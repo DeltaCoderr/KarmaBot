@@ -4,3 +4,7 @@
  A Powerful Discord Bot with a Music System used by 120K+ users and more than 1000 servers.
 
 Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
+
+<a href="https://top.gg/bot/636484020301201418">
+    <img src="https://top.gg/api/widget/636484020301201418.svg" alt="Karma Bot" />
+</a>
