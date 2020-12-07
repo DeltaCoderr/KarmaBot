@@ -68,3 +68,6 @@ Karma has a lot of features, with **8 main categories**:
     "other": ""
 }
 ```
+* **Install** all the packages by typing **``npm i ``**
+
+* **Start** the bot by typing **``node karma.js``**
