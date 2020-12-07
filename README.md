@@ -74,3 +74,6 @@ Karma has a lot of features, with **8 main categories**:
 * **Install** all the packages by typing **``npm i ``**
 
 * **Start** the bot by typing **``node karma.js``**
+
+## License
+Karma Bot is licensed under the GPL 3.0 license. See the file LICENSE for more information. If you plan to use any part of this source code in your own bot, I would be grateful if you would include some form of credit somewhere.
