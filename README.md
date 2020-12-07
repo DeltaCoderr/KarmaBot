@@ -66,3 +66,4 @@ Karma has a lot of features, with **8 main categories**:
     "nsfw": "",
     "other": ""
 }
+```
