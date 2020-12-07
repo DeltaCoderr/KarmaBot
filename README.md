@@ -38,6 +38,13 @@ Karma has a lot of features, with **8 main categories**:
 [![Upvotes](https://top.gg/api/widget/upvotes/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Owner](https://top.gg/api/widget/owner/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 
+## Invite the Bot 💕
+
+<a href="https://top.gg/bot/636484020301201418">
+    <img src="https://top.gg/api/widget/636484020301201418.svg" alt="Karma Bot" />
+</a>
+
+* **[Support Server](https://discord.gg/NtyaM9d)**
 
 ## Bot Setup  🔊
 * **Clone the Repo** by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking **[Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)**
