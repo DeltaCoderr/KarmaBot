@@ -16,7 +16,7 @@ Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](htt
 
 ### Commands List 
 
-Karma has a lot of features, with **7 main categories**:
+Karma has a lot of features, with **8 main categories**:
 
 *   🎵 **Music**: `play`, `skip`, `queue`, `np`,`filters` and **8** more! 
 *   👩‍💼 **Information**: `info`, `help`, `invite` and **2** more! 
@@ -24,4 +24,5 @@ Karma has a lot of features, with **7 main categories**:
 *   🤖 **ChatBot**: `chatbot` and **2** more! 
 *   👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **7** more!
 *   🖨️ **General**: `fire`, `respect`, `scary`, `triggered` and **2** more! 
+*   ✉️ **Other**: `profile, `addemoji`, `snipe`, `wiki` and **3** more!
 *   👑 **Owner**: `eval`
