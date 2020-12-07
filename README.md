@@ -8,3 +8,10 @@ Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](htt
 <a href="https://top.gg/bot/636484020301201418">
     <img src="https://top.gg/api/widget/636484020301201418.svg" alt="Karma Bot" />
 </a>
+
+
+## Features
+
+### All Commands
+
+*   🎵 **Music**:
