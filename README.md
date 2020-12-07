@@ -1,4 +1,4 @@
-<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Atlanta" src="https://cdn.discordapp.com/avatars/636484020301201418/c42cd65954060d3fdf4e0a3bab01990c.png?size=1024"> 
+<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Karma" src="https://cdn.discordapp.com/avatars/636484020301201418/c42cd65954060d3fdf4e0a3bab01990c.png?size=1024"> 
 
 # KarmaBot ✨
 
@@ -49,7 +49,7 @@ Karma has a lot of features, with **8 main categories**:
 ## Bot Setup  🔊
 * **Clone the Repo** by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking **[Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)**
 
-* Set up your **[config.json]()** file with your respective information.
+* Set up your **[config.json](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/config.json)** file with your respective information.
 ```
 {
     "prefix": "",     // Your Prefix
@@ -59,7 +59,7 @@ Karma has a lot of features, with **8 main categories**:
     "AME_API": ""     //AME_API for Image Commands.
 }
 ```
-* Set up your **[emotes.json]()** file with your Emoji IDS.
+* Set up your **[emotes.json](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/emotes.json)** file with your Emoji IDS.
 ```
 {
     "load": "",
