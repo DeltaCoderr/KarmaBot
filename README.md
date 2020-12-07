@@ -37,7 +37,7 @@ Karma has a lot of features, with **8 main categories**:
 
 
 ## Bot Setup  🔊
-* Clone the Repo by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking [Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)
+* **Clone the Repo** by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking **[Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)**
 
 * Set up your **[config.json]()** file with your respective information.
 ```
