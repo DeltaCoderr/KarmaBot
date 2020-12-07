@@ -26,3 +26,11 @@ Karma has a lot of features, with **8 main categories**:
 *   🖨️ **General**: `fire`, `respect`, `scary`, `triggered` and **2** more! 
 *   ✉️ **Other**: `profile, `addemoji`, `snipe`, `wiki` and **3** more!
 *   👑 **Owner**: `eval`
+
+## Status 📥
+
+[![Status](https://top.gg/api/widget/status/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
+[![Servers](https://top.gg/api/widget/servers/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
+[![Lib](https://top.gg/api/widget/lib/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
+[![Upvotes](https://top.gg/api/widget/upvotes/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
+[![Owner](https://top.gg/api/widget/owner/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
