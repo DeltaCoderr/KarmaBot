@@ -41,9 +41,9 @@ Karma has a lot of features, with **8 main categories**:
 * Set up your **[config.json]()** file with your respective information.
 ```
 {
-    "prefix": "", // Your Prefix
+    "prefix": "",     // Your Prefix
     "embedcolor": "", // Your EmbedColor
-    "dev": "", // Owner's Discord ID
-    "token": "", // Bot's Token
-    "AME_API": "" //AME_API for Image Commands.
+    "dev": "",        // Owner's Discord ID
+    "token": "",      // Bot's Token
+    "AME_API": ""     //AME_API for Image Commands.
 }
