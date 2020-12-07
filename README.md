@@ -17,7 +17,7 @@ Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](htt
 - [X] Image
 - [X] ChatBot
 
-### Commands List 
+### Commands List 💫 
 
 Karma has a lot of features, with **8 main categories**:
 
