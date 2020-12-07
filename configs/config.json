@@ -1,0 +1,7 @@
+{
+    "prefix": "",     // Your Prefix
+    "embedcolor": "", // Your EmbedColor
+    "dev": "",        // Owner's Discord ID
+    "token": "",      // Bot's Token
+    "AME_API": ""     //AME_API for Image Commands.
+}
