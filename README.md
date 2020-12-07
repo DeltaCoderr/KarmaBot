@@ -47,3 +47,22 @@ Karma has a lot of features, with **8 main categories**:
     "token": "",      // Bot's Token
     "AME_API": ""     //AME_API for Image Commands.
 }
+```
+* Set up your **[emotes.json]()** file with your Emoji IDS.
+```
+{
+    "load": "",
+    "verified": "",
+    "error": "",
+    "info": "",
+    "music": "",
+    "queue": "",
+    "success": "",
+    "music1": "",
+    "fun": "",
+    "chatbot": "",
+    "image": "",
+    "anime": "",
+    "nsfw": "",
+    "other": ""
+}
