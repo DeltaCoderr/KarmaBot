@@ -1,7 +1,10 @@
 <img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Atlanta" src="https://cdn.discordapp.com/avatars/636484020301201418/c42cd65954060d3fdf4e0a3bab01990c.png?size=1024"> 
 
 # KarmaBot
- A Powerful Discord Bot with a Music System used by 120K+ users and more than 1000 servers.
+
+[![Run on Repl.it](https://repl.it/badge/github/DeltaCoderr/KarmaBot)](https://repl.it/github/DeltaCoderr/KarmaBot)
+[![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
+>  A Powerful Discord Bot with a Music System used by 120K+ users and more than 1000 servers.
 
 Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
 
