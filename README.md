@@ -34,3 +34,16 @@ Karma has a lot of features, with **8 main categories**:
 [![Lib](https://top.gg/api/widget/lib/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Upvotes](https://top.gg/api/widget/upvotes/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Owner](https://top.gg/api/widget/owner/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
+
+
+## Bot Setup  🔊
+
+* Set up your **[config.json]()** file with your respective information.
+```
+{
+    "prefix": "", // Your Prefix
+    "embedcolor": "", // Your EmbedColor
+    "dev": "", // Owner's Discord ID
+    "token": "", // Bot's Token
+    "AME_API": "" //AME_API for Image Commands.
+}
