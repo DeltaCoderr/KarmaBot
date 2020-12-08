@@ -45,8 +45,14 @@ Karma has a lot of features, with **8 main categories**:
     <img src="https://top.gg/api/widget/636484020301201418.svg" alt="Karma Bot" />
 </a>
 
-* **[Support Server](https://discord.gg/NtyaM9d)**
-* **[Community Server](https://discord.gg/devs)**
+* **Any Questions/Suggestions? Ask them in our Support Server**
+</br></br>
+<a href="https://discord.gg/NtyaM9d"><img src="https://discordapp.com/api/guilds/738773269456486401/embed.png?style=banner2"/></a>
+<br><br>
+* **Community Server**
+</br></br>
+<a href="https://discord.gg/devs"><img src="https://discordapp.com/api/guilds/733807204938940447/embed.png?style=banner2"/></a>
+<br><br>
 
 ## Bot Setup  🔊
 * **Clone the Repo** by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking **[Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)**
