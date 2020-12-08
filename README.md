@@ -3,10 +3,11 @@
 # KarmaBot ✨
 
 [![Run on Repl.it](https://repl.it/badge/github/DeltaCoderr/KarmaBot)](https://repl.it/github/DeltaCoderr/KarmaBot)
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/DeltaCoderr/KarmaBot)
 [![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
 >  A Mulitpurpose Discord Bot with a Music System used by 120K+ users and more than 1000 servers.
 
-Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
+Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr) and [PixelMadness](https://github.com/PixelMadness).  
 
 ## Categories 📑
 - [x] Music & Filter
@@ -45,6 +46,7 @@ Karma has a lot of features, with **8 main categories**:
 </a>
 
 * **[Support Server](https://discord.gg/NtyaM9d)**
+* **[Community Server](https://discord.gg/devs)**
 
 ## Bot Setup  🔊
 * **Clone the Repo** by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking **[Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)**
