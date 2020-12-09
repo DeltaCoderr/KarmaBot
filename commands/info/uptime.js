@@ -12,7 +12,7 @@ module.exports = {
         usage: '',
         accessableby: "",
     },
-    run: async (client, message, args) => {
+    run: async (bot, message, args) => {
         const prefix = config.prefix
         if (!message.content.startsWith(prefix)) return;
 
