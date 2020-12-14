@@ -31,9 +31,9 @@ module.exports = {
         let safe = message.author.createdTimestamp
         
         if(safe > 604800017) {
-          safe = "``Reliable`` <:discordinvisible:757485982227365939>"
+          safe = "`Reliable` <:discordinvisible:757485982227365939>"
         } else {
-          safe = "``Suspicious`` <:discorddnd:757485967266545704>"
+          safe = "`Suspicious` <:discorddnd:757485967266545704>"
         }
         
       /*  let a = {
@@ -115,24 +115,20 @@ module.exports = {
           .setColor(config.embedcolor)
           .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
           .setDescription(`__**User Info**__
-      **•** \`\`ID:\`\` **${user.id}**
-      **•** \`\`Profile:\`\` **${user}**
-      **•** \`\`Bot:\`\` **${user.user.bot ? 'Yes' : 'No'}**
-      **•** \`\`Created At:\`\` **${moment(user.user.createdAt).format('MMMM Do YYYY, H:mm:ss a')}**
-
+      **•** \`ID:\` **${user.id}**
+      **•** \`Profile:\` **${user}**
+      **•** \`Bot:\`\` **${user.user.bot ? 'Yes' : 'No'}**
+      **•** \`Created At:\` **${moment(user.user.createdAt).format('MMMM Do YYYY, H:mm:ss a')}**
       __**Member Info**__
-      **•** \`\`Nickname:\`\` **${user.displayName ? user.displayName : 'yok'} **
-      **•** \`\`Joined At:\`\` **${moment(user.joinedAt).format('MMMM Do YYYY, H:mm:ss a')}**
-      **•** \`\`Activity:\`\` **${custom}**
-
+      **•** \`Nickname:\` **${user.displayName ? user.displayName : 'yok'} **
+      **•** \`Joined At:\` **${moment(user.joinedAt).format('MMMM Do YYYY, H:mm:ss a')}**
+      **•** \`Activity:\` **${custom}**
       __**Roles:**__
       ${roles}
-
       __**Messages Info**__
-      **•** \`\`Last Message:\`\` **${lastMessage}**
-      **•** \`\`Last Message At:\`\` **${lastMessageTime}**
-      **•** \`\`Message's Count:\`\` **${messagecount}**
-
+      **•** \`Last Message:\` **${lastMessage}**
+      **•** \`Last Message At:\` **${lastMessageTime}**
+      **•** \`Message's Count:\` **${messagecount}**
       __**Badge Information**__
       ${flags} 
       
@@ -146,4 +142,3 @@ module.exports = {
 
     }
 }
-
