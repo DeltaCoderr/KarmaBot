@@ -117,7 +117,7 @@ module.exports = {
           .setDescription(`__**User Info**__
       **•** \`ID:\` **${user.id}**
       **•** \`Profile:\` **${user}**
-      **•** \`Bot:\`\` **${user.user.bot ? 'Yes' : 'No'}**
+      **•** \`Bot:\` **${user.user.bot ? 'Yes' : 'No'}**
       **•** \`Created At:\` **${moment(user.user.createdAt).format('MMMM Do YYYY, H:mm:ss a')}**
       __**Member Info**__
       **•** \`Nickname:\` **${user.displayName ? user.displayName : 'yok'} **
