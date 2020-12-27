@@ -22,6 +22,11 @@ module.exports = async (client, message) => {
         let args = message.content.slice(prefix.length).trim().split(/ +/g);
         let cmd = args.shift().toLowerCase();
 
+        message.flags = []
+        while (args[0] && args[0][0] === "-") {
+        message.flags.push(args.shift().slice(1));
+        }
+        
         var commandfile = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd))
         if (commandfile) commandfile.run(client, message, args);
         
