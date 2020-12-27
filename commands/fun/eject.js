@@ -32,7 +32,7 @@ const user = message.mentions.users.first() || (args.length > 0 ? message.users.
     message.channel.send(embed);
   }catch(err) {
     const embed2 = new Discord.MessageEmbed()
-    .setTitle(`${client.emote.error} Something went wrong.\n${client.emote.error}Note : It won't work if the User contains Unwanted characters in his Username.`)
+    .setTitle(`${client.emotes.error} Something went wrong.\n${client.emotes.error}Note : It won't work if the User contains Unwanted characters in his Username.`)
     .setColor(config.embedcolor)
     message.channel.send(embed2)
     }
