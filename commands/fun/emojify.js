@@ -47,7 +47,7 @@ module.exports = {
 		}).join('');
 
 		if(emojified.length > 2000) {
-			return message.channel.send(`${client.emote.error} The emojified message exceeds 2000 characters.`);
+			return message.channel.send(`${client.emotes.error} The emojified message exceeds 2000 characters.`);
 		}
 
 		message.channel.send(emojified);
