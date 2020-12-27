@@ -11,14 +11,15 @@ module.exports = {
         accessableby: "",
     },
     run: async (client, message, args) => {
-    try {
-      if(args[0]) return message.channel.send(`${client.emote.error} Provide something to comment`)
+        const comment = args.join('');
+        if(!comment) return message.channel.send(`${client.emotes.error} Provide something to Comment!`)
+        try {    
         let yt = await canvacord.Canvas.youtube({"avatar":message.author.displayAvatarURL({format: "png"}),"username":message.author.username, "content":args.join(" ")})
         let attachment = new Discord.MessageAttachment(yt, 'comment.png')
         message.channel.send(attachment)
     }catch(err) {
         const embed2 = new Discord.MessageEmbed()
-    .setTitle(`${client.emote.error} Something went wrong.\n${client.emote.error}Note : It won't work if the User contains Unwanted characters in his Username.`)
+    .setTitle(`${client.emotes.error} Something went wrong.\n${client.emotes.error}Note : It won't work if the User contains Unwanted characters in his Username.`)
     .setColor(config.embedcolor)
     message.channel.send(embed2)
     }
