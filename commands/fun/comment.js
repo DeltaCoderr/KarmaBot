@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-//const Canvas = require('canvas')
+const canvacord = require('canvacord')
 
 module.exports = {
     config: {
@@ -11,18 +11,11 @@ module.exports = {
         accessableby: "",
     },
     run: async (client, message, args) => {
-    
-         try {
-    const canvas = Canvas.createCanvas(550, 110);
-	const ctx = canvas.getContext('2d');
-
-	const background = await Canvas.loadImage(`https://some-random-api.ml/canvas/youtube-comment?username=${message.author.username}&comment=${args}&avatar=${message.author.avatarURL()}&dark=true`);
-	
-	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-	
-	const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'comment.png');
-  
-   message.channel.send(attachment)
+    try {
+      if(args[0]) return message.channel.send(`${client.emote.error} Provide something to comment`)
+        let yt = await canvacord.Canvas.youtube({"avatar":message.author.displayAvatarURL({format: "png"}),"username":message.author.username, "content":args.join(" ")})
+        let attachment = new Discord.MessageAttachment(yt, 'comment.png')
+        message.channel.send(attachment)
     }catch(err) {
         const embed2 = new Discord.MessageEmbed()
     .setTitle(`${client.emote.error} Something went wrong.\n${client.emote.error}Note : It won't work if the User contains Unwanted characters in his Username.`)
