@@ -1,0 +1,69 @@
+const { MessageEmbed } = require('discord.js');
+const config = require('../../configs/config.json');
+
+
+module.exports = {
+    config: {
+        name: 'ban',
+        description: '',
+        aliases: [""],
+        usage: '',
+        accessableby: "",
+    },
+    run: async (client, message, args) => {
+        if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply('i don\'t have ban members permission.')
+    if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply('you don\'t have ban members permission.')
+
+            const noargs = new MessageEmbed()
+.addField("<:warning:788394079876546570> Error!", "```diff\n- No user mentioned!```")
+.addField("<:attention_here:788394177904771092> Usage", `\`\`\`diff\n+ ${prefix}ban [user] (reason)\`\`\``)
+.setColor("#e7b956")
+            if (!args[0]) return message.channel.send(noargs) 
+
+            let banMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args[0].toLocaleLowerCase()) || message.guild.members.cache.find(ro => ro.displayName.toLowerCase() === args[0].toLocaleLowerCase());
+            
+            const nomember = new MessageEmbed()
+            .addField("<:warning:788394079876546570> Error!", "```diff\n- Unable to find that user!```")
+            .addField("<:attention_here:788394177904771092> Try", "```diff\n+ Checking if that user is in this server, and rerun the command again!```")
+.setColor("#e7b956")
+            
+            const selfban = new MessageEmbed()
+            .addField("<:warning:788394079876546570> Error!", "```diff\n- You can't ban yourself!```")
+            .addField("<:attention_here:788394177904771092> Try", "```diff\n+ Mentioning someone again!```")
+.setColor("#e7b956")
+            if (!banMember) return message.channel.send(nomember);
+            if (banMember === message.member) return message.channel.send(selfban)
+
+            var reason = args.slice(1).join(" ");
+   const unbannable = new MessageEmbed()
+            .addField("<:warning:788394079876546570> Error!", "```diff\n- Unable to ban that user!```")
+            .addField("<:attention_here:788394177904771092> Try", "```diff\n+ Checking your role permission or make sure that user is not higher than yours!```")
+.setColor("#e7b956")
+            
+            if (!banMember.bannable) return message.channel.send(unbannable)
+            try {
+                
+                const userbanned = new MessageEmbed()
+            .addField("<:attention_here:788394177904771092> Banned!", `\`\`\`diff\n- You got banned from ${message.guild.name}!\`\`\``)
+            .addField("<:tag:785744172606947389> Reason", `\`\`\`diff\n+ ${reason || "None."}!\`\`\``)
+                            .addField("<:moderator:788395153043226644> Moderator", `\`\`\`diff\n+ ${message.author.tag}!\`\`\``)
+.setColor("#e7b956")
+            banMember.send(userbanned).then(() =>
+                message.guild.members.ban(banMember, { days: 7, reason: reason })).catch(() => null)
+            } catch {
+                message.guild.members.ban(banMember, { days: 7, reason: reason })
+            }
+            if (reason) {
+            var sembed = new MessageEmbed()
+                    .addField("<:attention_here:788394177904771092> Banned! ✈", `\`\`\`diff\n+ ${banMember.user.tag} - [${banMember.user.id}] has been banned!\`\`\``)
+                        .addField("<:tag:785744172606947389> Reason", `\`\`\`diff\n+ ${reason || "None."}!\`\`\``)
+              .setColor("#e7b956")
+            message.channel.send(sembed)
+            } else {
+                var sembed2 = new MessageEmbed()
+                      .addField("<:attention_here:788394177904771092> Banned! ✈", `\`\`\`diff\n+ ${banMember.user.tag} - [${banMember.user.id}] has been banned!\`\`\``)
+              .setColor("#e7b956")
+            message.channel.send(sembed2)
+            }
+    }
+}
