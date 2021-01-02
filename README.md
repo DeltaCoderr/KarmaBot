@@ -27,7 +27,7 @@ Karma has a lot of features, with **8 main categories**:
 *   🚓 **Anime**: `anime`, `hug`, `karma`, `neko` and **3** more! 
 *   🤖 **ChatBot**: `chatbot` and **2** more! 
 *   👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **7** more!
-*   🖨️ **General**: `fire`, `respect`, `scary`, `triggered` and **2** more! 
+*   🖨️ **Image**: `fire`, `respect`, `scary`, `triggered` and **6** more! 
 *   ✉️ **Other**: `profile`, `addemoji`, `snipe`, `wiki` and **3** more!
 *   👑 **Owner**: `eval`
 
