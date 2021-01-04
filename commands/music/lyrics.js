@@ -14,7 +14,7 @@ module.exports = {
     run: async (client, message, args) => {
     
         try {
-            if(!args)  return message.channel.send("Bruh, Provide a Song")
+            if(!args[0])  return message.channel.send("Bruh, Provide a Song")
            
              let embed = new MessageEmbed()
                  .setDescription(`**Please wait, im looking for the Lyrics, It can take \`few \` seconds** ${client.emotes.load} .`)
