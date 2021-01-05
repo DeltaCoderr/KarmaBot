@@ -64,7 +64,6 @@ module.exports = {
             //let kullanicisayi = donustur()
           setTimeout(()=>{
             const embed = new Discord.MessageEmbed()
-            .setImage("https://cdn.discordapp.com/attachments/770248422992248862/780032317909237760/unknown.png")
           .setThumbnail(client.user.avatarURL())
           .setDescription("**Sakura Bot Project.**"+"\n\n <a:pyramid:757488922354909184> **Number of servers serviced :** " + guilds +
           "\n <a:pyramid:757488922354909184> **Number of channels served : ** " + channels +

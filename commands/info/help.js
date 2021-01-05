@@ -37,7 +37,6 @@ module.exports = {
                 embed.addField(`${client.emotes.nsfw} NSFW [3] - `, '**This section can only be used on NSFW Channel**')
             }
             embed.setFooter('© Sakura', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
-            embed.setImage('https://cdn.discordapp.com/attachments/770248422992248862/780032317909237760/unknown.png')
             embed.setTimestamp()
 
             return message.channel.send(embed)
