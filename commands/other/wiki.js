@@ -31,7 +31,7 @@ module.exports = {
             .setDescription(`** ${body.extract}**`)
             .setColor(config.embedcolor)
         .setTimestamp()
-          .setFooter(`© Karma `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
+          .setFooter(`© Sakura `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
         
          if (body.thumbnail) embed.setThumbnail(body.thumbnail.source);
         message.channel.send(embed);

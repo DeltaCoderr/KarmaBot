@@ -14,19 +14,19 @@ module.exports = {
 	const embednoinvoice = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-    .setFooter('Karma Music System')
+    .setFooter('Sakura Music System')
     .setColor(embedcolor)
 	.setTimestamp();
 	const embednosong = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - No songs currently playing !`)
-    .setFooter('Karma Music System')
+    .setFooter('Sakura Music System')
     .setColor(embedcolor)
 	.setTimestamp();
 	const embedshuffle = new Discord.MessageEmbed()
 	.setTitle('Shuffled!')
 	.setDescription(`${client.emotes.success} - Queue shuffled **${client.player.getQueue(message).tracks.length}** song(s) !`)
-    .setFooter('Karma Music System')
+    .setFooter('Sakura Music System')
     .setColor(embedcolor)
 	.setTimestamp();
     if (!message.member.voice.channel) return message.channel.send(embednoinvoice);

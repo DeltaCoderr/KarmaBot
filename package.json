@@ -1,20 +1,20 @@
 {
-  "name": "karmabot",
+  "name": "Sakurabot",
     "description": "A Multipurpose Discord bot (more than 50 commands) that uses the Discordjs API!",
-    "main": "karma.js",
+    "main": "Sakura.js",
     "scripts": {
-        "start": "node karma.js"
+        "start": "node Sakura.js"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/DeltaCoderr/KarmaBot.git"
+        "url": "git+https://github.com/DeltaCoderr/SakuraBot.git"
     },
     "author": "DeltaCoderr",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/DeltaCoderr/KarmaBot/issues"
+        "url": "https://github.com/DeltaCoderr/SakuraBot/issues"
     },
-    "homepage": "https://github.com/DeltaCoderr/Karmabot#readme",
+    "homepage": "https://github.com/DeltaCoderr/Sakurabot#readme",
     
     "dependencies": {
     "@discordjs/opus": "^0.3.3",

@@ -14,7 +14,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
         .setThumbnail(client.user.avatarURL())
     .setDescription(
-      "**Karma Bot Project** \n\n**👋 Hey!\n Do you want Invite me? [Click Here](https://discord.com/api/oauth2/authorize?client_id=636484020301201418&permissions=268435504&scope=bot) to Invite me!\nThanks for supporting me.** ❤️"
+      "**Sakura Bot Project** \n\n**👋 Hey!\n Do you want Invite me? [Click Here](https://discord.com/api/oauth2/authorize?client_id=636484020301201418&permissions=268435504&scope=bot) to Invite me!\nThanks for supporting me.** ❤️"
     )
     .addField(
       "Support Link: ",
@@ -28,7 +28,7 @@ module.exports = {
     )
     .setTimestamp()
     .setFooter(
-      "© Karma",
+      "© Sakura",
       "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png"
     )
     .setColor(config.embedcolor);

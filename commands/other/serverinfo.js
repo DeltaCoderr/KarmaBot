@@ -29,7 +29,7 @@ module.exports = {
             .addField(`🌍 **Server Region**`, `≫ \`${message.guild.region}\``, true)
             .addField(`😎 **Emotes**`, `≫ \`${message.guild.emojis.cache.size}\``, true)
             .setTimestamp()
-            .setFooter(`© Karma `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
+            .setFooter(`© Sakura `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
     
           message.channel.send(embed);
     }

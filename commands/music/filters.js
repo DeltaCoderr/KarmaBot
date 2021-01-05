@@ -15,13 +15,13 @@ module.exports = {
 	const embednoinvoice = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-    .setFooter('Karma Music System')
+    .setFooter('Sakura Music System')
     .setColor(embedcolor)
 	.setTimestamp();
 	const embednosong = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - No songs currently playing !`)
-    .setFooter('Karma Music System')
+    .setFooter('Sakura Music System')
     .setColor(embedcolor)
 	.setTimestamp();
     if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
@@ -40,7 +40,7 @@ module.exports = {
 
     message.channel.send({
         embed: {
-            footer: { text: 'Karma Music System' },
+            footer: { text: 'Sakura Music System' },
             fields: [
                 { name: 'Filters', value: filtersStatuses[0].join('\n'), inline: true },
                 { name: '** **', value: filtersStatuses[1].join('\n'), inline: true },

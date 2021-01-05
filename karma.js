@@ -46,7 +46,7 @@ fs.readdir('./player-events/', (err, files) => {
 // EVENTS
 
 client.on('ready', () => {
-    console.log('Karma Started!');
+    console.log('Sakura Started!');
 });
 
 //CHATBOT FEATURE 

@@ -14,37 +14,37 @@ module.exports = {
 	const embednoinvoice = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embednomusic = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - No music currently playing !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embedspecify = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - Please specify a valid filter to enable or disable !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embednofilter = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - This filter doesn't exist !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embedfilteradd = new Discord.MessageEmbed()
 	.setTitle('Filter Adding!')
 	.setDescription(`${client.emotes.music} - I'm **adding** the filter to the music, please wait... Note : the longer the music is, the longer this will take.`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
     const embedfilderremove = new Discord.MessageEmbed()
 	.setTitle('Filter Removing!')
 	.setDescription(`${client.emotes.music} - I'm **disabling** the filter on the music, please wait... Note : the longer the music is playing, the longer this will take.`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	if (!message.member.voice.channel) return message.channel.send(embednoinvoice);

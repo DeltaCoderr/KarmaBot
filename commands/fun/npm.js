@@ -45,7 +45,7 @@ module.exports = {
 					{ name: '》 Keywords :', value: pkg.keywords ? pkg.keywords.join(', ') : 'None' },
 				)
 				.setColor(config.embedcolor)
-				.setFooter('© Karma', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
+				.setFooter('© Sakura', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
                  .setTimestamp();
 
 			message.channel.send(embed);

@@ -21,11 +21,11 @@ module.exports = {
         const duration = moment.duration(bot.uptime)
     let bicon = bot.user.displayAvatarURL()
     const botembed = new Discord.MessageEmbed()
-        .setTitle("Karma Bot Project")
+        .setTitle("Sakura Bot Project")
         .setColor(config.embedcolor)
-        .setDescription(`<a:pyramid:757488922354909184> **Karma has been active for** \`${uptime}\`. \n <a:pyramid:757488922354909184> **The ping is currently** \`${bot.ws.ping} ms\`. \n\n  ❗  **__Attention!__** **Karma is restarting himself after \`10 to 15 hours\` for a good quality and lagless sound!**`)
+        .setDescription(`<a:pyramid:757488922354909184> **Sakura has been active for** \`${uptime}\`. \n <a:pyramid:757488922354909184> **The ping is currently** \`${bot.ws.ping} ms\`. \n\n  ❗  **__Attention!__** **Sakura is restarting himself after \`10 to 15 hours\` for a good quality and lagless sound!**`)
         .setTimestamp()
-        .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
+        .setFooter('© Sakura ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
         .setThumbnail(bicon);
  message.react ('727551598640889896')
     message.channel.send(botembed);

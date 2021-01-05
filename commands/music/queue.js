@@ -13,13 +13,13 @@ module.exports = {
 	const embednoinvoice = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-    .setFooter('Karma Music System')
+    .setFooter('Sakura Music System')
     .setColor(embedcolor)
 	.setTimestamp();
 	const embednosong = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - No songs currently playing !`)
-    .setFooter('Karma Music System')
+    .setFooter('Sakura Music System')
     .setColor(embedcolor)
 	.setTimestamp();
     if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
@@ -32,7 +32,7 @@ module.exports = {
 	.setDescription(`**Server queue - ${message.guild.name} ${client.emotes.queue}**\nCurrent : ${queue.playing.title} | ${queue.playing.author}\n\n` + (queue.tracks.map((track, i) => {
         return `**#${i + 1}** - ${track.title} | ${track.author} (requested by : ${track.requestedBy.username})`
     }).slice(0, 5).join('\n') + `\n\n${queue.tracks.length > 5 ? `And **${queue.tracks.length - 5}** other songs...` : `In the playlist **${queue.tracks.length}** song(s)...`}`))
-    .setFooter('Karma Music System')
+    .setFooter('Sakura Music System')
     .setColor(embedcolor)
 	.setTimestamp();
     message.channel.send(embedqueue);

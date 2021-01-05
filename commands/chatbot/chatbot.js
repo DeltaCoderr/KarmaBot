@@ -29,7 +29,7 @@ module.exports = {
         )
         .setTimestamp()
         .setFooter(
-          "© Karma",
+          "© Sakura",
           "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png"
         )
         .setColor(config.embedcolor);
@@ -43,7 +43,7 @@ module.exports = {
       
         .setThumbnail(client.user.avatarURL())
         .setDescription(
-          `**Karma Bot Project** \n\n**👋 Hey!\n Type \`${config.prefix}setchatbotchannel\` - To Set a Channel \n Type \`${config.prefix}disablechatbotchannel\` - To Disable a Channel.**\n **ChatBot Channel Set as - ${embedvch}**` 
+          `**Sakura Bot Project** \n\n**👋 Hey!\n Type \`${config.prefix}setchatbotchannel\` - To Set a Channel \n Type \`${config.prefix}disablechatbotchannel\` - To Disable a Channel.**\n **ChatBot Channel Set as - ${embedvch}**` 
         )
        .addField(
           "Support Link: ",
@@ -57,7 +57,7 @@ module.exports = {
         )
         .setTimestamp()
         .setFooter(
-          "© Karma",
+          "© Sakura",
           "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png"
         )
         .setColor(config.embedcolor);

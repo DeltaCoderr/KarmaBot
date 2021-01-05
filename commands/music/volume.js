@@ -14,37 +14,37 @@ module.exports = {
 	const embednoinvoice = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embednosong = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - No songs currently playing !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embedenternumber = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - Please enter a number !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embedbetw = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - Please enter a valid number (between 1 and 100) !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embedvalid = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${client.emotes.error} - Please enter a valid number !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
 	const embedsett = new Discord.MessageEmbed()
 	.setTitle('Success!')
 	.setDescription(`${client.emotes.success} - Volume set to **${args.join(" ")}%** !`)
-	.setFooter('Karma Music System')
+	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
     if (!message.member.voice.channel) return message.channel.send(embednoinvoice);

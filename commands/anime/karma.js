@@ -7,22 +7,22 @@ const emojis = require('../../configs/emotes.json');
 
 module.exports = {
     config: {
-        name: 'karma',
-        description: 'Drops Random Karma Pictures.',
-        aliases: ["karma"],
+        name: 'Sakura',
+        description: 'Drops Random Sakura Pictures.',
+        aliases: ["Sakura"],
         usage: '',
         accessableby: "",
     },
     run: async (client, message, args) => {
        
-        let res = await fetch('https://api.deltaa.tk/karma')
+        let res = await fetch('https://api.deltaa.tk/Sakura')
         let data = await res.json()
 
     let gifembed = new Discord.MessageEmbed()
-        .setTitle("Random Karma Picture or Gif")
+        .setTitle("Random Sakura Picture or Gif")
         .setColor(config.embedcolor)
         .setDescription(`[Full View](${data.url})`)
-        .setFooter(`© Karma`, message.author.avatarURL())
+        .setFooter(`© Sakura`, message.author.avatarURL())
         .setImage(data.url);
     message.channel.send(gifembed);
     }
