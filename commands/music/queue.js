@@ -3,7 +3,7 @@ const { embedcolor } = require('../../configs/config.json');
 module.exports = {
     config: {
         name: "queue",
-        aliases: [],
+        aliases: ["q"],
         category: "music",
         description: "Shows the next Music songs ",
         usage: "",
