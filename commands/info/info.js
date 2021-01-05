@@ -65,11 +65,11 @@ module.exports = {
           setTimeout(()=>{
             const embed = new Discord.MessageEmbed()
           .setThumbnail(client.user.avatarURL())
-          .setDescription("**Sakura Bot Project.**"+"\n\n  **Number of servers serviced :** " + guilds +
-          "\n  **Number of channels served : ** " + channels +
-          "\n  **Number of users served : ** " + users +
+          .setDescription("**Sakura Bot Project.**"+"\n\n <a:pyramid:757488922354909184> **Number of servers serviced :** " + guilds +
+          "\n <a:pyramid:757488922354909184> **Number of channels served : ** " + channels +
+          "\n <a:pyramid:757488922354909184> **Number of users served : ** " + users +
           "\n\n<:discordbotdev:795838320986554399> **Developers:** \n <@360498353462575115>")
-          .addField("Invite Link: ",`**[Click Here!](https://discord.com/api/oauth2/authorize?client_id=636484020301201418&permissions=32&scope=bot)**`, true)
+          .addField("Invite Link: ",`**[Click Here!](https://discord.com/api/oauth2/authorize?client_id=739817077573025892&permissions=32&scope=bot)**`, true)
           .addField("Support Link: ",`**[Click Here!](https://discord.gg/CJ9y9We5)**`, true)
           .setTimestamp()
           .setFooter('© Sakura', 'https://cdn.discordapp.com/avatars/739817077573025892/cb1e8de0cafdc718c0b40181cd1cdd6d.png?size=1024')
