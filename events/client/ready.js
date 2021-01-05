@@ -10,8 +10,8 @@ module.exports = async client => {
     console.log(chalk.red`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Active, Commands Loaded!`);
     console.log(chalk.red`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: ${client.user.username} Logged In!`);
     function randomStatus() {
-    let status = [`type --help | ${client.guilds.cache.size} Server`,
-      `--help | ${client.users.cache.size} Members`];
+    let status = [`=help | ${client.guilds.cache.size} Server`,
+      `=help | ${client.users.cache.size} Members`];
     let rstatus = Math.floor(Math.random() * status.length);
     client.user.setActivity(status[rstatus], { type: 'PLAYING' });
 
