@@ -22,7 +22,7 @@ module.exports = {
 
         if (!args[0]) {
 
-            embed.setDescription(`**Sakura's Prefix Is \`${prefix}\``)
+            embed.setDescription(`**Sakura's Prefix Is** \`${prefix}\``)
             embed.setFooter(`${message.guild.me.displayName} | Total Commands - ${client.commands.size - 1} Loaded`, client.user.displayAvatarURL());
             embed.addField(`${client.emotes.info} Info [4] - `, '`help`, `info`, `invite`, `uptime`')
             embed.addField(`${client.emotes.anime} Anime [7] - `, '`anime`, `hug`, `Sakura`, `neko`, `pat`, `waifu`, `wink`')
