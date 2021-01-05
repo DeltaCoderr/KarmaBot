@@ -9,6 +9,6 @@ module.exports = async client => {
 
     console.log(chalk.red`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Active, Commands Loaded!`);
     console.log(chalk.red`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: ${client.user.username} Logged In!`);
-    client.user.setPresence({ activity: { name: "=help | ${client.guilds.cache.size} Server", type: "WATCHING" }, status: "idle" });
+    client.user.setPresence({ activity: { name: "=help | `${client.guilds.cache.size}` Server", type: "WATCHING" }, status: "idle" });
     console.log(chalk.blue`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Now ` + totalChannels + ` channels, ` + totalGuilds + ` Servers and ` + totalUsers + ` serving  users!`);
 }
