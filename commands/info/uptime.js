@@ -23,7 +23,7 @@ module.exports = {
     const botembed = new Discord.MessageEmbed()
         .setTitle("Sakura Bot Project")
         .setColor(config.embedcolor)
-        .setDescription(`<a:pyramid:757488922354909184> **Sakura has been active for** \`${uptime}\`. \n <a:pyramid:757488922354909184> **The ping is currently** \`${bot.ws.ping} ms\`. \n\n  ❗  **__Attention!__** **Sakura is restarting himself after \`10 to 15 hours\` for a good quality and lagless sound!**`)
+        .setDescription(` **Sakura has been active for** \`${uptime}\`. \n  **The ping is currently** \`${bot.ws.ping} ms\`. \n\n  ❗  **__Attention!__** **Sakura is restarting himself after \`10 to 15 hours\` for a good quality and lagless sound!**`)
         .setTimestamp()
         .setFooter('© Sakura ', 'https://cdn.discordapp.com/avatars/739817077573025892/cb1e8de0cafdc718c0b40181cd1cdd6d.png?size=1024')
         .setThumbnail(bicon);
