@@ -22,14 +22,14 @@ module.exports = {
 
         if (!args[0]) {
 
-            embed.setDescription(`**Sakura's Prefix Is \`${prefix}\`\n\nFor Help Related To A Particular Command Type -\n\`${prefix}help [command name] Or ${prefix}help [alias]\`**`)
+            embed.setDescription(`**Sakura's Prefix Is \`${prefix}\``)
             embed.setFooter(`${message.guild.me.displayName} | Total Commands - ${client.commands.size - 1} Loaded`, client.user.displayAvatarURL());
             embed.addField(`${client.emotes.info} Info [4] - `, '`help`, `info`, `invite`, `uptime`')
             embed.addField(`${client.emotes.anime} Anime [7] - `, '`anime`, `hug`, `Sakura`, `neko`, `pat`, `waifu`, `wink`')
             embed.addField(`${client.emotes.fun} Fun [13] - `, '`binary`, `clyde`, `comment`, `eject`, `emojify`, `github`, `iq`, `npm`, `osu`, `ping`, `reddit`, `weather`, `zalgo`')
             embed.addField(`${client.emotes.image} Image [10] - `, '`fire`, `respect`, `rip`, `scary`, `trash`, `triggered`, `beautiful`, `affect`, `delete`, `thomas`')
             embed.addField(`${client.emotes.music1} Music [13] - `, '`clear-queue`, `filter`, `filters`, `loop`, `np`, `pause`, `lyrics`, `play`, `queue`, `resume`, `shuffle`, `skip` `stop`, `volume`')
-            embed.addField(`${client.emotes.other} Other [6] -`, '`avatar`, `profile`, `serverinfo`, `urban`, `wiki`, `addemoji`')
+            embed.addField(`${client.emotes.other} Other [6] -`, '`avatar`, `profile`, `serverinfo`, `s `urban`, `wiki`, `addemoji`')
             if(message.channel.nsfw) {
                 embed.addField(`${client.emotes.nsfw} NSFW [3] - `, '`anal`, `blowjob`, `cum`')
             } else {
