@@ -1,16 +1,16 @@
 {
-    "load": "",
-    "verified": "",
-    "error": "",
-    "info": "",
-    "music": "",
+    "load": "<a:loading:796132997950078986>",
+    "verified": "<a:verify:796136735645237250>",
+    "error": "❌",
+    "info": "<:info:796137509632344074>",
+    "music": "🎵",
     "queue": "",
-    "success": "",
+    "success": "✔️",
     "music1": "",
-    "fun": "",
+    "fun": "🎉",
     "chatbot": "",
-    "image": "",
-    "anime": "",
-    "nsfw": "",
-    "other": ""
+    "image": "🖼️",
+    "anime": "<:anime:796140043646795836>",
+    "nsfw": "🔞",
+    "other": "<a:loading:796132997950078986>"
 }
