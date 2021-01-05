@@ -9,6 +9,13 @@ module.exports = async client => {
 
     console.log(chalk.red`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Active, Commands Loaded!`);
     console.log(chalk.red`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: ${client.user.username} Logged In!`);
-    client.user.setPresence({ activity: { name: "=help | `${client.guilds.cache.size}` Server", type: "WATCHING" }, status: "idle" });
+    function randomStatus() {
+    let status = [`type --help | ${client.guilds.cache.size} Server`,
+      `--help | ${client.users.cache.size} Members`];
+    let rstatus = Math.floor(Math.random() * status.length);
+    client.user.setActivity(status[rstatus], { type: 'PLAYING' });
+
+  }; setInterval(randomStatus, 15000);
+  
     console.log(chalk.blue`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Now ` + totalChannels + ` channels, ` + totalGuilds + ` Servers and ` + totalUsers + ` serving  users!`);
 }
