@@ -31,9 +31,9 @@ module.exports = {
         let safe = message.author.createdTimestamp
         
         if(safe > 604800017) {
-          safe = "`Reliable` <:discordinvisible:757485982227365939>"
+          safe = "`Reliable` <:discordinvisible:795845911280484394>"
         } else {
-          safe = "`Suspicious` <:discorddnd:757485967266545704>"
+          safe = "`Suspicious` <:dnd:795846661100273674>"
         }
         
       /*  let a = {
@@ -49,10 +49,10 @@ module.exports = {
           "VERIFIED_BOT": "Verified Bot",
         }*/
         
-          if(durum === "online") durumm = `Online <:discordinvisible:757485982227365939> `
-          if(durum === "offline") durumm = `Offline <:discordoffline:757485996999966801> `
-          if(durum === "idle") durumm = `Idle <:discordidle:757483463501676614>`
-          if(durum === "dnd") durumm = `Do not disturb <:discorddnd:757485967266545704>  `
+          if(durum === "online") durumm = `Online <:discordinvisible:795845911280484394> `
+          if(durum === "offline") durumm = `Offline <:offline:795846188901203978> `
+          if(durum === "idle") durumm = `Idle <:idle:795846446262779934>`
+          if(durum === "dnd") durumm = `Do not disturb <:dnd:795846661100273674>  `
           
           let lastMessage
           let lastMessageTime
