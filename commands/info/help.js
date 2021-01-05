@@ -26,11 +26,10 @@ module.exports = {
             embed.setFooter(`${message.guild.me.displayName} | Total Commands - ${client.commands.size - 1} Loaded`, client.user.displayAvatarURL());
             embed.addField(`${client.emotes.info} Info [4] - `, '`help`, `info`, `invite`, `uptime`')
             embed.addField(`${client.emotes.anime} Anime [7] - `, '`anime`, `hug`, `Sakura`, `neko`, `pat`, `waifu`, `wink`')
-            embed.addField(`${client.emotes.chatbot} Chatbot [3] - `, '`chatbot`, `disableChatbotchannel`, `setChatbotchannel`')
             embed.addField(`${client.emotes.fun} Fun [13] - `, '`binary`, `clyde`, `comment`, `eject`, `emojify`, `github`, `iq`, `npm`, `osu`, `ping`, `reddit`, `weather`, `zalgo`')
             embed.addField(`${client.emotes.image} Image [10] - `, '`fire`, `respect`, `rip`, `scary`, `trash`, `triggered`, `beautiful`, `affect`, `delete`, `thomas`')
             embed.addField(`${client.emotes.music1} Music [13] - `, '`clear-queue`, `filter`, `filters`, `loop`, `np`, `pause`, `lyrics`, `play`, `queue`, `resume`, `shuffle`, `skip` `stop`, `volume`')
-            embed.addField(`${client.emotes.other} Other [6] -`, '`avatar`, `profile`, `serverinfo`, `snipe`, `urban`, `wiki`, `addemoji`')
+            embed.addField(`${client.emotes.other} Other [6] -`, '`avatar`, `profile`, `serverinfo`, `urban`, `wiki`, `addemoji`')
             if(message.channel.nsfw) {
                 embed.addField(`${client.emotes.nsfw} NSFW [3] - `, '`anal`, `blowjob`, `cum`')
             } else {
