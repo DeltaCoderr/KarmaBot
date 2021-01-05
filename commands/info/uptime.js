@@ -21,7 +21,7 @@ module.exports = {
         const duration = moment.duration(bot.uptime)
     let bicon = bot.user.displayAvatarURL()
     const botembed = new Discord.MessageEmbed()
-        .setTitle("Sakura Bot Project")
+        .setTitle("<a:loading:796132997950078986> Sakura Bot Project")
         .setColor(config.embedcolor)
         .setDescription(` **Sakura has been active for** \`${uptime}\`. \n  **The ping is currently** \`${bot.ws.ping} ms\`. \n\n  ❗  **__Attention!__** **Sakura is restarting himself after \`10 to 15 hours\` for a good quality and lagless sound!**`)
         .setTimestamp()
