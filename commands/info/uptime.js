@@ -25,7 +25,7 @@ module.exports = {
         .setColor(config.embedcolor)
         .setDescription(`<a:pyramid:757488922354909184> **Sakura has been active for** \`${uptime}\`. \n <a:pyramid:757488922354909184> **The ping is currently** \`${bot.ws.ping} ms\`. \n\n  ❗  **__Attention!__** **Sakura is restarting himself after \`10 to 15 hours\` for a good quality and lagless sound!**`)
         .setTimestamp()
-        .setFooter('© Sakura ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
+        .setFooter('© Sakura ', 'https://cdn.discordapp.com/avatars/739817077573025892/cb1e8de0cafdc718c0b40181cd1cdd6d.png?size=1024')
         .setThumbnail(bicon);
  message.react ('727551598640889896')
     message.channel.send(botembed);

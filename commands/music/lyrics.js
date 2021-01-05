@@ -42,7 +42,7 @@ module.exports = {
         .setAuthor(author)
         .setFooter(
          "© Sakura",
-         "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png"
+         "https://cdn.discordapp.com/avatars/739817077573025892/cb1e8de0cafdc718c0b40181cd1cdd6d.png?size=1024"
        )
       .setTimestamp();
          msg.edit(succesfull)

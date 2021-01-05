@@ -72,7 +72,7 @@ module.exports = {
           .addField("Invite Link: ",`**[Click Here!](https://discord.com/api/oauth2/authorize?client_id=636484020301201418&permissions=32&scope=bot)**`, true)
           .addField("Support Link: ",`**[Click Here!](https://discord.gg/CJ9y9We5)**`, true)
           .setTimestamp()
-          .setFooter('© Sakura', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
+          .setFooter('© Sakura', 'https://cdn.discordapp.com/avatars/739817077573025892/cb1e8de0cafdc718c0b40181cd1cdd6d.png?size=1024')
           .setColor(config.embedcolor);
            message.react ('755471130315194399')
           message.channel.send(embed)
