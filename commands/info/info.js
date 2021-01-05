@@ -68,7 +68,7 @@ module.exports = {
           .setDescription("**Sakura Bot Project.**"+"\n\n <a:pyramid:757488922354909184> **Number of servers serviced :** " + guilds +
           "\n <a:pyramid:757488922354909184> **Number of channels served : ** " + channels +
           "\n <a:pyramid:757488922354909184> **Number of users served : ** " + users +
-          "\n\n<:discordbotdev:757489652214267904> **Developers:** \n <@360498353462575115>")
+          "\n\n<:discordbotdev:795838320986554399> **Developers:** \n <@360498353462575115>")
           .addField("Invite Link: ",`**[Click Here!](https://discord.com/api/oauth2/authorize?client_id=636484020301201418&permissions=32&scope=bot)**`, true)
           .addField("Support Link: ",`**[Click Here!](https://discord.gg/CJ9y9We5)**`, true)
           .setTimestamp()

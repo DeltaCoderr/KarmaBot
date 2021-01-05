@@ -63,19 +63,19 @@ module.exports = {
             flags = "User doesn't have any badge"
           }
         
-         flags = flags.replace("HOUSE_BRAVERY", "• <:hsquadbravery:757488491792826410>\`HypeSquad Bravery\`")
-         flags = flags.replace("EARLY_SUPPORTER","• <a:nitro:740923343548579890> \`Early Supporter\`")
-         flags = flags.replace("VERIFIED_DEVELOPER","• <:discordbotdev:757489652214267904> \`Verified Bot Developer\`")
-         flags = flags.replace("EARLY_VERIFIED_DEVELOPER","• <:discordbotdev:757489652214267904> \`Verified Bot Developer\`")
-         flags = flags.replace("HOUSE_BRILLIANCE","• <:hsquadbrilliance:757487710775672863> \`HypeSquad Brilliance\`")
-         flags = flags.replace("HOUSE_BALANCE","• <:hsquadbalance:757487549605347348>\`HypeSquad Balance\`")
+         flags = flags.replace("HOUSE_BRAVERY", "• <:hsquadbravery:795840506051428412>\`HypeSquad Bravery\`")
+         flags = flags.replace("EARLY_SUPPORTER","• <:nitro:795842046223974460> \`Early Supporter\`")
+         flags = flags.replace("VERIFIED_DEVELOPER","• <:discordbotdev:795838320986554399> \`Verified Bot Developer\`")
+         flags = flags.replace("EARLY_VERIFIED_DEVELOPER","• <:discordbotdev:795838320986554399> \`Verified Bot Developer\`")
+         flags = flags.replace("HOUSE_BRILLIANCE","• <:hsquadbrilliance:795840396492013568> \`HypeSquad Brilliance\`")
+         flags = flags.replace("HOUSE_BALANCE","• <:hsquadbalance:795840435133218863>\`HypeSquad Balance\`")
          flags = flags.replace("DISCORD_PARTNER","• <:partner:739714991732686848> \`Partner\`")
          flags = flags.replace("HYPESQUAD_EVENTS","• <a:hypesquad:755471122430034060>\`Hypesquad Event\`")
-         flags = flags.replace("DISCORD_CLASSIC","• <a:classic:740922817683652754>\`Discord Classic\`")
+         flags = flags.replace("DISCORD_CLASSIC","• <:classic:795843165709533225>\`Discord Classic\`")
       
           if(nitroBadge.includes("gif")) {
            flags = flags + `
-      • <a:nitroboost:740923077973508156>  \`Nitro\``
+      • <:nitroboost:795843880515797023>  \`Nitro\``
           }
           
           let voice = db.get(`${message.guild.id}.${user.user.id}.voicetime`)
