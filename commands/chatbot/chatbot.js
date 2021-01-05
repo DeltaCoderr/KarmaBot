@@ -19,12 +19,7 @@ module.exports = {
         )
        .addField(
           "Support Link: ",
-          `**[Click Here!](https://discord.gg/NtyaM9d)**`,
-          true
-        )
-        .addField(
-          "Vote Link:",
-          `**[Click Here!](https://top.gg/bot/636484020301201418/vote)**`,
+          `**[Click Here!](https://discord.gg/CJ9y9We5)**`,
           true
         )
         .setTimestamp()
@@ -47,12 +42,7 @@ module.exports = {
         )
        .addField(
           "Support Link: ",
-          `**[Click Here!](https://discord.gg/NtyaM9d)**`,
-          true
-        )
-        .addField(
-          "Vote Link:",
-          `**[Click Here!](https://top.gg/bot/636484020301201418/vote)**`,
+          `**[Click Here!](https://discord.gg/CJ9y9We5)**`,
           true
         )
         .setTimestamp()

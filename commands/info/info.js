@@ -70,8 +70,7 @@ module.exports = {
           "\n <a:pyramid:757488922354909184> **Number of users served : ** " + users +
           "\n\n<:discordbotdev:757489652214267904> **Developers:** \n <@360498353462575115>")
           .addField("Invite Link: ",`**[Click Here!](https://discord.com/api/oauth2/authorize?client_id=636484020301201418&permissions=32&scope=bot)**`, true)
-          .addField("Support Link: ",`**[Click Here!](https://discord.gg/NtyaM9d)**`, true)
-          .addField("Vote Link:",`**[Click Here!](https://top.gg/bot/636484020301201418/vote)**`, true)
+          .addField("Support Link: ",`**[Click Here!](https://discord.gg/CJ9y9We5)**`, true)
           .setTimestamp()
           .setFooter('© Sakura', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
           .setColor(config.embedcolor);
