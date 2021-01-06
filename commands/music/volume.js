@@ -47,6 +47,15 @@ module.exports = {
 	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
+	
+	const xembed = new Discord.MessageEmbed()
+
+    .setTitle(`:x: คุณไม่ใช่ premium, ${message.author.tag}`)
+
+    .setColor(`RED`);
+	if (db.get(`premium.${message.author.id}`)) { //output : premium user
+
+  //true
     if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
 
     if (!client.player.getQueue(message)) return message.channel.send(embednosong);
@@ -60,5 +69,8 @@ module.exports = {
     client.player.setVolume(message, parseInt(args[0]));
 
     message.channel.send(embedsett);
+	} else {
+	  message.channel.send(xembed);
+	}
     }
 };
