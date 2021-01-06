@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const db = require("quick.db");
 const { embedcolor } = require('../../configs/config.json');
 
 module.exports = {
