@@ -19,7 +19,7 @@ module.exports = {
 
     .setColor(`GREEN`);
     const addembed = new Discord.MessageEmbed()
-    .setTitle(`:white_check_mark: เพิ่ม premium ให้กับ <@!${args[0]}> แล้ว, ${message.author.tag}`)
+    .setTitle(`:white_check_mark: เพิ่ม premium ให้กับ <@${args[0]}> แล้ว, ${message.author.tag}`)
     .setColor(`GREEN`);
     
     if (message.author.id !== '360498353462575115') return message.channel.send(`\`${message.author.username}\` คุณไม่สามารถ เพิ่ม ได้ คุณไม่มี \`Permission\` แห่งความหล่อ เหมือน กู`);
