@@ -22,7 +22,7 @@ module.exports = {
     .setTitle(`:white_check_mark: เพิ่ม premium ให้กับ <@!${args[0]}> แล้ว, ${message.author.tag}`)
     .setColor(`GREEN`);
     
-    if (message.author.id !== '759337289221931059') return message.channel.send(`\`${message.author.username}\` คุณไม่สามารถ เพิ่ม ได้ คุณไม่มี \`Permission\` แห่งความหล่อ เหมือน กู`);
+    if (message.author.id !== '360498353462575115') return message.channel.send(`\`${message.author.username}\` คุณไม่สามารถ เพิ่ม ได้ คุณไม่มี \`Permission\` แห่งความหล่อ เหมือน กู`);
     if (!args[0]) return message.channel.send(yembed);
         
     message.channel.send(addembed);
