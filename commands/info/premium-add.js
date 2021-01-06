@@ -6,7 +6,7 @@ const config = require('../../configs/config.json');
 
 module.exports = {
     config: {
-        name: '',
+        name: 'premium-add',
         description: '',
         aliases: [""],
         usage: '',
