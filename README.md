@@ -54,6 +54,7 @@ Karma has a lot of features, with **8 main categories**:
 </br></br>
 <a href="https://discord.gg/devs"><img src="https://discordapp.com/api/guilds/733807204938940447/embed.png?style=banner2"/></a>
 <br><br>
+* **[Website](https://karma.deltaa.tk)**
 
 ## Bot Setup  🔊
 * **Clone the Repo** by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking **[Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)**
