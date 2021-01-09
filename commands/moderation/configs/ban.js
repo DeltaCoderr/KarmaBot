@@ -8,6 +8,7 @@ module.exports = {
         description: 'Ban a member from your server!',
         usage: '<@user> [reason]',
         accessableby: "Moderators",
+        category: "Moderation",
     },
     run: async (client, message, args) => {
     if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply('i don\'t have ban members permission.')
