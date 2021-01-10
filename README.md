@@ -7,7 +7,7 @@
 [![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
 >  A Mulitpurpose Discord Bot with a Music System used by 120K+ users and more than 1000 servers.
 
-Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr) and [PixelMadness](https://github.com/PixelMadness).  
+Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
 
 ## Categories 📑
 - [x] Music & Filter
@@ -29,7 +29,7 @@ Karma has a lot of features, with **8 main categories**:
 *   👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **7** more!
 *   🖨️ **Image**: `fire`, `respect`, `scary`, `triggered` and **6** more! 
 *   ✉️ **Other**: `profile`, `addemoji`, `snipe`, `wiki` and **3** more!
-*   👑 **Owner**: `eval`
+*   👑 **Owner**: `eval`, `reload`
 
 ## Status 📥
 
@@ -94,3 +94,27 @@ Karma has a lot of features, with **8 main categories**:
 
 ## License ©️
 Karma Bot is licensed under the GPL 3.0 license. See the file `LICENSE` for more information. If you plan to use any part of this source code in your own bot, I would be grateful if you would include some form of credit somewhere.
+
+## ✨ Contributors :
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/DeltaCoderr/Covid-19-Tracker)&nbsp;
+
+Thanks goes to these wonderful people :
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<table>
+  <tr>
+     <td align="center"><a href="https://github.com/DeltaCoderr"><img src="https://avatars0.githubusercontent.com/u/51528076?s=460&u=d1e28ca661a14f0b3428cc07dd410f36f891966b&v=4" width="100px;" alt=""/><br /><sub><b>DeltaCoderr</b></sub></a><br /><a href="https://github.com/houseofgeeks/hg/commits?author=DeltaCoderr" title="Owner">👑</a></td>
+     <td align="center"><a href="https://github.com/PixelMadness"><img src="https://avatars2.githubusercontent.com/u/60398093?s=400&u=69c6d946c0c2169e68c32cf4dc6c3134436e7c71&v=4" width="100px;" alt=""/><br /><sub><b>PixelMadness</b></sub></a><br /><a href="https://github.com/pixelmadness/hg/commits?author=pixelmadness" title="Music">🎵</a></td>
+     <td align="center"><a href="https://github.com/DevRad0415"><img src="https://avatars0.githubusercontent.com/u/75932400?s=400&u=0e048959bff907bf98d5410a8d38132f56be3a32&v=4" width="100px;" alt=""/><br /><sub><b>Radical</b></sub></a><br /><a href="https://github.com/DevRad0415/hg/commits?author=DevRad0415" title="Code">💻</a></td>
+     
+  </tr>
+  
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+ 
