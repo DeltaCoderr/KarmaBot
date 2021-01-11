@@ -3,7 +3,8 @@
 const Discord = require('discord.js');
 const config = require('./configs/config.json');
 const fs = require('fs');
-const db = require('quick.db');
+const { Database } = require("quickmongo")
+const db = new Database(config.database)
 const http = require("http");
 const path = require("path");
 const express = require("express");
@@ -49,10 +50,14 @@ client.on('ready', () => {
     console.log('Karma Started!');
 });
 
+db.on("ready", () => {
+    console.log("Database Connected!")
+})
+
 //CHATBOT FEATURE 
 
-client.on("message", async message => {
-        let channel = db.fetch(`chatbot_${message.guild.id}`);
+client.on("message", async (message) => {
+        let channel = await db.get(`chatbot_${message.guild.id}`);
      if(!channel) return;
         var sChannel = message.guild.channels.cache.get(channel);
      if (message.author.bot || sChannel.id !== message.channel.id) return;
@@ -62,8 +67,9 @@ client.on("message", async message => {
      }
         sChannel.startTyping();
     if (!message.content) return sChannel.send("Please say something.");
-    fetch(` `) //your chatbot api goes here
-        .then(res => res.json())
+
+    fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=Mori_Delta`)
+    .then(res => res.json())
         .then(data => {
             sChannel.send(`> ${message.content} \n <@${message.author.id}> ${data.message}`);
         });
