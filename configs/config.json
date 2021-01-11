@@ -2,6 +2,7 @@
     "prefix": "",     
     "embedcolor": "", 
     "dev": "",       
-    "token": "",      
+    "token": "", 
+    "database": "",
     "AME_API": ""     
 }
