@@ -68,7 +68,7 @@ client.on("message", async (message) => {
         sChannel.startTyping();
     if (!message.content) return sChannel.send("Please say something.");
 
-    fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=Mori_Delta`)
+    fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=YOUR_NAME`)
     .then(res => res.json())
         .then(data => {
             sChannel.send(`> ${message.content} \n <@${message.author.id}> ${data.message}`);
