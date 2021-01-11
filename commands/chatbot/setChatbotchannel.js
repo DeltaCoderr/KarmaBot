@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
 const emote = require('../../configs/emotes.json')
-const db = require('quick.db')
+const { Database } = require("quickmongo")
+const db = new Database(config.database)
 
 module.exports = {
     config: {
@@ -57,7 +58,6 @@ if (!args[0]) {
     } catch {
         return message.channel.send(`**${emote.error} Error - Missing Permissions Or Channel Is Not A Text Channel!**`);
     }
-
     }
 }
 
