@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
 const emote = require('../../configs/emotes.json')
-const db = require('quick.db')
+const { Database } = require("quickmongo")
+const db = new Database(config.database)
 
 module.exports = {
     config: {
@@ -27,16 +28,17 @@ module.exports = {
         }})
         } else {
             let channel = message.guild.channels.cache.get(a)
-            client.guilds.cache.get(message.guild.id).channels.cache.get(channel.id).send(`** ${emote.verified} ChatBot Channel Disabled!**`)
+           // client.guilds.cache.get(message.guild.id).channels.cache.get(channel.ID).send(`** ${emote.verified} ChatBot Channel Disabled!**`)
             db.delete(`chatbot_${message.guild.id}`)
     
             message.channel.send({embed: {
             color: config.embedcolor,
-            title: `${emote.verified} ChatBot Channel has been Succesfully Disabled! \`${channel.id}\``
+            title: `${emote.verified} ChatBot Channel has been Succesfully Disabled! `
         }})
         }
         return;
-    } catch {
+    } catch(err) {
+        console.log(err)
         return message.channel.send(`${emote.error} Error - Missing Permissions or Channel Doesn't Exist`)
     }
 
