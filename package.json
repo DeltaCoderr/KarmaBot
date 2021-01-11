@@ -39,6 +39,7 @@
     "node-osu": "^2.2.0",
     "path": "^0.12.7",
     "quick.db": "^7.1.3",
+    "quickmongo": "^3.0.0",
     "relevant-urban": "^2.0.0",
     "request": "^2.88.2",
     "snekfetch": "^4.0.4",
