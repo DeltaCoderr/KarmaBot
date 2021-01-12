@@ -48,7 +48,7 @@ Karma has a lot of features, with **8 main categories**:
 
 * **Any Questions/Suggestions? Ask them in our Support Server**
 </br></br>
-<a href="https://discord.gg/NtyaM9d"><img src="https://discordapp.com/api/guilds/738773269456486401/embed.png?style=banner2"/></a>
+<a href="https://discord.gg/NtyaM9d"><img src="https://invidget.switchblade.xyz/NtyaM9d"/></a>
 <br><br>
 * **Community Server**
 </br></br>
