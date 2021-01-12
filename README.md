@@ -52,7 +52,7 @@ Karma has a lot of features, with **8 main categories**:
 <br><br>
 * **Community Server**
 </br></br>
-<a href="https://discord.gg/devs"><img src="https://discordapp.com/api/guilds/733807204938940447/embed.png?style=banner2"/></a>
+<a href="https://discord.gg/TvNTDzDXg9"><img src="https://invidget.switchblade.xyz/TvNTDzDXg9"/></a>
 <br><br>
 * **[Website](https://karma.deltaa.tk)**
 
