@@ -7,7 +7,7 @@ module.exports = {
     config: {
         name: 'addemoji',
         description: 'Adds a given Emoji to the server',
-        aliases: [""],
+        aliases: ["stealemoji"],
         usage: '',
         accessableby: "",
     },
