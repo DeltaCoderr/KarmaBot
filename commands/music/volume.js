@@ -5,7 +5,7 @@ const { embedcolor } = require('../../configs/config.json');
 module.exports = {
     config: {
         name: "volume",
-        aliases: [],
+        aliases: ["vol"],
         category: "music",
         description: "To set music volume",
         usage: "",

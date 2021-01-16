@@ -4,7 +4,7 @@ const { embedcolor } = require('../../configs/config.json')
 module.exports = {
     config: {
         name: "clear-queue",
-        aliases: [],
+        aliases: ["clear-list"],
         category: "music",
         description: "Deletes the next music in queue",
         usage: "",
