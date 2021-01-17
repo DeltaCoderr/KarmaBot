@@ -27,6 +27,6 @@ module.exports = {
 
     if (!args[0]) return message.channel.send(embedspecify);
 
-    client.player.play(message, args.join(" "))
+    client.player.play(message, args.join("Test"))
     }
 };
