@@ -68,7 +68,8 @@ client.on("message", async (message) => {
         sChannel.startTyping();
     if (!message.content) return sChannel.send("Please say something.");
 
-    fetch(`https://api.affiliateplus.xyz/api/chatbot?message=${encodeURIComponent(message.content)}&botname=${client.user.username}&ownername=YOUR_NAME`)
+    fetch(`https://api.deltaa.me/chatbot?message=${encodeURIComponent(message.content)}&name=${client.user.username}&user=${message.author.id}&gender=Male`)
+   
     .then(res => res.json())
         .then(data => {
             sChannel.send(`> ${message.content} \n <@${message.author.id}> ${data.message}`);
