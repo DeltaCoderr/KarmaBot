@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const db = require("quick.db");
 const { embedcolor } = require('../../configs/config.json')
 
 module.exports = {
@@ -47,6 +48,14 @@ module.exports = {
 	.setFooter('Sakura Music System')
 	.setColor(embedcolor)
 	.setTimestamp();
+	
+	const xembed = new Discord.MessageEmbed()
+
+    .setTitle(`:x: คุณไม่ใช่ premium, ${message.author.tag}`)
+
+    .setColor(`RED`);
+	if (db.get(`premium.${message.author.id}`)) { //output : premium user
+
 	if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
 
     if (!client.player.getQueue(message)) return message.channel.send(embednomusic);
@@ -66,6 +75,9 @@ module.exports = {
 
     if (filtersUpdated[filterRealName]) message.channel.send(embedfilteradd);
     else message.channel.send(embedfilderremove);
+	} else {
+	  message.channel.send(xembed);
+	}
 
 }
     };
