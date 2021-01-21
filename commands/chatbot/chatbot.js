@@ -16,7 +16,16 @@ module.exports = {
       const embedd = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
       .setDescription(
-        `**👋 Hey!\n Type \`${config.prefix}setchatbotchannel\` - To Set a Channel \n Type \`${config.prefix}disablechatbotchannel\` - To Disable a Channel.**\n **ChatBot Channel Set - None.** `
+        `🤖 ChatBot Configuration 
+
+        **${client.emotes.info} Usage :**
+         Type \`${config.prefix}setchatbotchannel\` - To Set a Channel 
+         Type \`${config.prefix}disablechatbotchannel\` - To Disable a Channel.
+         ChatBot Channel Set - None
+
+        **${client.emotes.info} Examples :**
+         \`${config.prefix}setchatbotchannel\` <#${message.channel.id}>
+         \`${config.prefix}disablechatbotchannel\` <#${message.channel.id}>`
       )
      .addField(
         "Support Link: ",
@@ -44,8 +53,17 @@ module.exports = {
     
       .setThumbnail(client.user.avatarURL())
       .setDescription(
-        `**Karma Bot Project** \n\n**👋 Hey!\n Type \`${config.prefix}setchatbotchannel\` - To Set a Channel \n Type \`${config.prefix}disablechatbotchannel\` - To Disable a Channel.**\n **ChatBot Channel Set as - ${embedvch}**` 
-      )
+        `**🤖 ChatBot Configuration** 
+
+        **${client.emotes.info} Usage :**
+         Type \`${config.prefix}setchatbotchannel\` - To Set a Channel 
+         Type \`${config.prefix}disablechatbotchannel\` - To Disable a Channel.
+         ChatBot Channel Set - ${embedvch} 
+
+        **${client.emotes.info} Examples :**
+         \`${config.prefix}setchatbotchannel\` <#${message.channel.id}>
+         \`${config.prefix}disablechatbotchannel\` <#${message.channel.id}>`
+                     )
      .addField(
         "Support Link: ",
         `**[Click Here!](https://discord.gg/NtyaM9d)**`,
