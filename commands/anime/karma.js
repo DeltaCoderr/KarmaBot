@@ -15,7 +15,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
        
-        let res = await fetch('https://api.deltaa.tk/karma')
+        let res = await fetch('https://api.deltaa.me/karma')
         let data = await res.json()
 
     let gifembed = new Discord.MessageEmbed()
