@@ -15,11 +15,11 @@ module.exports = {
     },
     run: async (client, message, args) => {
        
-        let res = await fetch('https://api.deltaa.me/karma')
+       let res = await fetch('https://api.deltaa.me/karma')
         let data = await res.json()
 
     let gifembed = new Discord.MessageEmbed()
-        .setTitle("Random Karma Picture or Gif")
+        .setTitle(`Random Karma ${data.url.endsWith('.png') ? 'Picture' : `${data.url.endsWith('.gif') ? 'GIF' : 'Picture'}`}`)
         .setColor(config.embedcolor)
         .setDescription(`[Full View](${data.url})`)
         .setFooter(`© Karma`, message.author.avatarURL())
