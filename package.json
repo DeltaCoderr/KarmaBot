@@ -18,7 +18,6 @@
     
     "dependencies": {
     "@discordjs/opus": "^0.3.3",
-    "@sujalgoel/reddit-image": "^1.1.1",
     "amethyste-api": "^1.1.4",
     "axios": "^0.21.0",
     "canvacord": "^5.0.8",
@@ -44,6 +43,7 @@
     "relevant-urban": "^2.0.0",
     "request": "^2.88.2",
     "snekfetch": "^4.0.4",
+    "reddit.images": "^1.1.2",
     "superagent": "^6.1.0",
     "to-zalgo": "^1.0.1",
     "weather-js": "^2.0.0",
