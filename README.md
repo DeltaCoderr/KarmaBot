@@ -109,7 +109,7 @@ Thanks goes to these wonderful people :
   <tr>
      <td align="center"><a href="https://github.com/DeltaCoderr"><img src="https://avatars0.githubusercontent.com/u/51528076?s=460&u=d1e28ca661a14f0b3428cc07dd410f36f891966b&v=4" width="100px;" alt=""/><br /><sub><b>DeltaCoderr</b></sub></a><br /><a href="https://github.com/houseofgeeks/hg/commits?author=DeltaCoderr" title="Owner">👑</a></td>
      <td align="center"><a href="https://github.com/Madnesssik"><img src="https://avatars.githubusercontent.com/u/78844616?s=400&u=cfb9cf4010f54d665c8c9f6290d15a19802bef99&v=4" width="100px;" alt=""/><br /><sub><b>Madnesssik</b></sub></a><br /><a href="https://github.com/Madnesssik/hg/commits?author=Madnesssik" title="Music">🎵</a></td>
-     <td align="center"><a href="https://github.com/DevRad0415"><img src="https://avatars0.githubusercontent.com/u/75932400?s=400&u=0e048959bff907bf98d5410a8d38132f56be3a32&v=4" width="100px;" alt=""/><br /><sub><b>Zeke</b></sub></a><br /><a href="https://github.com/DevRad0415/hg/commits?author=DevRad0415" title="Code">💻</a></td>
+     <td align="center"><a href="https://github.com/AzrailZeke"><img src="https://avatars.githubusercontent.com/u/78249812?s=400&u=c58998a50afa78b69b2fa6cd4edcff46dd09d5df&v=4" width="100px;" alt=""/><br /><sub><b>AzrailZeke</b></sub></a><br /><a href="https://github.com/AzrailZeke/hg/commits?author=AzrailZeke" title="Code">💻</a></td>
      
   </tr>
   
