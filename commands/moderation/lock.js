@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js")
+const config = require('../../configs/config.json');
 
 module.exports = {
     config: {
@@ -24,7 +25,18 @@ module.exports = {
      await channel.updateOverwrite(message.guild.id, {
             SEND_MESSAGES: false
         });
-        channel.send(`${message.author.tag} locked this channel! ${reason? `\n\n**Reason**\n${reason}` : ''}`)
+    if(reason) {
+    const rr = new MessageEmbed()
+    .addField('Channel Locked!', `\`\`\`diff\n+ This channel has been locked by ${message.author.tag}!\`\`\``)
+    .addField('Reason', `\`\`\`diff\n+ ${reason}\`\`\``)
+    .setColor(config.embedcolor)
+    channel.send(rr)
+    } else {
+    const rrr = new MessageEmbed()
+   .addField('Channel Locked!', `\`\`\`diff\n+ This channel has been locked by ${message.author.tag}!\`\`\``)
+   .setColor(config.embedcolor)
+    channel.send(rrr)
+    }
     message.channel.send(`<#${channel.id}> has been successfully locked.`)
         } catch(err) {
         console.log(err)
