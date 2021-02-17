@@ -11,20 +11,22 @@ module.exports = {
         accessableby: "",
     },
     run: async (client, message, args) => {
-        if(!message.channel.nsfw) return message.channel.send("This Commmand is only usable in NSFW channels.")
-        
-        const { body } = await superagent
-        .get("https://nekos.life/api/neko");
-       const  link = body.neko;
-        
-        const embed = new Discord.MessageEmbed()
-        .setColor(config.embedcolor)
-        .setTitle("Here's Your Neko ")
-        .setImage(body.neko)
-         .setTimestamp()
-        .setFooter(`© Karma `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
-        message.channel.send({embed})
-
-    }
+       
+  
+        superagent.get('https://shiro.gg/api/images/neko')
+        .end((err, response) => {
+      const embed = new Discord.MessageEmbed()
+      .setTitle("Here's your Neko")
+      .setImage(response.body.url)
+      .setColor(config.embedcolor)
+      .setTimestamp()
+      .setFooter(`© Karma `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
+      .setURL(response.body.url);
+  message.channel.send(embed);
+    }).catch((err) => message.channel.send({embed: {
+                color: 16734039,
+                title: "Something went wrong... :cry:"
+            }}));
+}
 }
 
