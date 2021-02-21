@@ -45,7 +45,7 @@ module.exports = {
         .addField(`Episodes`, Anime.episodes, true)
         .addField(`Duration`, Anime.duration, true)
         .addField(`Popularity`, Anime.popularity, true)
-        .addField(`Gneres`, Anime.genres.join(", "))
+        .addField(`Genres`, Anime.genres.join(", "))
         .setThumbnail(Anime.picture)
         .setFooter(`Score - ${Anime.score}`)
         .setTimestamp();
