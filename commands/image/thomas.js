@@ -16,8 +16,7 @@ let user = await message.mentions.members.first() || message.guild.members.cache
 
 if(!args[0]) user = message.member;
 
-if(!user) return message.channel.send(`User not found!`)
-};
+if(!user) return message.channel.send(`User not found!`);
 
  let m = await message.channel.send("**Please Wait...**");   
  let avatar = user.user.displayAvatarURL({
