@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-
+const displayFmts = {
+	jpg: 'JPEG',
+	png: 'PNG',
+	gif: 'GIF',
+	webp: 'WebP'
+};
 
 module.exports = {
     config: {
@@ -11,18 +16,19 @@ module.exports = {
         accessableby: "",
     },
     run: async (client, message, args) => {
-    
-        const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
-    const embed = new Discord.MessageEmbed()
-        .setAuthor(member.user.tag, member.user.displayAvatarURL({ dynamic: true, size: 1024 }))
-        .setColor(config.embedcolor)
-        .setTitle(`**Avatar**`)
-        .setDescription(`\`Links:\` **[png](${member.user.displayAvatarURL({format: "png", size: 1024})}) | [jpg](${member.user.displayAvatarURL({format: "jpg", size: 1024})}) | [gif](${member.user.displayAvatarURL({format: "gif", size: 1024, dynamic: true})}) | [webp](${member.user.displayAvatarURL({format: "webp", size: 1024})})**`)
-        .setImage(member.user.displayAvatarURL({ dynamic: true, size: 1024 }))
-        .setFooter(`Requested by ${message.member.displayName}`, message.author.displayAvatarURL({ dynamic: true, size: 1024 }))
-        .setTimestamp()
-    return message.channel.send(embed)
-    
+const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(e => e.user.username === args.join(' ')) || message.member;
+		const formats = ['png'];
+		if (user.user.avatar) formats.push('jpg', 'webp');
+		const format = user.user.avatar && user.user.avatar.startsWith('a_') ? 'gif' : 'png';
+		if (format === 'gif') formats.push('gif');
+		const embed = new MessageEmbed()
+			.setTitle(user.user.tag)
+			.setDescription(
+                formats.map(fmt => `[${displayFmts[fmt]}](${user.user.displayAvatarURL({ format: fmt, size: 2048 })})`).join(' | ')
+			)
+			.setImage(user.user.displayAvatarURL({ format, size: 2048 }))
+			.setColor(config.embedcolor);
+		return message.channel.send(embed);
     }
 }
 
