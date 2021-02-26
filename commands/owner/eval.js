@@ -20,7 +20,7 @@ module.exports = {
   }
   
         const content = message.content.split(" ").slice(1).join(" ");
-        const result = new Promise((resolve, reject) => resolve(eval(content)));
+        const result = new Promise((resolve, reject) => resolve(eval(`(async () => {${content}})()`)));
         
         return result.then((output) => {
             if(typeof output !== "string"){
