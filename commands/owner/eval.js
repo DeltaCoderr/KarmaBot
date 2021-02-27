@@ -1,13 +1,18 @@
+/* ====================================================================================
+Some packages are declared but not used, were just importing them so if we use the eval we dont need to define it 
+==================================================================================== */
+const { MessageAttachment, MessageEmbed, MessageCollector } = require('discord.js');
+const { inspect } = require('util');
+const { Type } = require('@anishshobith/deeptype');
+const sourcebin = require('sourcebin');
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-
-
 
 module.exports = {
     config: {
         name: 'eval',
         description: 'Eval',
-        aliases: [""],
+        aliases: [],
         usage: '<user>',
         accessableby: "not you",
     },
@@ -19,28 +24,56 @@ module.exports = {
     return message.channel.send("Only people who are worthy enough can use it")
   }
   
-        const content = message.content.split(" ").slice(1).join(" ");
-        const result = new Promise((resolve, reject) => resolve(eval(content)));
+function clean(text) {
+        if (typeof text === 'string') {
+            text = text
+                .replace(/`/g, `\`${String.fromCharCode(8203)}`)
+                .replace(/@/g, `@${String.fromCharCode(8203)}`)
+                .replace(new RegExp(client.token, 'gi'), '(node:800) UnhandledPromiseRejectionWarning: Error: Incorrect login details were provided.')
+        }
+        return text;
+ }
+         const msg = message;
+        if (!args.length) return message.channel.send('You must provide something to evaluate.');
+        let code = args.join(' ');
+        code = code.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
         
-        return result.then((output) => {
-            if(typeof output !== "string"){
-                output = require("util").inspect(output, { depth: 0 });
+        let evaled;
+        try {
+            const start = process.hrtime();
+            if(code.includes('await')) {
+            evaled = eval(`(async () => {${code}})()`)
+            } else {
+            evaled = eval(code);
             }
-            if(output.includes(client.token)){
-                output = output.replace(message.client.token, "T0K3N");
+            if(eval instanceof Promise) {
+                evaled = await evaled;
             }
-            message.channel.send(output, {
-                code: "js"
-            });  
-        }).catch((err) => {
-            err = err.toString();
-            if(err.includes(message.client.token)){
-                err = err.replace(message.client.token, "T0K3N");
+
+            const stop = process.hrtime(start);
+            const response = [
+                `**Output**: \`\`\`js\n${clean(inspect(evaled, { depth: 0 }))}\n\`\`\``,
+                `**Type:** \`\`\`ts\n${new Type(evaled).is}\n\`\`\``,
+                `**Time:** \`\`\`${(((stop[0] * 1e9) + stop[1])) / 1e6}ms \`\`\``
+            ]
+            const res = response.join('\n');
+            if (res.length < 2000) {
+                await message.channel.send(res)
+            } else {
+                let output = await sourcebin.create([{ 
+                    name: 'output',
+                    content: res,
+                    languageId: 'js'
+                }], {
+                    title: 'Evaluation Output',
+                    description: 'Outcome of eval command.'
+                });
+                output = await sourcebin.shorten(output.url);
+
+                await message.channel.send(output);
             }
-            message.channel.send(err, {
-                code: "js"
-            });
-        });
-      
-    }
-}
+        } catch (err) {
+            return message.channel.send(`Error: \`\`\`xl\n${clean(err)}\n\`\`\``);
+        }
+   }
+};
