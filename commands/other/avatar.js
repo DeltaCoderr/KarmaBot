@@ -5,7 +5,7 @@ const config = require('../../configs/config.json');
 module.exports = {
     config: {
         name: 'avatar',
-        description: 'Show user avatar',
+        description: 'Show a user\'s avatar',
         aliases: ["av"],
         usage: '',
         accessableby: "",
