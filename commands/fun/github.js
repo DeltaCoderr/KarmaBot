@@ -6,7 +6,7 @@ const fetch = require('node-fetch')
 module.exports = {
     config: {
         name: 'github',
-        description: 'Shows information about github user',
+        description: 'Shows information about a github user',
         aliases: ["github"],
         usage: '<query>',
         accessableby: "",
