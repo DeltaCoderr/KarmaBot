@@ -8,7 +8,7 @@ require('moment-duration-format')
 module.exports = {
     config: {
         name: 'profile',
-        description: 'Shows information about user',
+        description: 'Shows information about a user',
         aliases: ["whois", "userinfo"],
         usage: '',
         accessableby: "",
