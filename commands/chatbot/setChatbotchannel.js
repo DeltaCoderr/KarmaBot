@@ -28,7 +28,7 @@ if (!args[0]) {
   } else
     return message.channel.send({embed: {
             color: config.embedcolor,
-            title: `${emote.error} Please Enter a Channel ID or ID to set`
+            title: `${emote.error} Please Enter a Channel or Channel ID to set`
         }})
 }
     let channel = message.mentions.channels.first() || client.guilds.cache.get(message.guild.id).channels.cache.get(args[0]) || message.guild.channels.cache.find(c => c.name.toLowerCase() === args.join(' ').toLocaleLowerCase());
