@@ -78,14 +78,18 @@ client.on("message", async (message) => {
               
     });
 
-    client.snipes = new Map();
+client.snipes = new Map();
 
-    client.on('messageDelete', function(message, channel){
-    client.snipes.set(message.channel.id,{
-        content:message.content,
-        author:message.author.tag,
-        image:message.attachments.first() ? message.attachments.first().proxyURL : null
+client.on('messageDelete', function(message, channel){
+client.snipes.set(message.channel.id,{
+    content:message.content,
+    author:message.author.tag,
+    authorimg:message.author.avatarURL({dynamic: true}),
+    image:message.attachments.first() ? message.attachments.first().proxyURL : null,
+    channelname:message.channel.name,
+    messageid:message.id,
+    channelid:message.channel.id
 })
-});
+})
 
 client.login(config.token)
