@@ -20,7 +20,7 @@ module.exports = {
 
     message.channel.send(
       new MessageEmbed()
-        .setColor("RANDOM")
+        .setColor(config.embedcolor)
         .setImage(url)
         .setDescription(`${message.member} smugs.`)
     );

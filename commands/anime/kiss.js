@@ -26,7 +26,7 @@ module.exports = {
 
       return message.channel.send(
         embed
-          .setColor("RANDOM")
+          .setColor(config.embedcolor)
           .setDescription(`${message.member}, How dare you!`)
           .setImage(url)
           .setFooter(
@@ -46,7 +46,7 @@ module.exports = {
       } else if (message.mentions.members.size) {
         return message.channel.send(
           embed
-            .setColor("RANDOM")
+            .setColor(config.embedcolor)
             .setDescription(
               `${message.member} kisses ${message.mentions.members.first()}!`
             )

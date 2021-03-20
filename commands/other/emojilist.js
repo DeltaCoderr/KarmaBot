@@ -34,7 +34,7 @@ module.exports = {
       .setDescription(
         `**Animated [${Animated}]**:\n${EmojisAnimated}\n\n**Standard [${EmojiCount}]**:\n${Emojis}`
       )
-      .setColor(`RANDOM`);
+      .setColor(config.embedcolor);
 
     if (Embed.length > 2000) {
       return message.channel.send(

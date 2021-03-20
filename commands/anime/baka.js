@@ -32,10 +32,13 @@ module.exports = {
     } else if (message.mentions.members.size) {
       return message.channel.send(
         embed
-          .setColor("GREY")
+          .setColor(config.embedcolor)
           .setImage(url)
           .setDescription(`${message.mentions.members.first()} B~baka!`)
       );
-    } else return message.channel.send(embed.setColor("RANDOM").setImage(url));
+    } else
+      return message.channel.send(
+        embed.setColor(config.embedcolor).setImage(url)
+      );
   },
 };

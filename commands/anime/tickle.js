@@ -35,7 +35,7 @@ module.exports = {
     } else if (message.mentions.members.size) {
       return message.channel.send(
         embed
-          .setColor("RANDOM")
+          .setColor(config.embedcolor)
           .setDescription(
             `${
               message.member
@@ -44,7 +44,9 @@ module.exports = {
           .setImage(url)
       );
     } else {
-      return message.channel.send(embed.setColor("RANDOM").setImage(url));
+      return message.channel.send(
+        embed.setColor(config.embedcolor).setImage(url)
+      );
     }
   },
 };

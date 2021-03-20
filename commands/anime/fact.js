@@ -13,7 +13,7 @@ module.exports = {
   run: async (client, message, args) => {
     random.getFact().then((r) => {
       const embed = new MessageEmbed()
-        .setColor("RANDOM")
+        .setColor(config.embedcolor)
         .setTitle("Did you know?")
         .setThumbnail(
           "https://media.discordapp.net/attachments/711250719675645962/721640740136026202/uhjhyj.gif"

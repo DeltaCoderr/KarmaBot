@@ -38,7 +38,7 @@ module.exports = {
     } else if (message.mentions.members.size) {
       return message.channel.send(
         embed
-          .setColor("GREY")
+          .setColor(config.embedcolor)
           .setDescription(
             `${message.member} slapped ${message.mentions.members.first()}!`
           )
