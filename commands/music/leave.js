@@ -23,7 +23,7 @@ await message.member.voice.channel.leave()
 
 const left = new Discord.MessageEmbed()
 .setTitle('Left The Voice Channel')
-.setDescription(`${client.emotes.success} **Successfully left the voice channel!`)
+.setDescription(`${client.emotes.success} **Successfully left the voice channel!**`)
 .setFooter('Karma Music System')
 .setColor(embedcolor)
 return message.channel.send(left)
