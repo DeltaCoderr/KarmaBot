@@ -1,11 +1,22 @@
-    const { MessageEmbed } = require("discord.js");
-    const { readdirSync } = require("fs");
-    const { stripIndents } = require("common-tags");
-    const { embedcolor } = require("../../configs/config.json");
-    const { prefix } = require('../../configs/config.json');
+    const {
+        MessageEmbed
+    } = require("discord.js");
+    const {
+        readdirSync
+    } = require("fs");
+    const {
+        stripIndents
+    } = require("common-tags");
+    const {
+        embedcolor
+    } = require("../../configs/config.json");
+    const {
+        prefix
+    } = require('../../configs/config.json');
 
     module.exports = {
         config: {
+            category: __dirname.split("commands\\")[1],
             name: "help",
             aliases: ["h"],
             usage: "[command name] (optional)",
@@ -31,7 +42,7 @@
                 embed.addField(`${client.emotes.image} Image [10] - `, '`fire`, `respect`, `rip`, `scary`, `trash`, `triggered`, `beautiful`, `affect`, `delete`, `thomas`')
                 embed.addField(`${client.emotes.music1} Music [14] - `, '`clear-queue`, `filter`, `filters`, `loop`, `np`, `pause`, `lyrics`, `play`, `queue`, `resume`, `shuffle`, `skip` `stop`, `volume`, `leave`')
                 embed.addField(`${client.emotes.other} Other [7] -`, '`avatar`, `profile`, `serverinfo`, `snipe`, `urban`, `wiki`, `addemoji`, `emojilist`')
-                if(message.channel.nsfw) {
+                if (message.channel.nsfw) {
                     embed.addField(`${client.emotes.nsfw} NSFW [3] - `, '`hentai`, `thighs`, `bondage`')
                 } else {
                     embed.addField(`${client.emotes.nsfw} NSFW [3] - `, '**This section can only be used on NSFW Channel**')
@@ -46,7 +57,7 @@
                 if (!command) return message.channel.send(embed.setTitle("**Invalid Command!**").setDescription(`**Do \`${prefix}help\` For the List Of the Commands!**`))
                 command = command.config
 
-                embed.setDescription(stripIndents`**Karma Prefix Is \`${prefix}\`**\n
+                embed.setDescription(stripIndents `**Karma Prefix Is \`${prefix}\`**\n
                 ** Command -** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}\n
                 ** Description -** ${command.description || "No Description provided."}\n
                 ** Usage -** ${command.usage ? `\`${prefix}${command.name} ${command.usage}\`` : "No Usage"}\n

@@ -1,10 +1,15 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-const { parse } = require("twemoji-parser");
-const { MessageEmbed } = require("discord.js");
+const {
+    parse
+} = require("twemoji-parser");
+const {
+    MessageEmbed
+} = require("discord.js");
 
 module.exports = {
     config: {
+        category: __dirname.split("commands\\")[1],
         name: 'addemoji',
         description: 'Adds a given Emoji to the server',
         aliases: ["stealemoji"],
@@ -27,10 +32,10 @@ module.exports = {
             const name = args.slice(1).join(" ");
             try {
                 const Added = new MessageEmbed()
-                .setColor(config.embedcolor)
-                .setTitle(`${client.emotes.verified} Emoji Added`)
-                .setDescription(
-                `${client.emotes.verified} Emoji Has Been Added! | Name : ${name || `${customemoji.name}`} | Preview : [Click Me](${Link})`
+                    .setColor(config.embedcolor)
+                    .setTitle(`${client.emotes.verified} Emoji Added`)
+                    .setDescription(
+                        `${client.emotes.verified} Emoji Has Been Added! | Name : ${name || `${customemoji.name}`} | Preview : [Click Me](${Link})`
                     );
                 await message.guild.emojis.create(
                     `${Link}`,
@@ -40,10 +45,12 @@ module.exports = {
             } catch (err) {
                 console.log(err)
                 return message.channel.send(`${client.emotes.error} An error has occured!\n\n**Possible Reasons:**\n\`\`\`- This server has reached the emojis limit\n- The bot doesn't have permissions.\n- The emojis size is too big.\`\`\``)
-           
+
             }
         } else {
-            let CheckEmoji = parse(emoji, { assetType: "png" });
+            let CheckEmoji = parse(emoji, {
+                assetType: "png"
+            });
             if (!CheckEmoji[0])
                 return message.channel.send(`${client.emotes.error} **Please Give Me A Valid Emoji!**`);
             message.channel.send(

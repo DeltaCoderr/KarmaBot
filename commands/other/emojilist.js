@@ -1,8 +1,11 @@
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 const config = require("../../configs/config.json");
 
 module.exports = {
   config: {
+    category: __dirname.split("commands\\")[1],
     name: "emojis",
     description: "Shows all the emojis available in the server",
     aliases: ["Serveremojis", "emojilist", "serveremojis"],

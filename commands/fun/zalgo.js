@@ -1,10 +1,13 @@
 const Discord = require('discord.js');
-const { MessageEmbed } = require('discord.js')
+const {
+    MessageEmbed
+} = require('discord.js')
 const config = require('../../configs/config.json');
 const Zalgo = require('to-zalgo')
 
 module.exports = {
     config: {
+        category: __dirname.split("commands\\")[1],
         name: 'zalgo',
         description: 'Converts your text to Zalgo',
         aliases: ["zalgo"],
@@ -12,13 +15,12 @@ module.exports = {
         accessableby: "",
     },
     run: async (client, message, args) => {
-    
+
         const embed = new MessageEmbed()
-     .setColor(config.embedcolor)
-     .setDescription(`${Zalgo(args.join(" "))}`)
-     .setTimestamp()
-     .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
-    message.channel.send(embed)
+            .setColor(config.embedcolor)
+            .setDescription(`${Zalgo(args.join(" "))}`)
+            .setTimestamp()
+            .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
+        message.channel.send(embed)
     }
 }
-

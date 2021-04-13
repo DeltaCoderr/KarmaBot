@@ -1,12 +1,17 @@
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 const config = require("../../configs/config.json");
 const nekos = require("nekos.life");
 const {
-  sfw: { tickle },
+  sfw: {
+    tickle
+  },
 } = new nekos();
 
 module.exports = {
   config: {
+    category: __dirname.split("commands\\")[1],
     name: "tickle",
     description: "Get's a tickle reaction!",
     aliases: ["TICKLE", "Tickle"],
@@ -14,7 +19,9 @@ module.exports = {
     accessableby: "",
   },
   run: async (client, message, args) => {
-    const { url } = await tickle().catch(() => {});
+    const {
+      url
+    } = await tickle().catch(() => {});
 
     if (!url) return message.channel.send(`Could not connect to nekos.life`);
 
@@ -35,13 +42,13 @@ module.exports = {
     } else if (message.mentions.members.size) {
       return message.channel.send(
         embed
-          .setColor(config.embedcolor)
-          .setDescription(
-            `${
+        .setColor(config.embedcolor)
+        .setDescription(
+          `${
               message.member
             } started tickling ${message.mentions.members.first()}!`
-          )
-          .setImage(url)
+        )
+        .setImage(url)
       );
     } else {
       return message.channel.send(

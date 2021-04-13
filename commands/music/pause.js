@@ -1,8 +1,11 @@
 const Discord = require("discord.js");
-const { embedcolor } = require('../../configs/config.json');
+const {
+    embedcolor
+} = require('../../configs/config.json');
 
 module.exports = {
     config: {
+        category: __dirname.split("commands\\")[1],
         name: "pause",
         aliases: [],
         category: "music",
@@ -11,30 +14,30 @@ module.exports = {
         accessableby: ""
     },
     run: async (client, message, args) => {
-	const embednoinvoice = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-    .setFooter('Karma Music System')
-    .setColor(embedcolor)
-	.setTimestamp();
-	const embednomusic = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - No music currently playing !`)
-    .setFooter('Karma Music System')
-    .setColor(embedcolor)
-	.setTimestamp();
-	const embedpaused = new Discord.MessageEmbed()
-	.setTitle('Paused!')
-	.setDescription(`${client.emotes.success} - Song ${client.player.getQueue(message).playing.title} **paused** !`)
-    .setFooter('Karma Music System')
-    .setColor(embedcolor)
-	.setTimestamp();
-    if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
+        const embednoinvoice = new Discord.MessageEmbed()
+            .setTitle('Error!')
+            .setDescription(`${client.emotes.error} - You're not in a voice channel !`)
+            .setFooter('Karma Music System')
+            .setColor(embedcolor)
+            .setTimestamp();
+        const embednomusic = new Discord.MessageEmbed()
+            .setTitle('Error!')
+            .setDescription(`${client.emotes.error} - No music currently playing !`)
+            .setFooter('Karma Music System')
+            .setColor(embedcolor)
+            .setTimestamp();
+        const embedpaused = new Discord.MessageEmbed()
+            .setTitle('Paused!')
+            .setDescription(`${client.emotes.success} - Song ${client.player.getQueue(message).playing.title} **paused** !`)
+            .setFooter('Karma Music System')
+            .setColor(embedcolor)
+            .setTimestamp();
+        if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
 
-    if (!client.player.getQueue(message)) return message.channel.send(embednomusic);
+        if (!client.player.getQueue(message)) return message.channel.send(embednomusic);
 
-    client.player.pause(message);
+        client.player.pause(message);
 
-    message.channel.send(embedpaused);
+        message.channel.send(embedpaused);
     }
 };

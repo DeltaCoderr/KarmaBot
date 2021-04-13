@@ -5,7 +5,7 @@ const Scraper = require('mal-scraper')
 
 module.exports = {
     config: {
-        name: 'anime',
+category: __dirname.split("commands\\")[1],        name: 'anime',
         description: 'Shows information about anime',
         aliases: ["anime"],
         usage: '<query/name>',

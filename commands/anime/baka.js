@@ -1,12 +1,17 @@
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 const config = require("../../configs/config.json");
 const nekos = require("nekos.life");
 const {
-  sfw: { baka },
+  sfw: {
+    baka
+  },
 } = new nekos();
 
 module.exports = {
   config: {
+    category: __dirname.split("commands\\")[1],
     name: "baka",
     description: "Get's a reaction for baka!",
     aliases: ["BAKA", "Baka"],
@@ -14,7 +19,9 @@ module.exports = {
     accessableby: "",
   },
   run: async (client, message, args) => {
-    const { url } = await baka().catch(() => {});
+    const {
+      url
+    } = await baka().catch(() => {});
 
     if (!url) return message.channel.send(`Could not connect to nekos.life`);
 
@@ -32,9 +39,9 @@ module.exports = {
     } else if (message.mentions.members.size) {
       return message.channel.send(
         embed
-          .setColor(config.embedcolor)
-          .setImage(url)
-          .setDescription(`${message.mentions.members.first()} B~baka!`)
+        .setColor(config.embedcolor)
+        .setImage(url)
+        .setDescription(`${message.mentions.members.first()} B~baka!`)
       );
     } else
       return message.channel.send(

@@ -1,11 +1,16 @@
-const { MessageEmbed } = require("discord.js");
+const {
+  MessageEmbed
+} = require("discord.js");
 const config = require("../../configs/config.json");
 const nekos = require("nekos.life");
 const {
-  sfw: { slap },
+  sfw: {
+    slap
+  },
 } = new nekos();
 module.exports = {
   config: {
+    category: __dirname.split("commands\\")[1],
     name: "slap",
     description: "Get's a slap reaction!",
     aliases: ["SLAP", "Slap"],
@@ -13,7 +18,9 @@ module.exports = {
     accessableby: "",
   },
   run: async (client, message, args) => {
-    const { url } = await slap().catch(() => {});
+    const {
+      url
+    } = await slap().catch(() => {});
 
     if (!url) return message.channel.send(`Could not connect to nekos.life`);
 
@@ -38,11 +45,11 @@ module.exports = {
     } else if (message.mentions.members.size) {
       return message.channel.send(
         embed
-          .setColor(config.embedcolor)
-          .setDescription(
-            `${message.member} slapped ${message.mentions.members.first()}!`
-          )
-          .setImage(url)
+        .setColor(config.embedcolor)
+        .setDescription(
+          `${message.member} slapped ${message.mentions.members.first()}!`
+        )
+        .setImage(url)
       );
     } else {
       return message.channel.send(
