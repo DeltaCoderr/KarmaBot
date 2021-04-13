@@ -1,10 +1,7 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
 const emote = require('../../configs/emotes.json')
-const {
-    Database
-} = require("quickmongo")
-const db = new Database(config.database)
+const db = require('quick.db')
 
 module.exports = {
     config: {
@@ -24,7 +21,7 @@ module.exports = {
             }
         })
         if (!args[0]) {
-            let b = await db.fetch(`chatbot_${message.guild.id}`);
+            let b = db.fetch(`chatbot_${message.guild.id}`);
             let channelName = message.guild.channels.cache.get(b);
             if (message.guild.channels.cache.has(b)) {
                 return message.channel.send(
