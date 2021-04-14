@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
-const db = require('quick.db')
+const { Database } = require("quickmongo")
+const db = new Database(config.database)
 
 
 module.exports = {
@@ -44,7 +45,7 @@ module.exports = {
       )
       .setColor(config.embedcolor);
 
-    let channel1 = db.fetch(`chatbot_${message.guild.id}`);
+    let channel1 = await db.fetch(`chatbot_${message.guild.id}`);
     if (!channel1) return message.channel.send(embedd)
     var sChannel = message.guild.channels.cache.get(channel1);
     let embedvch = "<#" + sChannel.id + ">"

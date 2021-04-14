@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
 const emote = require('../../configs/emotes.json')
-const db = require('quick.db')
+const { Database } = require("quickmongo")
+const db = new Database(config.database)
 
 module.exports = {
     config: {
@@ -21,7 +22,7 @@ module.exports = {
             }
         })
         try {
-            let a = db.fetch(`chatbot_${message.guild.id}`)
+            let a = await db.fetch(`chatbot_${message.guild.id}`)
 
             if (!a) {
                 return message.channel.send({
@@ -33,7 +34,7 @@ module.exports = {
             } else {
                 let channel = message.guild.channels.cache.get(a)
                 // client.guilds.cache.get(message.guild.id).channels.cache.get(channel.ID).send(`** ${emote.verified} ChatBot Channel Disabled!**`)
-                db.delete(`chatbot_${message.guild.id}`)
+                await db.delete(`chatbot_${message.guild.id}`)
 
                 message.channel.send({
                     embed: {
