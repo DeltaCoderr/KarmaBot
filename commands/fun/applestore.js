@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
 const AppleStore = require("app-store-scraper");
-const EmbedColor = `RANDOM`;
+
 
 module.exports = {
     config: {
