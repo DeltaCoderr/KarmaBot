@@ -32,7 +32,7 @@ module.exports = {
 		try{
 			const data = response[0];
 			const embed = new MessageEmbed()
-				.setColor('BLUE')
+				.setColor(config.embedcolor)
 				.setTitle(data.name)
 				.setThumbnail(`https://www.countryflags.io/${data.alpha2Code}/flat/64.png`)
 				.setFooter(`Requested by ${message.author.tag}`)
