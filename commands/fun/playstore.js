@@ -29,7 +29,7 @@ module.exports = {
       }
 
       const Embed = new MessageEmbed()
-        .setColor("RANDOM")
+        .setColor(config.embedcolor)
         .setThumbnail(App.icon)
         .setURL(App.url)
         .setTitle(`${App.title}`)
