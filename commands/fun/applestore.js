@@ -37,7 +37,7 @@ module.exports = {
       let Score = App.score.toFixed(1);
 
       let Embed = new Discord.MessageEmbed()
-        .setColor(EmbedColor || "RANDOM")
+        .setColor(config.embedcolor)
         .setThumbnail(App.icon)
         .setURL(App.url)
         .setTitle(`${App.title}`)
