@@ -24,21 +24,21 @@ module.exports = {
     if (color < 0) return message.channel.send({
       embed: {
         color: config.embedcolor,
-        description: "Provide Hex Code for embed Color. \`${config.prefix}cembed <hex color> <title> <embed message>\`"
+        description: `Provide Hex Code for embed Color. \`${config.prefix}cembed <hex color> <title> <embed message>\``
       }
     });
 
     if (title < 1) return message.channel.send({
       embed: {
         color: config.embedcolor,
-        description: "Provide Title for embed. \`${config.prefix}cembed <hex color> <title> <embed message>\`"
+        description: `Provide Title for embed. \`${config.prefix}cembed <hex color> <title> <embed message>\``
       }
     });
 
     if (saymessage < 2) return message.channel.send({
       embed: {
         color: config.embedcolor,
-        description: "Provide Message for Embed. \`${config.prefix}cembed <hex color> <title> <embed message>\`"
+        description: `Provide Message for Embed. \`${config.prefix}cembed <hex color> <title> <embed message>\``
       }
     });
 
