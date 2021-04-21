@@ -13,7 +13,7 @@ module.exports = {
     run: async (client, message, args) => {
       if (!message.guild.me.hasPermission(["ADMINISTRATOR"]))
       return message.channel.send(
-        "I Don't Have Proper Permissions To Use This Command! \`d!cembed <hex color> <title> <embed message>\`"
+        "I Don't Have Proper Permissions To Use This Command! \`${config.prefix}cembed <hex color> <title> <embed message>\`"
       );
         message.delete()
 
