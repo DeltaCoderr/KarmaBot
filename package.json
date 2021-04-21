@@ -33,6 +33,7 @@
     "fs": "^0.0.1-security",
     "google-play-scraper": "^8.0.2",
     "http": "^0.0.1-security",
+    "is-url": "^1.2.4",
     "jimp": "^0.16.1",
     "mal-scraper": "^2.11.2",
     "moment": "^2.29.1",
