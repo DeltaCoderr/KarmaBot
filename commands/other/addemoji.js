@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../configs/config.json');
+let isUrl = require("is-url");
 const { parse } = require("twemoji-parser");
 const { MessageEmbed } = require("discord.js");
 
@@ -8,7 +9,7 @@ module.exports = {
         name: 'addemoji',
         description: 'Adds a given Emoji to the server',
         aliases: ["stealemoji"],
-        usage: '',
+        usage: '<emoji>/<link> (emoji name)',
         accessableby: "",
     },
     run: async (client, message, args) => {
@@ -17,39 +18,40 @@ module.exports = {
             return message.channel.send(`${client.emotes.error} You don't have the permissions to use this command [Manage Emojis]!`)
         }
 
-        const emoji = args[0];
-        if (!emoji) return message.channel.send(`Please Give Me A Emoji!`);
+        let type = "";
+        let name = "";
+        let emote = args.join(" ").match(/<?(a)?:?(\w{2,32}):(\d{17,19})>?/gi);
 
-        let customemoji = Discord.Util.parseEmoji(emoji);
-        if (customemoji.id) {
-            const Link = `https://cdn.discordapp.com/emojis/${customemoji.id}.${customemoji.animated ? "gif" : "png"
-                }`;
-            const name = args.slice(1).join(" ");
-            try {
-                const Added = new MessageEmbed()
-                .setColor(config.embedcolor)
-                .setTitle(`${client.emotes.verified} Emoji Added`)
-                .setDescription(
-                `${client.emotes.verified} Emoji Has Been Added! | Name : ${name || `${customemoji.name}`} | Preview : [Click Me](${Link})`
-                    );
-                await message.guild.emojis.create(
-                    `${Link}`,
-                    `${name || `${customemoji.name}`}`
-                )
-                return message.channel.send(Added)
-            } catch (err) {
-                console.log(err)
-                return message.channel.send(`${client.emotes.error} An error has occured!\n\n**Possible Reasons:**\n\`\`\`- This server has reached the emojis limit\n- The bot doesn't have permissions.\n- The emojis size is too big.\`\`\``)
-           
-            }
+        if(emote) {
+            emote = args[0];
+            type = "emoji";
+            name = args.join(" ").replace(/<?(a)?:?(\w{2,32}):(\d{17,19})>?/gi, "").trim().split(" ")[0];
         } else {
-            let CheckEmoji = parse(emoji, { assetType: "png" });
-            if (!CheckEmoji[0])
-                return message.channel.send(`${client.emotes.error} **Please Give Me A Valid Emoji!**`);
-            message.channel.send(
-                `${client.emotes.error} **You Can Use Normal Emoji Without Adding In Server!**`
-            );
+            emote = `${args.find(arg => isUrl(arg))}`
+            name = args.find(arg => arg != emote);
+            type = "url";
+        }
+        let emoji = { name: "" };
+            let Link;
+            if(type == "emoji") {
+                emoji = Discord.Util.parseEmoji(emote);
+                Link = `https://cdn.discordapp.com/emojis/${emoji.id}.${emoji.animated ? "gif" : "png"}`
+        } else {
+            if(!name) return message.channel.send("Please Provide an Name for the Emoji!\n`k!addemoji [Link] [Emoji Name]` ");
+            Link = message.attachments.first() ? message.attachments.first().url : emote 
         }
 
+        try {
+            const Added = new MessageEmbed()
+            .setColor(config.embedcolor)
+            .setTitle(`${client.emotes.verified} Emoji Added`)
+            .setDescription(`${client.emotes.verified} Emoji has been Added! | Name : ${name || `${emoji.name}`} | Preview : [Click Here](${Link})`);
+
+            await  message.guild.emojis.create(`${Link}`, `${`${name || emoji.name}`}`)
+            message.channel.send(Added)
+        } catch (err) {
+            console.log(err)
+            return message.channel.send(`${client.emotes.error} An error has occured!\n\n**Possible Reasons:**\n\`\`\`- This server has reached the emojis limit\n- The bot doesn't have permissions.\n- The emojis size is too big.\`\`\``)
+        }
     }
 }
