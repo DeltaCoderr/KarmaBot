@@ -66,8 +66,9 @@ Karma has a lot of features, with **8 main categories**:
     "embedcolor": "", // Your EmbedColor
     "dev": "",        // Owner's Discord ID
     "token": "",      // Bot's Token
-    "database": "",  //Your DataBase URL to store the ChatBot's Channel data
-    "AME_API": ""     //AME_API for Image Commands. Key can be found here -> (https://docs.api.amethyste.moe)
+    "database": "",   // Your DataBase URL to store the ChatBot's Channel data
+    "FACT_API": "",   // Get the api from the discord server 
+    "AME_API": ""     // AME_API for Image Commands. Key can be found here -> (https://docs.api.amethyste.moe)
 }
 ```
 * Set up your **[emotes.json](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/emotes.json)** file with your Emoji IDS.
