@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const config = require("../../configs/config.json");
-const random = require("anime-facts");
+const AnimeFact = require("anime-facts");
+const api = new AnimeFact(config.FACT_API)
 
 module.exports = {
   config: {
@@ -11,14 +12,17 @@ module.exports = {
     accessableby: "",
   },
   run: async (client, message, args) => {
-    random.getFact().then((r) => {
+    api.getFact().then((r) => {
       const embed = new MessageEmbed()
         .setColor(config.embedcolor)
         .setTitle("Did you know?")
         .setThumbnail(
           "https://media.discordapp.net/attachments/711250719675645962/721640740136026202/uhjhyj.gif"
         )
-        .setDescription(r.fact);
+        .setDescription(r.fact)
+        .setFooter(`© Karma `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
+        .setTimestamp()
+        
       message.channel.send(embed);
     });
   },
