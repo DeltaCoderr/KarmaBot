@@ -18,6 +18,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
     "anime-facts": "^1.2.5",
+    "amethyste-api": "^1.1.4",
     "app-store-scraper": "^0.16.3",
     "axios": "^0.21.0",
     "canvacord": "^5.0.8",
