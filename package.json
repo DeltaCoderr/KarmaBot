@@ -25,7 +25,7 @@
     "chalk": "^4.1.0",
     "common-tags": "^1.8.0",
     "discord-image-generation": "^1.4.5",
-    "discord-player": "^3.0.3",
+    "discord-player": "^4.0.3",
     "discord.js": "^12.5.1",
     "express": "^4.17.1",
     "ffmpeg": "^0.0.4",
