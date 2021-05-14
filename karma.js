@@ -24,7 +24,14 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
 const { Player } = require('discord-player');
-const player = new Player(client);
+const player = new Player(client, {
+    enableLive: true,
+    autoSelfDeaf: true,
+    leaveOnEnd: true,
+    leaveOnEndCooldown: 5000,
+    leaveOnEmpty: true,
+    leaveOnStop: true
+});
 client.player = player;
 client.emotes = require('./configs/emotes.json')
 client.filters = require('./configs/filters.json');
