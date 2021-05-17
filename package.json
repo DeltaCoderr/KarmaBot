@@ -1,5 +1,6 @@
 {
   "name": "karmabot",
+  "version": "1.9.0"
   "description": "A Multipurpose Discord bot (more than 50 commands) that uses the Discordjs API!",
   "main": "karma.js",
   "scripts": {
