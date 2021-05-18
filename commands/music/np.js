@@ -11,48 +11,57 @@ module.exports = {
         accessableby: ""
     },
     run: async (client, message, args) => {
-	const embednoinvoice = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-    .setFooter('Karma Music System')
-    .setColor(embedcolor)
-	.setTimestamp();
-	const embednomusic = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - No music currently playing !`)
-    .setFooter('Karma Music System')
-    .setColor(embedcolor)
-	.setTimestamp();
-if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
 
-    if (!client.player.getQueue(message)) return message.channel.send(embednomusic);
+        const embed1 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - You're not in a voice channel !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    const track = await client.player.nowPlaying(message);
-    const filters = [];
+        const embed2 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - You're not in my voice channel!`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    Object.keys(client.player.getQueue(message).filters).forEach((filterName) => {
-        if (client.player.getQueue(message).filters[filterName]) filters.push(filterName);
-    });
+        const embed3 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - I'm not playing anything?`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    message.channel.send({
-        embed: {
-            author: { name: track.title },
-            footer: { text: 'Karma Music System' },
-            fields: [
-                { name: 'Channel', value: track.author, inline: true },
-                { name: 'Requested by', value: track.requestedBy.username, inline: true },
-                { name: 'From playlist', value: track.fromPlaylist ? 'Yes' : 'No', inline: true },
+        if (!message.member.voice.channel) return message.reply(embed1);
+        if (message.guild.me.voice.channel && message.guild.me.voice.channelID !== message.member.voice.channelID) return message.reply(embed2);
 
-                { name: 'Views', value: track.views, inline: true },
-                { name: 'Duration', value: track.duration, inline: true },
-                { name: 'Filters activated', value: filters.length, inline: true },
+        const queue = client.player.getQueue(message);
+        if (!queue) return message.reply(embed3);
 
-                { name: 'Progress bar', value: client.player.createProgressBar(message, { timecodes: true }), inline: true }
-            ],
-            thumbnail: { url: track.thumbnail },
-            color: embedcolor,
-            timestamp: new Date(),
-        },
-    });
+        const current = queue.playing;
+
+        const filters = [];
+
+        Object.keys(client.player.getQueue(message).filters).forEach((filterName) => {
+            if (client.player.getQueue(message).filters[filterName]) filters.push(filterName);
+        });
+
+        const embed = new Discord.MessageEmbed()
+            .setTitle("Now Playing!")
+            .addField("📋 Title:", current.title, true)
+            .addField("💬 Author:", current.author, true)
+            .addField("👤 Queued by:", current.requestedBy.tag, true)
+            .addField("📜 Views:", current.views, true)
+            .addField(`⏲️ Duration:`, current.duration, true)
+            .addField(`${client.emotes.success} Filters activated:`, filters.length, true )
+            .addField(`${client.emotes.diskspin} Progress:`, client.player.createProgressBar(message, { timecodes: true, length: 15 }))
+            .setTimestamp()
+            .setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL())
+            .setColor(embedcolor);
+
+        if (current.thumbnail) embed.setThumbnail(current.thumbnail);
+
+        message.reply(embed);
     }
 };

@@ -11,61 +11,76 @@ module.exports = {
         accessableby: ""
     },
     run: async (client, message, args) => {
-	const embednoinvoice = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embednomusic = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - No music currently playing !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embedspecify = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - Please specify a valid filter to enable or disable !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embednofilter = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - This filter doesn't exist !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embedfilteradd = new Discord.MessageEmbed()
-	.setTitle('Filter Adding!')
-	.setDescription(`${client.emotes.music} - I'm **adding** the filter to the music, please wait... Note : the longer the music is, the longer this will take.`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-    const embedfilderremove = new Discord.MessageEmbed()
-	.setTitle('Filter Removing!')
-	.setDescription(`${client.emotes.music} - I'm **disabling** the filter on the music, please wait... Note : the longer the music is playing, the longer this will take.`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
+	
+		const embed = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - You're not in a voice channel !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    if (!client.player.getQueue(message)) return message.channel.send(embednomusic);
+		const embed2 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - You are not in the same voice channel !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    if (!args[0]) return message.channel.send(embedspecify);
+		const embed3 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - No music currently playing !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    const filterToUpdate = Object.values(client.filters).find((f) => f.toLowerCase() === args[0].toLowerCase());
+		const embed4 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - Please specify a valid filter to enable or disable !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    if (!filterToUpdate) return message.channel.send(embednofilter);
+		const embed5 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - This filter doesn't exist, try for example (bassboost, pulsator...) !`)
+        .setFooter('Karma M Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    const filterRealName = Object.keys(client.filters).find((f) => client.filters[f] === filterToUpdate);
+		const embed6 = new Discord.MessageEmbed()
+        .setTitle('Success!')
+        .setDescription(`${client.emotes.success} - I'm **adding** the filter to the music, please wait... Note : the longer the music is, the longer this will take.`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    const queueFilters = client.player.getQueue(message).filters
-    const filtersUpdated = {};
-    filtersUpdated[filterRealName] = queueFilters[filterRealName] ? false : true;
-    client.player.setFilters(message, filtersUpdated);
+		const embed7 = new Discord.MessageEmbed()
+        .setTitle('Success!')
+        .setDescription(`${client.emotes.success} - I'm **disabling** the filter on the music, please wait... Note : the longer the music is playing, the longer this will take.`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    if (filtersUpdated[filterRealName]) message.channel.send(embedfilteradd);
-    else message.channel.send(embedfilderremove);
+		if (!message.member.voice.channel) return message.channel.send(embed);
+		
+		if (message.guild.me.voice.channel && message.member.voice.channel.id !== message.guild.me.voice.channel.id) return message.channel.send(embed2);
+		
+		if (!client.player.getQueue(message)) return message.channel.send(embed3);
+		
+		if (!args[0]) return message.channel.send(embed4);
+		
+		const filterToUpdate = Object.keys(client.filters).find((x) => x.toLowerCase() === args[0].toLowerCase());
+		
+		if (!filterToUpdate) return message.channel.send(embed5);
+		
+		const filtersUpdated = {};
+		
+		filtersUpdated[filterToUpdate] = client.player.getQueue(message).filters[filterToUpdate] ? false : true;
 
-}
-    };
+		client.player.setFilters(message, filtersUpdated);
+
+		if (filtersUpdated[filterToUpdate]) message.channel.send(embed6);
+		else message.channel.send(embed7);
+	}
+
+};

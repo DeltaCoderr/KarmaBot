@@ -11,22 +11,33 @@ module.exports = {
         accessableby: ""
     },
     run: async (client, message, args) => {
-	const embednoinvoice = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-    .setFooter('Karma Music System')
-    .setColor(embedcolor)
-	.setTimestamp();
-	const embedspecify = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - Please indicate the title of a song !`)
-    .setFooter('Karma Music System')
-    .setColor(embedcolor)
-	.setTimestamp();
-    if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
+        const embed1 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - You're not in a voice channel !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    if (!args[0]) return message.channel.send(embedspecify);
+        const embed2 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - You're not in my voice channel !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    client.player.play(message, args.join(" "))
+        const embed3 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - Please include a search query !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
+
+        if (!message.member.voice.channel) return message.reply(embed1);
+        if (message.guild.me.voice.channel && message.guild.me.voice.channelID !== message.member.voice.channelID) return message.reply(embed2);
+        
+        const query = args.join(" ");
+        if (!query) return message.reply(embed3);
+
+        await client.player.play(message, query, true);
     }
 };

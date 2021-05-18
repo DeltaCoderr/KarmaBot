@@ -11,54 +11,59 @@ module.exports = {
         accessableby: ""
     },
     run: async (client, message, args) => {
-	const embednoinvoice = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - You're not in a voice channel !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embednosong = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - No songs currently playing !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embedenternumber = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - Please enter a number !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embedbetw = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - Please enter a valid number (between 1 and 100) !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embedvalid = new Discord.MessageEmbed()
-	.setTitle('Error!')
-	.setDescription(`${client.emotes.error} - Please enter a valid number !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-	const embedsett = new Discord.MessageEmbed()
-	.setTitle('Success!')
-	.setDescription(`${client.emotes.success} - Volume set to **${args.join(" ")}%** !`)
-	.setFooter('Karma Music System')
-	.setColor(embedcolor)
-	.setTimestamp();
-    if (!message.member.voice.channel) return message.channel.send(embednoinvoice);
 
-    if (!client.player.getQueue(message)) return message.channel.send(embednosong);
+		const embed1 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - You're not in a voice channel !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
+    
+        const embed2 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - You're not in my voice channel !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    if (!args[0]) return message.channel.send(embedenternumber);
+        const embed3 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - No music currently playing !`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    if (isNaN(args[0]) || 100 < args[0] || args[0] <= 0) return message.channel.send(embedbetw);
+        const embed4 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - Please enter the volume amount to set!`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    if (message.content.includes('-') || message.content.includes('+') || message.content.includes(',') || message.content.includes('.')) return message.channel.send(embedvalid);
+        const embed5 = new Discord.MessageEmbed()
+        .setTitle('Something went wrong!')
+        .setDescription(`${client.emotes.error} - Volume amount must be in range of \`0-100\`!`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
 
-    client.player.setVolume(message, parseInt(args[0]));
+        if (!message.member.voice.channel) return message.reply(embed1);
+        if (message.guild.me.voice.channel && message.guild.me.voice.channelID !== message.member.voice.channelID) return message.reply(embed2);
 
-    message.channel.send(embedsett);
+        const queue = client.player.getQueue(message);
+        if (!queue) return message.reply(embed3);
+
+        const amount = args[0];
+        if (!amount || isNaN(amount)) return message.reply(embed4);
+        if (parseInt(amount) < 0 || parseInt(amount) > 100) return message.reply(embed5);
+
+        queue.player.setVolume(message, parseInt(amount));
+        const embed6 = new Discord.MessageEmbed()
+        .setTitle('Success!')
+        .setDescription(`${client.emotes.success} - Volume changed to **${queue.volume}%**!`)
+        .setFooter('Karma Music System')
+        .setColor(embedcolor)
+        .setTimestamp();
+        message.reply(embed6);
     }
 };
