@@ -87,6 +87,7 @@ Karma has a lot of features, with **8 main categories**:
     "image": "",
     "anime": "",
     "nsfw": "",
+    "diskspin": "",
     "other": ""
 }
 ```
