@@ -3,14 +3,14 @@
 const Discord = require('discord.js');
 const config = require('./configs/config.json');
 const fs = require('fs');
-const { Database } = require("quickmongo")
-const db = new Database(config.database)
+const { Database } = require("quickmongo");
+const db = new Database(config.database);
 const http = require("http");
 const path = require("path");
 const express = require("express");
 const chalk = require("chalk");
 const moment = require("moment"); 
-var Jimp = require("jimp");
+const Jimp = require("jimp");
 const request = require("request");
 const axios = require("axios");
 const snekfetch = require("snekfetch");
@@ -25,15 +25,15 @@ client.aliases = new Discord.Collection();
 
 const { Player } = require('discord-player');
 const player = new Player(client, {
-    enableLive: true,
-    autoSelfDeaf: true,
-    leaveOnEnd: true,
-    leaveOnEndCooldown: 5000,
-    leaveOnEmpty: true,
-    leaveOnStop: true
+	enableLive: true,
+	autoSelfDeaf: true,
+	leaveOnEnd: true,
+	leaveOnEndCooldown: 5000,
+	leaveOnEmpty: true,
+	leaveOnStop: true
 });
 client.player = player;
-client.emotes = require('./configs/emotes.json')
+client.emotes = require('./configs/emotes.json');
 client.filters = require('./configs/filters.json');
 
 ["aliases", "commands"].forEach(cmd => client[cmd] = new Discord.Collection());
@@ -42,61 +42,58 @@ client.filters = require('./configs/filters.json');
 client.categories = fs.readdirSync('./commands');
 
 fs.readdir('./player-events/', (err, files) => {
-    if (err) return console.error(err);
-    files.forEach(file => {
-        const event = require(`./player-events/${file}`);
-        let eventName = file.split(".")[0];
-        console.log(`Loading player event ${eventName}`);
-        client.player.on(eventName, event.bind(null, client));
-    });
+	if (err) return console.error(err);
+	files.forEach(file => {
+		const event = require(`./player-events/${file}`), eventName = file.split(".")[0];
+		console.log(`Loading player event ${eventName}`);
+		client.player.on(eventName, event.bind(null, client));
+	});
 });
 
 // EVENTS
 
 client.on('ready', () => {
-    console.log('Karma Started!');
+	console.log('Karma Started!');
 });
 
 db.on("ready", () => {
-    console.log("Database Connected!")
-})
+	console.log("Database Connected!")
+});
 
 //CHATBOT FEATURE 
 
 client.on("message", async (message) => {
-        let channel = await db.get(`chatbot_${message.guild.id}`);
-     if(!channel) return;
-        var sChannel = message.guild.channels.cache.get(channel);
-     if (message.author.bot || sChannel.id !== message.channel.id) return;
-     message.content = message.content.replace(/@(everyone)/gi, "everyone").replace(/@(here)/gi, "here");
-     if (message.content.includes(`@`)) {
-        return sChannel.send(`**:x: Please dont mention anyone**`);
-     }
-        sChannel.startTyping();
-    if (!message.content) return sChannel.send("Please say something.");
-
-    fetch(`https://api.deltaa.me/chatbot?message=${encodeURIComponent(message.content)}&name=${client.user.username}&user=${message.author.username}&gender=Male`)
-   
-    .then(res => res.json())
-        .then(data => {
-            sChannel.send(`> ${message.content} \n <@${message.author.id}> ${data.message}`);
-        });
-          sChannel.stopTyping();
-              
-    });
+	const channel = await db.get(`chatbot_${message.guild.id}`);
+	if(!channel) return;
+	const sChannel = message.guild.channels.cache.get(channel);
+	if (!sChannel) return;
+	if (message.author.bot || sChannel.id !== message.channel.id) return;
+	message.content = message.content.replace(/@(everyone)/gi, "everyone").replace(/@(here)/gi, "here");
+	if (message.content.includes(`@`)) {
+		return sChannel.send(`**:x: Please dont mention anyone**`);
+	}
+	sChannel.startTyping();
+	if (!message.content) return sChannel.send("Please say something.");
+	fetch(`https://api.deltaa.me/chatbot?message=${encodeURIComponent(message.content)}&name=${client.user.username}&user=${message.author.username}&gender=Male`)
+	.then(res => res.json())
+	.then(data => {
+		sChannel.send(`> ${message.content} \n <@${message.author.id}> ${data.message}`);
+	});
+	sChannel.stopTyping();				
+});
 
 client.snipes = new Map();
 
-client.on('messageDelete', function(message, channel){
-client.snipes.set(message.channel.id,{
-    content:message.content,
-    author:message.author.tag,
-    authorimg:message.author.avatarURL({dynamic: true}),
-    image:message.attachments.first() ? message.attachments.first().proxyURL : null,
-    channelname:message.channel.name,
-    messageid:message.id,
-    channelid:message.channel.id
-})
-})
+client.on('messageDelete', (message, channel) => {
+	client.snipes.set(message.channel.id, {
+		content: message.content,
+		author: message.author.tag,
+		authorimg: message.author.avatarURL({ dynamic: true }),
+		image: message.attachments.first() ? message.attachments.first().proxyURL : null,
+		channelname: message.channel.name,
+		messageid: message.id,
+		channelid: message.channel.id
+	});
+});
 
 client.login(config.token)
