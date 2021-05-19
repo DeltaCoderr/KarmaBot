@@ -25,6 +25,7 @@ module.exports = {
             embed.setDescription(`**Karma's Prefix Is \`${prefix}\`\n\nFor Help Related To A Particular Command Type -\n\`${prefix}help [command name] Or ${prefix}help [alias]\`**`)
             embed.setFooter(`${message.guild.me.displayName} | Total Commands - ${client.commands.size - 1} Loaded`, client.user.displayAvatarURL());
             embed.addField(`${client.emotes.info} Info [4] - `, '`help`, `info`, `invite`, `uptime`')
+            embed.addField(`${client.emotes.moderation} Moderation [3] -`, '`ban`, `lock`, `unlock`')
             embed.addField(`${client.emotes.anime} Anime [7] - `, '`anime`, `hug`, `karma`, `neko`, `pat`, `waifu`, `wink`')
             embed.addField(`${client.emotes.chatbot} Chatbot [3] - `, '`chatbot`, `disableChatbotchannel`, `setChatbotchannel`')
             embed.addField(`${client.emotes.fun} Fun [13] - `, '`binary`, `clyde`, `comment`, `eject`, `emojify`, `github`, `iq`, `npm`, `osu`, `ping`, `reddit`, `weather`, `zalgo`')
