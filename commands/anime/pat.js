@@ -18,7 +18,7 @@ module.exports = {
               const embed = new Discord.MessageEmbed()
              .setColor(config.embedcolor)
               .setTitle("Here's your Pat, 👀")
-          .setDescription(`${victim} Pats ${message.author}`)
+          .setDescription(`${message.author} pats ${victim}`)
           .setImage(body.url)
            .setTimestamp()
           .setFooter(`© Karma `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
