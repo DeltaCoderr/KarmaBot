@@ -22,7 +22,7 @@ module.exports = {
             .setColor(config.embedcolor)
             .setTitle(`${message.guild.name}`)
             .setThumbnail(message.guild.iconURL)
-            .addField(`<:discord_online:739717108882997278> **Online Users**`, `≫ \`${onlineUsers.online}\``, true)
+            .addField(`**Online Users**`, `≫ \`${onlineUsers.online}\``, true)
             .addField(`👤 **Total Users**`,  `≫ \`${message.guild.memberCount}\``, true)
             .addField(`📜 **Roles**`, `≫ \`${message.guild.roles.cache.size}\``, true)
             .addField(`💬 **Text Channels**`, `≫ \`${message.guild.channels.cache.size}\``, true)
