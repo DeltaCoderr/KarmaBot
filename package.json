@@ -59,6 +59,7 @@
         "to-zalgo": "^1.0.1",
         "twemoji-parser": "^13.0.0",
         "weather-js": "^2.0.0",
+        "weky": "^1.9.6",
         "ytdl-core": "^4.1.2"
   },
   "engines": {
