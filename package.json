@@ -1,6 +1,6 @@
 {
   "name": "karmabot",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A Multipurpose Discord bot (more than 50 commands) that uses the Discordjs API!",
   "main": "karma.js",
   "scripts": {
@@ -25,6 +25,7 @@
         "canvacord": "^5.0.8",
         "chalk": "^4.1.0",
         "common-tags": "^1.8.0",
+        "discord-buttons": "^3.1.1",
         "discord-image-generation": "^1.4.5",
         "discord-player": "^4.1.0",
         "discord.js": "^12.5.1",
@@ -59,6 +60,7 @@
         "to-zalgo": "^1.0.1",
         "twemoji-parser": "^13.0.0",
         "weather-js": "^2.0.0",
+        "weky": "^1.9.6",
         "ytdl-core": "^4.1.2"
   },
   "engines": {
