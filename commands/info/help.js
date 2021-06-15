@@ -25,7 +25,7 @@
                 embed.setDescription(`**Karma's Prefix Is \`${prefix}\`\n\nFor Help Related To A Particular Command Type -\n\`${prefix}help [command name] Or ${prefix}help [alias]\`**`)
                 embed.setFooter(`${message.guild.me.displayName} | Total Commands - ${client.commands.size - 1} Loaded`, client.user.displayAvatarURL());
                 embed.addField(`${client.emotes.info} Info [4] - `, '`help`, `info`, `invite`, `uptime`')
-                embed.addField(`🔲 Buttons [1] - `, '`ttt`, `snake`')
+                embed.addField(`🔲 Buttons [2] - `, '`ttt`, `snake`')
                 embed.addField(`${client.emotes.anime} Anime [15] - `, '`anime`, `baka`, `fact`, `hug`, `karma`, `kiss`, `neko`, `pat`, `poke`, `slap`, `smug`, `tickle`, `waifu`, `whatanime`, `wink`')
                 embed.addField(`${client.emotes.chatbot} Chatbot [3] - `, '`chatbot`, `disableChatbotchannel`, `setChatbotchannel`')
                 embed.addField(`${client.emotes.fun} Fun [16] - `, '`binary`, `clyde`, `comment`, `eject`, `emojify`, `github`, `iq`, `npm`, `osu`, `ping`, `reddit`, `weather`, `zalgo`, `country`, `applestore`, `playstore`')
