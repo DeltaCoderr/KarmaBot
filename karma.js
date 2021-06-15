@@ -19,7 +19,7 @@ const fetch = require("node-fetch");
 // Handlers And Client
 
 const client = new Discord.Client();
-
+const disbut = require("discord-buttons")(client)
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
