@@ -1,0 +1,20 @@
+module.exports = {
+    flyinghearts: "<a:flyinghearts:774582856651112469>",
+    load: "<a:Load:782197219918741524>",
+    verified: "<a:verified:770647467128520724>",
+    error: "<:error:766298974721409084>",
+    info: "<:info:770648613378457600>",
+    music1: ":musical_note:",
+    queue: ":bar_chart:",
+    success: ":white_check_mark:",
+    music: "<a:diskspin:783977639299514388>",
+    fun: "<:neodude:766276745963110431>",
+    chatbot: "<:speak:783979421601103882>",
+    image: "<:image:783979155233570856>",
+    anime: "<a:animeyay:783978966393552906>",
+    nsfw: "<:18:783978353538367498>",
+    other: "<:fun:783977535838879755>",
+    diskspin: "<a:diskspin:783977639299514388>",
+    owner: "👑",
+    buttons: '🔳'
+}
