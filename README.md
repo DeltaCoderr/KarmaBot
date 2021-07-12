@@ -4,7 +4,7 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/DeltaCoderr/KarmaBot)](https://repl.it/github/DeltaCoderr/KarmaBot)
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/DeltaCoderr/KarmaBot)
-[![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
+[![](https://img.shields.io/badge/discord.js-v12.5.3-blue.svg?logo=npm)](https://github.com/discordjs)
 >  A Multipurpose Discord Bot with a Music System used by 200K+ users and more than 2000 servers.
 
 Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
@@ -61,36 +61,40 @@ Karma has a lot of features, with **8 main categories**:
 ## Bot Setup  🔊
 * **Clone the Repo** by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking **[Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)**
 
-* Set up your **[config.json](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/config.json)** file with your respective information.
+* Set up your **[config.js](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/config.js)** file with your respective information.
 ```
-{
-    "prefix": "",     // Your Prefix
-    "embedcolor": "", // Your EmbedColor
-    "dev": "",        // Owner's Discord ID
-    "token": "",      // Bot's Token
-    "database": "",   // Your DataBase URL to store the ChatBot's Channel data
-    "FACT_API": "",   // Get the api from the discord server 
-    "AME_API": ""     // AME_API for Image Commands. Key can be found here -> (https://docs.api.amethyste.moe)
+module.exports = {
+    token: '',      // Your Bot Token
+    prefix: '',     // Your Prefix
+    devs: '',       // Owner's Discord ID
+    embedcolor: '', // EmbedColor
+    database: '',   // Database URL for storing Channel's Data.
+    FACT_API: '',   // Get the API from Here -> https://docs-airi.netlify.app/
+    AME_API: ''     // AME_API for Image Commands. Key can be found -> https://docs.api.amethyste.moe
+
 }
 ```
-* Set up your **[emotes.json](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/emotes.json)** file with your Emoji IDS.
+* Set up your **[emotes.js](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/emotes.js)** file with your Emoji IDS.
 ```
-{
-    "load": "",
-    "verified": "",
-    "error": "",
-    "info": "",
-    "music": "",
-    "queue": "",
-    "success": "",
-    "music1": "",
-    "fun": "",
-    "chatbot": "",
-    "image": "",
-    "anime": "",
-    "nsfw": "",
-    "diskspin": "",
-    "other": ""
+module.exports = {
+    flyinghearts: "",
+    load: "",
+    verified: "",
+    error: "",
+    info: "",
+    music1: "",
+    queue: "",
+    success: "",
+    music: "",
+    fun: "",
+    chatbot: "",
+    image: "",
+    anime: "",
+    nsfw: "",
+    other: "",
+    diskspin: "",
+    owner: "",
+    buttons: ""
 }
 ```
 * **Install** all the packages by typing **``npm i ``**
