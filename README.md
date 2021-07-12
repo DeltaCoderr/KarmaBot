@@ -13,6 +13,7 @@ Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](htt
 - [x] Music & Filter
 - [x] Fun
 - [x] Anime
+- [x] Buttons
 - [x] NSFW
 - [x] Utility
 - [X] Image
@@ -22,12 +23,13 @@ Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](htt
 
 Karma has a lot of features, with **8 main categories**:
 
-*   🎵 **Music**: `play`, `skip`, `queue`, `np`,`filters` and **8** more! 
+*   🎵 **Music**: `play`, `skip`, `queue`, `np`,`filters` and **10** more! 
 *   👩‍💼 **Information**: `info`, `help`, `invite` and **2** more! 
 *   🚓 **Anime**: `anime`, `hug`, `karma`, `neko` and **11** more! 
+*   🔲 **Buttons** : `snake`, `tictactoe` and **1** more!
 *   🤖 **ChatBot**: `chatbot` and **2** more! 
-*   👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **7** more!
-*   🖨️ **Image**: `fire`, `respect`, `scary`, `triggered` and **6** more! 
+*   👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **8** more!
+*   🖨️ **Image**: `fire`, `respect`, `scary`, `triggered` and **5** more! 
 *   ✉️ **Other**: `profile`, `addemoji`, `snipe`, `wiki` and **3** more!
 *   👑 **Owner**: `eval`, `reload`
 
