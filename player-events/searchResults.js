@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require('../configs/config.json');
+
 
 module.exports = (client, message, query, tracks) => {
 		message.channel.send({
