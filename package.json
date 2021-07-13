@@ -1,0 +1,43 @@
+{
+  "name": "karmabot",
+  "version": "3.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DeltaCoderr",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "amethyste-api": "^1.1.5",
+    "anime-facts": "^4.3.8",
+    "axios": "^0.21.1",
+    "canvacord": "^5.2.1",
+    "chalk": "^4.1.1",
+    "common-tags": "^1.8.0",
+    "discord-buttons": "^4.0.0",
+    "discord-player": "^4.1.0",
+    "discord.js": "^12.5.3",
+    "ffmpeg-static": "^4.3.0",
+    "fs": "0.0.1-security",
+    "genius-lyrics": "^4.2.9",
+    "is-url": "^1.2.4",
+    "mal-scraper": "^2.11.3",
+    "moment": "^2.29.1",
+    "nekos.life": "^2.0.7",
+    "node-fetch": "^2.6.1",
+    "node-opus": "^0.3.3",
+    "node-osu": "^2.2.1",
+    "opusscript": "0.0.8",
+    "quickmongo": "^3.0.2",
+    "reddit.images": "^1.0.2",
+    "relevant-urban": "^2.0.0",
+    "to-zalgo": "^1.0.1",
+    "twemoji-parser": "^13.1.0",
+    "util": "^0.12.4",
+    "weather-js": "^2.0.0",
+    "weky": "^2.1.0",
+    "ytdl-core": "^4.8.3"
+  }
+}
