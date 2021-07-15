@@ -9,7 +9,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
 
-        if (!args[0]) return message.channel.send("Please Provide someone to battle with.")
+        if (!args[0]) return message.channel.send("Please provide someone to battle with.")
         const opponent = message.mentions.users.first()
         const game = new TicTacToe({
             message: message,
