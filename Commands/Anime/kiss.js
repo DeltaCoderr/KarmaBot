@@ -19,7 +19,7 @@ module.exports = {
         ) {
             const { url } = await slap().catch(() => { });
 
-            if (!url) return message.channel.send(`Could not connect to nekos.life`);
+            if (!url) return message.channel.send(`Couldn't connect to nekos.life`);
 
             return message.channel.send(
                 embed
@@ -31,7 +31,7 @@ module.exports = {
         } else {
             const { url } = await kiss().catch(() => { });
 
-            if (!url) return message.channel.send(`Could not connect to nekos.life`);
+            if (!url) return message.channel.send(`Couldn't connect to nekos.life`);
 
             if (
                 message.mentions.members.size &&
