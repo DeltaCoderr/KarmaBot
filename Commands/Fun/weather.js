@@ -12,7 +12,7 @@ module.exports = {
         if (args.length === 0) {
             let errorembed = new MessageEmbed()
                 .setTitle("Error :cry:")
-                .setDescription("Please enter a location!")
+                .setDescription("Please provide a location!")
                 .setColor(config.embedcolor)
                 .setTimestamp()
                 .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
@@ -24,7 +24,7 @@ module.exports = {
             if (result.length === 0) {
                 let errorembed = new MessageEmbed()
                     .setTitle("Error :cry:")
-                    .setDescription("Please enter a vaild location!")
+                    .setDescription("Please provide a vaild location!")
                     .setColor(config.embedcolor)
                     .setTimestamp()
                     .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
@@ -36,7 +36,7 @@ module.exports = {
             if (err) {
                 let errorembed = new MessageEmbed()
                     .setTitle("Error :cry:")
-                    .setDescription("Please enter a vaild location!")
+                    .setDescription("Please provide a vaild location!")
                     .setColor(config.embedcolor)
                     .setTimestamp()
                     .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
