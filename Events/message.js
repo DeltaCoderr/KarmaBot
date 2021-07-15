@@ -30,7 +30,7 @@ module.exports = async (client, message) => {
 		if (message.author.bot || sChannel.id !== message.channel.id) return;
 		message.content = message.content.replace(/@(everyone)/gi, "everyone").replace(/@(here)/gi, "here");
 		if (message.content.includes(`@`)) {
-			return sChannel.send(`**:x: Please dont mention anyone**`);
+			return sChannel.send(`**:x: Please don't mention anyone**`);
 		}
 		sChannel.startTyping();
 		if (!message.content) return sChannel.send("Please say something.");
