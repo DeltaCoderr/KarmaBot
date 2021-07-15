@@ -14,7 +14,7 @@ module.exports = {
            .setAuthor(message.guild.name, message.guild.iconURL())
            .setColor(config.embedcolor)
            .setFooter(client.user.username, client.user.avatarURL())
-           .setDescription(`<@${message.author.id}> **There is no deleted messages.**`)
+           .setDescription(`<@${message.author.id}> **There isn't a deleted messages.**`)
            .setTimestamp();
        if(!msg) return message.channel.send(embedn)
 
@@ -22,7 +22,7 @@ module.exports = {
      
        if(msg.content)
        
-       embed.addField('Content Of the Message :', msg.content)
+       embed.addField('Content Of the Deleted Message:', msg.content)
        .setAuthor(msg.author, msg.authorimg)
        .setColor(config.embedcolor)
        .setFooter(" Requested by " + message.author.tag , message.author.avatarURL())
@@ -31,7 +31,7 @@ module.exports = {
        if(msg.image)
        embed.setImage(msg.image)
        .setColor(config.embedcolor)
-       .setDescription(`**Content of the message:**`)
+       .setDescription(`**Content Of the Deleted Message:**`)
        .setAuthor(msg.author, msg.authorimg)
 
        message.channel.send(embed)
