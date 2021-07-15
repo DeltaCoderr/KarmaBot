@@ -13,7 +13,7 @@ module.exports = {
     run: async (client, message, args) => {
         const { url } = await tickle().catch(() => { });
 
-        if (!url) return message.channel.send(`Could not connect to nekos.life`);
+        if (!url) return message.channel.send(`Couldn't connect to nekos.life`);
 
         const embed = new MessageEmbed();
 
