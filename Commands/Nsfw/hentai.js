@@ -15,7 +15,7 @@ module.exports = {
             return message.channel.send({
                 embed: {
                     color: config.embedcolor,
-                    description: "You can use only this command in an NSFW Channel!"
+                    description: "You can use only this command in a NSFW Channel!"
                 }
             });
         };
