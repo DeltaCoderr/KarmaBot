@@ -5,7 +5,7 @@ module.exports = {
     help: {
         name: 'neko',
         aliases: ['neko'],
-        description: 'Drops random Neko Pictures.',
+        description: 'Drops a random Neko Pictures.',
         category: __dirname.split("Commands\\")[1]
     },
     run: async (client, message, args) => {
