@@ -23,14 +23,14 @@ class Bot extends Client {
         this.config = require('../Configs/config');
 
         if (!this.config.token)
-            return logger.error(`[ERROR]: No Token Provided in Config File!`);
+            return logger.error(`[ERROR]: No Token Provided in Config File !`);
 
         if (!this.config.devs.length) {
-            return logger.error(`[ERROR]: No Dev ID Provided`);
+            return logger.error(`[ERROR]: No Dev ID Provided !`);
         }
 
         if (!this.config.database) {
-            return logger.error(`[ERROR]: No Database URL Provided.!`);
+            return logger.error(`[ERROR]: No Database URL Provided !`);
         }
 
         this.commands = new Collection();
@@ -46,7 +46,7 @@ class Bot extends Client {
         LoadButtons(this);
         
         this.login(this.config.token).catch(() => {
-            logger.error(`[ERROR]: Invalid Token Provided.`);
+            logger.error(`[ERROR]: Invalid Token Provided !`);
         });
     };
 }
