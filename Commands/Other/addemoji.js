@@ -43,7 +43,7 @@ module.exports = {
             emoji = Discord.Util.parseEmoji(emote);
             Link = `https://cdn.discordapp.com/emojis/${emoji.id}.${emoji.animated ? "gif" : "png"}`
         } else {
-            if (!name) return message.channel.send("Please Provide an Name for the Emoji!\n`k!addemoji [Link] [Emoji Name]` ");
+            if (!name) return message.channel.send("Please Provide a Name for the Emoji!\n`k!addemoji [Link] [Emoji Name]` ");
             Link = message.attachments.first() ? message.attachments.first().url : emote
         }
 
