@@ -44,18 +44,18 @@ module.exports = {
             flags = "User doesn't have any badge"
         }
 
-        flags = flags.replace("HOUSE_BRAVERY", "• <:hsquadbravery:757488491792826410>\`HypeSquad Bravery\`")
+        flags = flags.replace("HOUSE_BRAVERY", "• <:hsquadbravery:757488491792826410> \`HypeSquad Bravery\`")
         flags = flags.replace("EARLY_SUPPORTER", "• <a:nitro:740923343548579890> \`Early Supporter\`")
         flags = flags.replace("EARLY_VERIFIED_DEVELOPER", "• <:discordbotdev:757489652214267904> \`Verified Bot Developer\`")
         flags = flags.replace("HOUSE_BRILLIANCE", "• <:hsquadbrilliance:757487710775672863> \`HypeSquad Brilliance\`")
-        flags = flags.replace("HOUSE_BALANCE", "• <:hsquadbalance:757487549605347348>\`HypeSquad Balance\`")
+        flags = flags.replace("HOUSE_BALANCE", "• <:hsquadbalance:757487549605347348> \`HypeSquad Balance\`")
         flags = flags.replace("DISCORD_PARTNER", "• <:partner:739714991732686848> \`Partner\`")
-        flags = flags.replace("HYPESQUAD_EVENTS", "• <a:hypesquad:755471122430034060>\`Hypesquad Event\`")
-        flags = flags.replace("DISCORD_CLASSIC", "• <a:classic:740922817683652754>\`Discord Classic\`")
+        flags = flags.replace("HYPESQUAD_EVENTS", "• <a:hypesquad:755471122430034060> \`Hypesquad Event\`")
+        flags = flags.replace("DISCORD_CLASSIC", "• <a:classic:740922817683652754> \`Discord Classic\`")
 
         if (nitroBadge.includes("gif")) {
             flags = flags + `
-    • <a:nitroboost:740923077973508156>  \`Nitro\``
+    • <a:nitroboost:740923077973508156>  \`Discord Nitro\``
         }
 
         let stat = user.presence.activities[0]
