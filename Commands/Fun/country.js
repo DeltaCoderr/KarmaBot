@@ -25,7 +25,7 @@ module.exports = {
         }
         catch (e) {
             return message.channel.send(
-                ':x:An error occured, please try again!',
+                ':x: An error occured, please try again!',
             );
         }
         try {
