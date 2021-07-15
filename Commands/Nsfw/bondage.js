@@ -12,7 +12,7 @@ module.exports = {
         if (!message.channel.nsfw) return message.channel.send({
             embed: {
                 color: config.embedcolor,
-                description: "You can only use this command in an NSFW Channel!"
+                description: "You can only use this command in a NSFW Channel!"
             }
         })
 
