@@ -37,6 +37,8 @@ class Bot extends Client {
 
         this.aliases = new Collection();
 
+        this.cooldowns = new Collection();
+
         LoadCommands(this);
 
         LoadEvents(this);
