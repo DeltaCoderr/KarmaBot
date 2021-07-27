@@ -3,8 +3,8 @@ const fetch = require('node-fetch');
 
 module.exports = {
     help: {
-        name: 'anime',
-        aliases: ['anime'],
+        name: 'karma',
+        aliases: ['karma'],
         description: 'Drops random Karma Pictures.',
         category: __dirname.split("Commands\\")[1]
     },
