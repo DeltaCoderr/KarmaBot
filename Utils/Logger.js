@@ -1,35 +1,39 @@
+const moment = require('moment');
 const chalk = require('chalk');
 const util = require('util');
 
-const append = (m) => {
-    const message = `[${new Date().toLocaleDateString()}] | ${m}`;
-    return typeof message === "string" ? message : util.inspect(message);
+global.logger = module.exports = class Logger {
+    static log(content, { color = 'grey', tag = 'Log' } = {}) {
+        this.write(content, { color, tag });
+    }
+
+    static info(content, { color = 'blue', tag = 'Info' } = {}) {
+        this.write(content, { color, tag });
+    }
+
+    static warn(content, { color = 'yellow', tag = 'Warn' } = {}) {
+        this.write(content, { color, tag });
+    }
+
+    static error(content, { color = 'red', tag = 'Error' } = {}) {
+        this.write(content, { color, tag, error: true });
+    }
+
+    static stacktrace(content, { color = 'white', tag = 'Error' } = {}) {
+        this.write(content, { color, tag, error: true });
+    }
+
+    static write(content, { color = 'grey', tag = 'Log', error = false } = {}) {
+        const timestamp = chalk.cyan(`[${moment().format('DD-MM-YYYY kk:mm:ss')}]:`);
+        const levelTag = chalk.bold(`[${tag}]`);
+        const text = chalk[color](this.clean(content));
+        const stream = error ? process.stderr : process.stdout;
+        stream.write(`${timestamp} ${levelTag} ${text}\n`);
+    }
+
+    static clean(item) {
+        if (typeof item === 'string') return item;
+        const cleaned = util.inspect(item, { depth: Infinity });
+        return cleaned;
+    }
 }
-
-global.logger = {
-    log: message => {
-        console.log(chalk.whiteBright(append((message))));
-    },
-
-    error: message => {
-        console.log(chalk.redBright(append((message))));
-    },
-
-    warn: message => {
-        console.log(chalk.magentaBright(append((message))));
-    },
-
-    info: message => {
-        console.log(chalk.blueBright(append((message))));
-    },
-
-    success: message => {
-        console.log(chalk.greenBright(append((message))));
-    },
-
-    debug: message => {
-        console.log(chalk.yellowBright(append((message))));
-    },
-};
-
-module.exports.logger = logger;
