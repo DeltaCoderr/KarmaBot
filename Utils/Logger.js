@@ -7,11 +7,11 @@ global.logger = module.exports = class Logger {
         this.write(content, { color, tag });
     }
 
-    static info(content, { color = 'blue', tag = 'Info' } = {}) {
+    static success(content, { color = 'green', tag = 'Info' } = {}) {
         this.write(content, { color, tag });
     }
 
-    static warn(content, { color = 'yellow', tag = 'Warn' } = {}) {
+    static warn(content, { color = 'orange', tag = 'Warn' } = {}) {
         this.write(content, { color, tag });
     }
 
@@ -19,7 +19,7 @@ global.logger = module.exports = class Logger {
         this.write(content, { color, tag, error: true });
     }
 
-    static stacktrace(content, { color = 'white', tag = 'Error' } = {}) {
+    static debug(content, { color = 'yellow', tag = 'Error' } = {}) {
         this.write(content, { color, tag, error: true });
     }
 
