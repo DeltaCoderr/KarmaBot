@@ -23,7 +23,7 @@ global.logger = module.exports = class Logger {
         this.write(content, { color, tag, error: true });
     }
 
-    static debug(content, { color = 'yellow', tag = 'Error' } = {}) {
+    static debug(content, { color = 'yellow', tag = 'Debug' } = {}) {
         this.write(content, { color, tag, error: true });
     }
 
