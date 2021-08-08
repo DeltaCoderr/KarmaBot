@@ -1,4 +1,4 @@
-const moment = require('moment');
+const moment = require("moment");
 const chalk = require('chalk');
 const util = require('util');
 
@@ -7,7 +7,11 @@ global.logger = module.exports = class Logger {
         this.write(content, { color, tag });
     }
 
-    static success(content, { color = 'green', tag = 'Info' } = {}) {
+    static success(content, { color = 'green', tag = 'Success' } = {}) {
+        this.write(content, { color, tag });
+    }
+
+    static info(content, { color = 'blue', tag = 'Info' } ={}) {
         this.write(content, { color, tag });
     }
 
