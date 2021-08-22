@@ -1,35 +1,43 @@
+const moment = require("moment");
 const chalk = require('chalk');
 const util = require('util');
 
-const append = (m) => {
-    const message = `[${new Date().toLocaleDateString()}] | ${m}`;
-    return typeof message === "string" ? message : util.inspect(message);
-}
+global.logger = module.exports = class Logger {
+    static log(content, { color = 'grey', tag = 'Log' } = {}) {
+        this.write(content, { color, tag });
+    }
 
-global.logger = {
-    log: message => {
-        console.log(chalk.whiteBright(append((message))));
-    },
+    static success(content, { color = 'green', tag = 'Success' } = {}) {
+        this.write(content, { color, tag });
+    }
 
-    error: message => {
-        console.log(chalk.redBright(append((message))));
-    },
+    static info(content, { color = 'blue', tag = 'Info' } ={}) {
+        this.write(content, { color, tag });
+    }
 
-    warn: message => {
-        console.log(chalk.magentaBright(append((message))));
-    },
+    static warn(content, { color = 'orange', tag = 'Warn' } = {}) {
+        this.write(content, { color, tag });
+    }
 
-    info: message => {
-        console.log(chalk.blueBright(append((message))));
-    },
+    static error(content, { color = 'red', tag = 'Error' } = {}) {
+        this.write(content, { color, tag, error: true });
+    }
 
-    success: message => {
-        console.log(chalk.greenBright(append((message))));
-    },
+    static debug(content, { color = 'yellow', tag = 'Debug' } = {}) {
+        this.write(content, { color, tag, error: true });
+    }
 
-    debug: message => {
-        console.log(chalk.yellowBright(append((message))));
-    },
-};
+    static write(content, { color = 'grey', tag = 'Log', error = false } = {}) {
+        const timestamp = chalk.cyan(`[${moment().format('DD-MM-YYYY kk:mm:ss')}]:`);
+        const levelTag = chalk.bold(`[${tag}]`);
+        const text = chalk[color](this.clean(content));
+        const stream = error ? process.stderr : process.stdout;
+        stream.write(`${timestamp} ${levelTag} ${text}\n`);
+    }
 
-module.exports.logger = logger;
+    static clean(item) {
+        if (typeof item === 'string') return item;
+        const cleaned = util.inspect(item, { depth: Infinity });
+        return cleaned;
+    }
+} 
