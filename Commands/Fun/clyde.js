@@ -9,16 +9,11 @@ module.exports = {
         category: __dirname.split("Commands\\")[1]
     },
     run: async (client, message, args) => {
-
         const text = args.slice().join(' ');
         if (!text) {
-            return message.channel.send(
-                '❎ Please provide valid text.',
-            );
+            return message.channel.send('❎ Please provide valid text.');
         }
-
         const url = `https://nekobot.xyz/api/imagegen?type=clyde&text=${text}`;
-
         let response;
         try {
             response = await fetch(url).then(res => res.json());
@@ -28,6 +23,5 @@ module.exports = {
         }
         const attachment = new MessageAttachment(response.message, 'clyde.png');
         return message.channel.send(attachment);
-
     }
 }

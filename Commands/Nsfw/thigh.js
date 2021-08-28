@@ -28,7 +28,7 @@ module.exports = {
                 .setColor(config.embedcolor)
                 .setFooter(`Tags: Thighs`)
                 .setURL(body.url);
-            message.channel.send(embed);
+            message.channel.send({embeds: [embed]});
         });
     }
 }

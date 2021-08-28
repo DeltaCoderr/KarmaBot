@@ -30,19 +30,19 @@ module.exports = {
                 let a = db.fetch(`chatbot_${message.guild.id}`);
 
                 if(!a) {
-                    return message.channel.send({embed: {
+                    return message.channel.send({embeds: [{
                         color: config.embedcolor,
                         title: `${emotes.error} There is no Chatbot channel to disable!`
-                    }});
+                    }]});
                 } else {
 
                     let channel = message.guild.channels.cache.get(a);
                     db.delete(`chatbot_${message.guild.id}`);
 
-                    message.channel.send({embed: {
+                    message.channel.send({embeds: [{
                         color: config.embed,
                         title: `${emotes.verified} Chatbot Channel has been succesfully disabled!`
-                    }});
+                    }]});
                 } return;
                 
             } catch(err) {

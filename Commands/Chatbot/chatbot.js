@@ -42,7 +42,7 @@ module.exports = {
         .setColor(config.embedcolor);
       
        let channel1 = await db.fetch(`chatbot_${message.guild.id}`);
-      if(!channel1) return message.channel.send(embedd)
+      if(!channel1) return message.channel.send({ embeds: [embedd]})
       var sChannel = message.guild.channels.cache.get(channel1);
       let embedvch = "<#" + sChannel.id + ">"
       
@@ -77,7 +77,7 @@ module.exports = {
           "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png"
         )
         .setColor(config.embedcolor);
-      message.channel.send(embed);
+      message.channel.send({embeds: [embed]});
 
     }
 }

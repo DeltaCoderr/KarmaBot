@@ -18,6 +18,6 @@ module.exports = {
             .setImage(member.user.displayAvatarURL({ dynamic: true, size: 1024 }))
             .setFooter(`Requested by ${message.member.displayName}`, message.author.displayAvatarURL({ dynamic: true, size: 1024 }))
             .setTimestamp()
-        return message.channel.send(embed)
+        return message.channel.send({embeds: [embed]})
     }
 }

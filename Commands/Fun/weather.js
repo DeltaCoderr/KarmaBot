@@ -16,7 +16,7 @@ module.exports = {
                 .setColor(config.embedcolor)
                 .setTimestamp()
                 .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
-            return message.channel.send(errorembed);
+            return message.channel.send({embeds: [errorembed]});
         }
 
         weather.find({ search: args.join(" "), degreeType: 'C' }, function (err, result) {
@@ -28,7 +28,7 @@ module.exports = {
                     .setColor(config.embedcolor)
                     .setTimestamp()
                     .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
-                return message.channel.send(errorembed);
+                return message.channel.send({ embeds: [errorembed] });
             }
 
             var current = result[0].current;
@@ -40,7 +40,7 @@ module.exports = {
                     .setColor(config.embedcolor)
                     .setTimestamp()
                     .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
-                return message.channel.send(errorembed);
+                return message.channel.send({embeds: [errorembed]});
             }
 
 
@@ -57,7 +57,7 @@ module.exports = {
                 .addField('Humidity', `${current.humidity}%`, true)
                 .setTimestamp()
                 .setFooter('© Karma ', 'https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png')
-            message.channel.send(embed)
+            message.channel.send({embeds: [embed]})
         })
 
     }

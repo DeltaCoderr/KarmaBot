@@ -54,7 +54,7 @@ module.exports = {
                 .setDescription(`${emotes.verified} Emoji has been Added! | Name : ${name || `${emoji.name}`} | Preview : [Click Here](${Link})`);
 
             await message.guild.emojis.create(`${Link}`, `${`${name || emoji.name}`}`)
-            message.channel.send(Added)
+            message.channel.send({embeds: [Added]})
         } catch (err) {
             console.log(err)
             return message.channel.send(`${emotes.error} An error has occured!\n\n**Possible Reasons:**\n\`\`\`- This server has reached the emojis limit\n- The bot doesn't have permissions.\n- The emoji size is too big.\`\`\``)
