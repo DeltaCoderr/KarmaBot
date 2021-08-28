@@ -17,13 +17,13 @@ module.exports = {
             .then(body => {
                 const embed = new MessageEmbed()
                     .setColor(config.embedcolor)
-                    .setTitle("Here's your Hug, 🤗")
+                    .setTitle("Here's your hug, 🤗")
                     .setDescription(`${victim} is hugged by ${message.author}`)
                     .setImage(body.url)
                     .setTimestamp()
                     .setFooter(`© Karma `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
 
-                message.channel.send(embed);
+                message.channel.send({ embeds: [embed]});
             });
     },
 };

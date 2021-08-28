@@ -18,6 +18,6 @@ module.exports = {
             .setTimestamp()
             .setFooter("© Karma", "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
             .setColor(config.embedcolor);
-        message.channel.send(embed) 
+        message.channel.send({embeds: [embed]}) 
     }
 }

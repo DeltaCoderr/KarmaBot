@@ -32,7 +32,7 @@ module.exports = {
 
             }
 
-            return message.channel.send(new MessageEmbed()
+            return message.channel.send({embeds: [new MessageEmbed()
                 .setAuthor(`Urban Dictionary`, `https://files.catbox.moe/kkkxw3.png`, `https://www.urbandictionary.com/`)
                 .setThumbnail("https://cdn.discordapp.com/attachments/739360499086524476/745639669836021841/UD_2.PNG")
                 .setTitle(`Definition of ${defs.word}`)
@@ -40,13 +40,12 @@ module.exports = {
                 .addField('Example(s)', defs.example ? defs.example : 'N/A')
                 .setColor(config.embedcolor)
                 .setFooter(`Submitted by ${defs.author}`)
-                .setTimestamp()
-            )
+                .setTimestamp()]})
         } else {
-            return message.channel.send(new MessageEmbed()
+            return message.channel.send({embeds: [new MessageEmbed()
                 .setAuthor(`Urban Dictionary`, `https://files.catbox.moe/kkkxw3.png`, `https://www.urbandictionary.com/`)
                 .setTitle("Something went wrong.")
-                .setColor(config.embedcolor))
+                .setColor(config.embedcolor)]})
         }
 
     }

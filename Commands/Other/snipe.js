@@ -16,7 +16,7 @@ module.exports = {
            .setFooter(client.user.username, client.user.avatarURL())
            .setDescription(`<@${message.author.id}> **There is no deleted messages.**`)
            .setTimestamp();
-       if(!msg) return message.channel.send(embedn)
+       if(!msg) return message.channel.send({embeds: [embedn]})
 
        const embed = new Discord.MessageEmbed()
      
@@ -34,6 +34,6 @@ module.exports = {
        .setDescription(`**Content of the message:**`)
        .setAuthor(msg.author, msg.authorimg)
 
-       message.channel.send(embed)
+       message.channel.send({embeds: [embed]})
     }
 }

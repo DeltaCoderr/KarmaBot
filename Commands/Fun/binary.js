@@ -35,7 +35,7 @@ module.exports = {
             )
             .setColor(config.embedcolor);
 
-        await message.channel.send(embed);
+        await message.channel.send({embeds: [embed]});
 
     }
 }

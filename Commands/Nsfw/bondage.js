@@ -10,10 +10,10 @@ module.exports = {
     },
     run: async (client, message, args) => {
         if (!message.channel.nsfw) return message.channel.send({
-            embed: {
+            embeds: [{
                 color: config.embedcolor,
                 description: "You can only use this command in an NSFW Channel!"
-            }
+            }]
         })
 
         await fetch("https://shiro.gg/api/images/nsfw/bondage")
@@ -25,7 +25,7 @@ module.exports = {
                     .setColor(config.embedcolor)
                     .setFooter(`Tags: Bondage`)
                     .setURL(body.url);
-                message.channel.send(embed);
+                message.channel.send({embeds: [embed]});
             });
     },
 };

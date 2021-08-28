@@ -27,16 +27,9 @@ module.exports = {
         ) {
             return message.channel.send(`Seriously?`);
         } else if (message.mentions.members.size) {
-            return message.channel.send(
-                embed
-                    .setColor(config.embedcolor)
-                    .setImage(url)
-                    .setDescription(`${message.mentions.members.first()} B~baka!`)
-            );
+            return message.channel.send({ embeds: [embed.setColor(config.embedcolor).setImage(url).setDescription(`${message.mentions.members.first()} B~baka!`)]});
         } else
-            return message.channel.send(
-                embed.setColor(config.embedcolor).setImage(url)
-            );
+            return message.channel.send({ embeds: [embed.setColor(config.embedcolor).setImage(url)]});
 
     },
 };

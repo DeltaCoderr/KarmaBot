@@ -1,3 +1,4 @@
+//Music commands should be removed.
 const Discord = require('discord.js');
 const { embedcolor } = require('../../Configs/config');
 

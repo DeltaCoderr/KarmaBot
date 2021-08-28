@@ -19,6 +19,6 @@ module.exports = {
             .setDescription(`[Full View](${data.url})`)
             .setFooter(`© Karma`, message.author.avatarURL())
             .setImage(data.url);
-        message.channel.send(gifembed);
+        message.channel.send({ embeds: [gifembed]});
     }
 }

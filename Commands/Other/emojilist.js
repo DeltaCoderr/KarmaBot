@@ -40,7 +40,7 @@ module.exports = {
                 `I'm sorry but, my limit is 2000 characters only!`
             );
         } else {
-            message.channel.send(Embed);
+            message.channel.send({embeds: [Embed]});
         }
 
     }

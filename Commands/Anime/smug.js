@@ -10,16 +10,8 @@ module.exports = {
         category: __dirname.split("Commands\\")[1]
     },
     run: async (client, message, args) => {
-
         const { url } = await smug().catch(() => { });
-
         if (!url) return message.channel.send(`Could not connect to nekos.life`);
-
-        message.channel.send(
-            new MessageEmbed()
-                .setColor(config.embedcolor)
-                .setImage(url)
-                .setDescription(`${message.member} smugs.`)
-        );
+        message.channel.send({ embeds: [(new MessageEmbed().setColor(config.embedcolor).setImage(url).setDescription(`${message.member} smugs.`))]});
     }
 }

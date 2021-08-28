@@ -13,10 +13,10 @@ module.exports = {
         if (!message.channel.nsfw) {
             message.react('💢');
             return message.channel.send({
-                embed: {
+                embeds: [{
                     color: config.embedcolor,
                     description: "You can use only this command in an NSFW Channel!"
-                }
+                }]
             });
         };
 
@@ -29,7 +29,7 @@ module.exports = {
                     .setColor(config.embedcolor)
                     .setFooter(`Tags: Hentai`)
                     .setURL(body.url);
-                message.channel.send(embed);
+                message.channel.send({embeds: [embed]});
             });
     },
 };

@@ -14,7 +14,7 @@ module.exports = {
         const country = args.slice().join(' ');
         if (!country) {
             return message.channel.send(
-                ':x: Please provide a valid Country.',
+                ':x: Please provide a valid Country.',A
             );
         }
         const url = 'https://restcountries.eu/rest/v2/name/' + country;
@@ -45,7 +45,7 @@ module.exports = {
                     { name: 'Area', value: `\`\`\`${data.area.toLocaleString()}km\`\`\``, inline: true },
                     { name: 'Languages', value: `\`\`\`${data.languages.map(lang => lang.name).join('/')}\`\`\`` },
                 );
-            message.channel.send(embed);
+            message.channel.send({embeds: [embed]});
         }
         catch {
             return message.channel.send(

@@ -33,7 +33,7 @@ module.exports = {
                     nsfwCollector.on('collect', async msg => {
                         if (msg.content.toLowerCase() === 'yes') {
                             if (msg.channel.nsfw) {
-                                message.channel.send(reddit)
+                                message.channel.send({embeds: [reddit]})
                                 await nsfwCollector.stop()
                                 return;
                             } else {
@@ -56,7 +56,7 @@ module.exports = {
                     let spoilerCollector = new Discord.MessageCollector(message.channel, spoilerFilter, { max: 999 });
                     spoilerCollector.on('collect', async msg => {
                         if (msg.content.toLowerCase() === 'yes') {
-                            message.channel.send(reddit)
+                            message.channel.send({embeds: [reddit]})
                             await spoilerCollector.stop()
                             return;
                         } else if (msg.content.toLowerCase() === 'no') {
@@ -69,7 +69,7 @@ module.exports = {
                         }
                     })
                 } else if (data.NSFW !== true || data.spoiler !== true) {
-                    return message.channel.send(reddit)
+                    return message.channel.send({embeds: [reddit]})
                 }
             })
         } catch (e) {

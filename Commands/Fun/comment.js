@@ -20,7 +20,7 @@ module.exports = {
             const embed2 = new MessageEmbed()
                 .setTitle(`${emotes.error} Something went wrong.\n${emotes.error}Note : It won't work if the User contains Unwanted characters in his Username.`)
                 .setColor(config.embedcolor)
-            message.channel.send(embed2)
+            message.channel.send({embeds: [embed2]})
         }
 
     }
