@@ -1,5 +1,5 @@
 export NVM_DIR=/home/runner/nvm
-export NODE_VERSION=14
+export NODE_VERSION=16
 
 if ! ls $NVM_DIR > /dev/null 2>&1 
 then mkdir -p $NVM_DIR
