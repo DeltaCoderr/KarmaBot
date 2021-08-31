@@ -1,4 +1,5 @@
 const { MessageEmbed } = require('discord.js');
+const Discord = require("discord.js");
 const redditimage = require('reddit.images');
 
 module.exports = {
