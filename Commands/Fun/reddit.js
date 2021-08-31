@@ -14,7 +14,7 @@ module.exports = {
             if (!args[0]) return message.reply("**Please provide a subreddit.**")
             const subreds = args[0]
 
-            redditimage.FetchSubreddit(subreds).then((data) => {
+            redditimage.reddit.FetchSubreddit(subreds).then((data) => {
                 const reddit = new MessageEmbed()
                     .setTitle(data.title)
                     .setURL(data.postLink)
