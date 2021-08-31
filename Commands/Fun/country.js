@@ -13,9 +13,7 @@ module.exports = {
 
         const country = args.slice().join(' ');
         if (!country) {
-            return message.channel.send(
-                ':x: Please provide a valid Country.',A
-            );
+            return message.channel.send(':x: Please provide a valid Country.');
         }
         const url = 'https://restcountries.eu/rest/v2/name/' + country;
 
