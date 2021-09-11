@@ -1,6 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-const AnimeFact = require("anime-facts");
-const api = new AnimeFact(config.FACT_API)
+const fetch  = require("node-fetch");
 
 module.exports = {
     help: {
@@ -11,8 +10,15 @@ module.exports = {
     },
     run: async (client, message, args) => {
 
-        api.getFact().then((r) => {
-            const embed = new MessageEmbed()
+        let url = "https://airi.kyoyo.me/api/fact";
+
+        fetch(url, {
+            headers: {
+                'Auth': config.FACT_API
+            }
+        }).then(res => res.json())
+             .then(r => {
+                    const embed = new MessageEmbed()
                 .setColor(config.embedcolor)
                 .setTitle("Did you know?")
                 .setThumbnail(
