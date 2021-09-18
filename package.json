@@ -1,6 +1,6 @@
 {
   "name": "karmabot",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,6 @@
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
     "amethyste-api": "^1.1.5",
-    "anime-facts": "^4.3.8",
     "axios": "^0.21.1",
     "canvacord": "^5.2.1",
     "chalk": "^4.1.1",
