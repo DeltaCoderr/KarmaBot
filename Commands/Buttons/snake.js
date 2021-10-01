@@ -1,32 +1,34 @@
 const { Snake } = require('weky')
 
 module.exports = {
-    help: {
-        name: 'snake',
-        aliases: ['snake'],
-        description: 'Play the snake game in Discord!',
-        category: __dirname.split("Commands\\")[1]
-    },
-    run: async (client, message, args) => {
+  help: {
+    name: 'snake',
+    aliases: ['snake'],
+    description: 'Play the snake game in Discord!',
+    category: __dirname.split("Commands\\")[1]
+  },
+  run: async (client, message, args) => {
 
-        const game = new Snake({
-            message: message,
-            embed: {
-                title: 'Snake',
-                color: config.embedcolor,
-                gameOverTitle: "Game Over",
-            },
-            emojis: {
-                empty: '⬛',
-                snakeBody: '🐍',
-                food: '🍎 ',
-                //controls
-                up: '⬆️',
-                right: '⬅️',
-                down: '⬇️',
-                left: '➡️'
-            }
-        })
-        game.start()
-    }
+    await Snake({
+      message: message,
+      embed: {
+        title: 'Snake ',
+        description: 'GG, you scored **{{score}}** points!',
+        color: config.embedcolor,
+        footer: '©️ Karma Bot',
+        timestamp: true
+      },
+      emojis: {
+        empty: '⬛',
+        snakeBody: '🐍',
+        food: '🍎',
+        up: '⬆️',
+        right: '⬅️',
+        down: '⬇️',
+        left: '➡️',
+      },
+      othersMessage: 'Only <@{{author}}> can use the buttons!',
+      buttonText: 'Cancel'
+    });
+  }
 }
