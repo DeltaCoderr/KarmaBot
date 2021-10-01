@@ -36,7 +36,7 @@
     "twemoji-parser": "^13.1.0",
     "util": "^0.12.4",
     "weather-js": "^2.0.0",
-    "weky": "^2.1.0",
+    "weky": "^3.1.8",
     "ytdl-core": "^4.8.3"
   }
 }

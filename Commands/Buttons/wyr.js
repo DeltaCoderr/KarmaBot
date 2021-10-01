@@ -1,4 +1,5 @@
 const { WouldYouRather } = require('weky')
+require('@weky/inlinereply');
 
 module.exports = {
     help: {
@@ -9,6 +10,17 @@ module.exports = {
     },
     run: async (client, message, args) => {
 
-        await WouldYouRather(message);
+        await WouldYouRather({
+            message: message,
+            embed: {
+                title: 'Would you rather...',
+                color: config.embedcolor,
+                footer: '©️ Karma Bot',
+                timestamp: true
+            },
+            thinkMessage: 'Let me think...',
+            othersMessage: 'Only <@{{author}}> can use the buttons!',
+            buttons: { optionA: 'Option A', optionB: 'Option B' }
+        });
     }
 }
