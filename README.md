@@ -3,9 +3,11 @@
 # KarmaBot ✨
 
 [![Run on Repl.it](https://repl.it/badge/github/DeltaCoderr/KarmaBot)](https://repl.it/github/DeltaCoderr/KarmaBot)
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/DeltaCoderr/KarmaBot)
 [![](https://img.shields.io/badge/discord.js-v12.5.3-blue.svg?logo=npm)](https://github.com/discordjs)
->  A Multipurpose Discord Bot with a Music System used by 200K+ users and more than 2000 servers.
+[![Stars](https://img.shields.io/github/stars/DeltaCoderr/KarmaBot.svg)](https://github.com/DeltaCoderr/KarmaBot)
+[![License](https://img.shields.io/github/license/DeltaCoderr/KarmaBot.svg)](https://github.com/DeltaCoderr/KarmaBot/blob/master/LICENSE)
+
+> A Multipurpose Discord Bot with a Music System used by 200K+ users and more than 2000 servers.
 
 Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
 
@@ -26,7 +28,7 @@ Karma has a lot of features, with **8 main categories**:
 *   🎵 **Music**: `play`, `skip`, `queue`, `np`,`filters` and **10** more! 
 *   👩‍💼 **Information**: `info`, `help`, `invite` and **2** more! 
 *   🚓 **Anime**: `anime`, `hug`, `karma`, `neko` and **11** more! 
-*   🔲 **Buttons** : `snake`, `tictactoe` and **1** more!
+*   🔲 **Buttons** : `snake`,  and **1** more!
 *   🤖 **ChatBot**: `chatbot` and **2** more! 
 *   👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **8** more!
 *   🖨️ **Image**: `fire`, `respect`, `scary`, `triggered` and **5** more! 
@@ -37,7 +39,6 @@ Karma has a lot of features, with **8 main categories**:
 
 [![Status](https://top.gg/api/widget/status/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Servers](https://top.gg/api/widget/servers/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
-[![Lib](https://top.gg/api/widget/lib/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Upvotes](https://top.gg/api/widget/upvotes/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Owner](https://top.gg/api/widget/owner/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 
@@ -48,58 +49,14 @@ Karma has a lot of features, with **8 main categories**:
 </a>
 
 
-* **Any Questions/Suggestions? Ask them in our Support Server**
-</br></br>
-<a href="https://discord.gg/NtyaM9d"><img src="https://invidget.switchblade.xyz/NtyaM9d"/></a>
+### Support Server :label:
+<a href="https://discord.gg/NtyaM9d"><img src="https://media.discordapp.net/attachments/761647934067834921/894556178548400148/unknown.png"/></a>
 <br><br>
-* **Community Server**
-</br></br>
-<a href="https://discord.gg/devs"><img src="https://invidget.switchblade.xyz/devs"/></a>
-<br><br>
-* **[Website](https://karma.deltaa.me)**
 
-## Bot Setup  🔊
-* **Clone the Repo** by typing ``git clone https://github.com/DeltaCoderr/KarmaBot`` or Download the .rar file by clicking **[Here](https://github.com/DeltaCoderr/KarmaBot/archive/main.zip)**
+* **[Bot Website](https://karma.deltaa.me)**
 
-* Set up your **[config.js](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/config.js)** file with your respective information.
-```
-module.exports = {
-    token: '',      // Your Bot Token
-    prefix: '',     // Your Prefix
-    devs: '',       // Owner's Discord ID
-    embedcolor: '', // EmbedColor
-    database: '',   // Database URL for storing Channel's Data.
-    FACT_API: '',   // Get the API from Here -> https://docs-airi.netlify.app/
-    AME_API: ''     // AME_API for Image Commands. Key can be found -> https://docs.api.amethyste.moe
-
-}
-```
-* Set up your **[emotes.js](https://github.com/DeltaCoderr/KarmaBot/blob/main/configs/emotes.js)** file with your Emoji IDS.
-```
-module.exports = {
-    flyinghearts: "",
-    load: "",
-    verified: "",
-    error: "",
-    info: "",
-    music1: "",
-    queue: "",
-    success: "",
-    music: "",
-    fun: "",
-    chatbot: "",
-    image: "",
-    anime: "",
-    nsfw: "",
-    other: "",
-    diskspin: "",
-    owner: "",
-    buttons: ""
-}
-```
-* **Install** all the packages by typing **``npm i ``**
-
-* **Start** the bot by typing **``node karma.js``**
+## Installation 
+The Installation guide can be found in the [Installation.md](https://github.com/DeltaCoderr/KarmaBot/blob/master/Installation.md) file. 
 
 ## License ©️
 Karma Bot is licensed under the GPL 3.0 license. See the file `LICENSE` for more information. If you plan to use any part of this source code in your own bot, I would be grateful if you would include some form of credit somewhere.
