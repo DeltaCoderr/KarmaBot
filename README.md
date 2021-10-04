@@ -3,7 +3,6 @@
 # KarmaBot ✨
 
 [![Run on Repl.it](https://repl.it/badge/github/DeltaCoderr/KarmaBot)](https://repl.it/github/DeltaCoderr/KarmaBot)
-[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/DeltaCoderr/KarmaBot)
 [![](https://img.shields.io/badge/discord.js-v12.5.3-blue.svg?logo=npm)](https://github.com/discordjs)
 >  A Multipurpose Discord Bot with a Music System used by 200K+ users and more than 2000 servers.
 
@@ -26,7 +25,7 @@ Karma has a lot of features, with **8 main categories**:
 *   🎵 **Music**: `play`, `skip`, `queue`, `np`,`filters` and **10** more! 
 *   👩‍💼 **Information**: `info`, `help`, `invite` and **2** more! 
 *   🚓 **Anime**: `anime`, `hug`, `karma`, `neko` and **11** more! 
-*   🔲 **Buttons** : `snake`, `tictactoe` and **1** more!
+*   🔲 **Buttons** : `snake`,  and **1** more!
 *   🤖 **ChatBot**: `chatbot` and **2** more! 
 *   👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **8** more!
 *   🖨️ **Image**: `fire`, `respect`, `scary`, `triggered` and **5** more! 
@@ -37,7 +36,6 @@ Karma has a lot of features, with **8 main categories**:
 
 [![Status](https://top.gg/api/widget/status/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Servers](https://top.gg/api/widget/servers/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
-[![Lib](https://top.gg/api/widget/lib/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Upvotes](https://top.gg/api/widget/upvotes/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 [![Owner](https://top.gg/api/widget/owner/636484020301201418.svg)](https://top.gg/bot/636484020301201418)
 
@@ -50,12 +48,9 @@ Karma has a lot of features, with **8 main categories**:
 
 * **Any Questions/Suggestions? Ask them in our Support Server**
 </br></br>
-<a href="https://discord.gg/NtyaM9d"><img src="https://invidget.switchblade.xyz/NtyaM9d"/></a>
+<a href="https://discord.gg/NtyaM9d"><img src="https://media.discordapp.net/attachments/761647934067834921/894556178548400148/unknown.png"/></a>
 <br><br>
-* **Community Server**
-</br></br>
-<a href="https://discord.gg/devs"><img src="https://invidget.switchblade.xyz/devs"/></a>
-<br><br>
+
 * **[Website](https://karma.deltaa.me)**
 
 ## Bot Setup  🔊
