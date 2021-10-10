@@ -37,7 +37,7 @@ module.exports = {
                 .setColor(config.embedcolor)
                 .setTimestamp()
                 .setFooter(`© Karma `, "https://cdn.discordapp.com/attachments/725019921159028808/739770316754256012/Screenshot_20200803-1459592.png")
-                .setThumbnail(`${body.screenshot}`)
+                .setImage(`${body.screenshot}`)
             message.channel.send(embed);
         }
     }
