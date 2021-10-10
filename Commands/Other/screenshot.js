@@ -32,7 +32,8 @@ module.exports = {
                     title: "❌ Error URL not found"
                 }
             });
-            if (message.content.toLowerCase().includes("pornhub.com") || message.content.toLowerCase().includes("nhentai.net") || message.content.toLowerCase().includes("xnxx.com") || message.content.toLowerCase().includes("xxx") || message.content.toLowerCase().includes("porn") || message.content.toLowerCase().includes("sex") || message.content.toLowerCase().includes("fuck")){
+            let argz = args.join(" ")
+            if (argz.toLowerCase().includes("pornhub.com") || argz.toLowerCase().includes("nhentai.net") || argz.toLowerCase().includes("xnxx.com") || argz.toLowerCase().includes("xxx") || argz.toLowerCase().includes("porn") || argz.toLowerCase().includes("sex") || argz.toLowerCase().includes("fuck")){
                 return message.channel.send("No NSFW please")
             } else {
             const embed = new MessageEmbed()
