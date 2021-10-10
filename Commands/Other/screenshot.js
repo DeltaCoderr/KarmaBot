@@ -13,16 +13,22 @@ module.exports = {
             const body = await fetch(`https://shot.screenshotapi.net/screenshot?&url=${encodeURIComponent(args.join(" "))}&fresh=true&output=json&file_type=png&wait_for_event=load`)
            .then(res => res.json().catch(() => { }));
 
+            if (args.length === 0) return message.channel.send({
+               embed: {
+                    color: config.embedcolor,
+                    title: "Please provide a valid URL!"
+               }
+            })
             if (!body) return message.channel.send({
                 embed: {
                     color: config.embedcolor,
-                    title: "❌ Error Page Not Found."
+                    title: "❌ Error"
                 }
             })
             if (body.error) return message.channel.send({
                 embed: {
                     color: config.embedcolor,
-                    title: "❌ Error Page Not Found."
+                    title: "❌ Error URL not found"
                 }
             });
 
