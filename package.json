@@ -1,0 +1,22 @@
+{
+	"name": "karmabot",
+	"version": "3.0.2",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm i && node index.js",
+		"test": "nodemon index.js"
+	},
+	"author": "DeltaCoderr",
+	"license": "CC BY-NC-ND 4.0",
+	"dependencies": {
+		"canvacord": "^5.2.3",
+		"discord.js": "^13.2.0",
+		"mongoose": "^6.0.10",
+		"undici": "^4.7.1"
+	},
+	"devDependencies": {
+		"node": "^16.10.0",
+		"nodemon": "^2.0.13"
+	}
+}
