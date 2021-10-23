@@ -1,4 +1,4 @@
-const Weky = require('../../Package/index');
+const Weky = require('../../Utils/Package/index');
 const config = require('../../Configs/config');
 
 module.exports = {

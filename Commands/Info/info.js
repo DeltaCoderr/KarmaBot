@@ -58,7 +58,7 @@ module.exports = {
 					channels +
 					'\n <a:pyramid:757488922354909184> **Number of users: ** ' +
 					users +
-					'\n\n<:discordbotdev:757489652214267904> **Developers:** \n <@552814506070507531>, <@581752425858203659>',
+					'\n\n<:discordbotdev:757489652214267904> **Developers:** \n <@552814506070507531>',
 			)
 			.addField(
 				'Invite Link:',

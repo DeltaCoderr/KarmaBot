@@ -1,7 +1,7 @@
 const gameData = new Set();
 const undici = require('undici');
 const Discord = require('discord.js');
-const functions = require('../../Base/Functions');
+const functions = require('../../../Base/Functions');
 
 module.exports = async (options) => {
 	if (!options.message) {
