@@ -5,7 +5,7 @@ module.exports = {
 		name: 'emojify',
 		aliases: [],
 		description: 'Emojify the text.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		if (!args[0]) {

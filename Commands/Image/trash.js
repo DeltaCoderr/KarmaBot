@@ -8,7 +8,7 @@ module.exports = {
 		name: 'trash',
 		aliases: [],
 		description: 'TRASH NO!',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const member = client.users.cache.get(args[0])

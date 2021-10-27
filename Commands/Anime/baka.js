@@ -8,7 +8,7 @@ module.exports = {
 		name: 'baka',
 		aliases: [],
 		description: 'Get a reaction for baka.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const victim = client.users.cache.get(args[0])

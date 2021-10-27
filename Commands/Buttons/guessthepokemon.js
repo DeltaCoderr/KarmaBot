@@ -6,7 +6,7 @@ module.exports = {
 		name: 'guessthepokemon',
 		aliases: ['gtp'],
 		description: 'Guess the pokemon',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		await Weky.GuessThePokemon({

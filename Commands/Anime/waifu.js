@@ -7,7 +7,7 @@ module.exports = {
 		name: 'waifu',
 		aliases: [],
 		description: 'Drops random waifu pictures.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const { url } = await undici.fetch(

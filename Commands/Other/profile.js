@@ -7,7 +7,7 @@ module.exports = {
 		name: 'profile',
 		aliases: [],
 		description: 'Shows the Info about the user',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		let member = message.guild.members.cache.get(args[0])

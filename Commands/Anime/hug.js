@@ -8,7 +8,7 @@ module.exports = {
 		name: 'hug',
 		aliases: [],
 		description: 'Get a gif for Hugging someone :eyes:.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const victim = client.users.cache.get(args[0])

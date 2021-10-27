@@ -7,7 +7,7 @@ module.exports = {
 		name: 'neko',
 		aliases: [],
 		description: 'Drops random Neko Pictures.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const { url } = await undici.fetch('https://shiro.gg/api/images/neko').then((res) => res.json());

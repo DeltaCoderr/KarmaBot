@@ -7,7 +7,7 @@ module.exports = {
 		name: 'reddit',
 		aliases: ['r'],
 		description: 'Shows random memes from the given subreddit',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const subreddit = args.join(' ');

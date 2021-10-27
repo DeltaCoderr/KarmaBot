@@ -7,7 +7,7 @@ module.exports = {
 		name: 'bondage',
 		aliases: [],
 		description: 'Shows Bondage image',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		if (!message.channel.nsfw) {

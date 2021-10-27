@@ -7,7 +7,7 @@ module.exports = {
 		name: 'fact',
 		aliases: [],
 		description: 'Gets random Anime Facts.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const { fact } = await undici.fetch('https://nekos.life/api/v2/fact').then((res) =>res.json());

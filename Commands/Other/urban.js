@@ -9,7 +9,7 @@ module.exports = {
 		name: 'urban',
 		aliases: [],
 		description: 'Shows the Urban definition',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		if (!args[0]) {

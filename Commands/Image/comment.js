@@ -7,7 +7,7 @@ module.exports = {
 		name: 'comment',
 		aliases: ['ytcomment'],
 		description: 'Shows your text as a Youtube Comment.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const comment = args.join('');

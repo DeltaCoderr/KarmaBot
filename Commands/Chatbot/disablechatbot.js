@@ -7,7 +7,7 @@ module.exports = {
 		name: 'disablechatbot',
 		aliases: [],
 		description: 'Disables the channel for the chatbot',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		if (

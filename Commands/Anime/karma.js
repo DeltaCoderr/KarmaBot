@@ -7,7 +7,7 @@ module.exports = {
 		name: 'karma',
 		aliases: [],
 		description: 'Drops random Karma Pictures.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 

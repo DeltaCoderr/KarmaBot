@@ -7,7 +7,7 @@ module.exports = {
 		name: 'hentai',
 		aliases: [],
 		description: 'Shows Hentai image',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		if (!message.channel.nsfw) {

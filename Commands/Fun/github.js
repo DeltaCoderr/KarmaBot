@@ -8,7 +8,7 @@ module.exports = {
 		name: 'github',
 		aliases: ['gh'],
 		description: 'Shows Information about the Github User',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const name = args.join(' ');

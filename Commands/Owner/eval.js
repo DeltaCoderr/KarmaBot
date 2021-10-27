@@ -8,7 +8,7 @@ module.exports = {
 		name: 'eval',
 		aliases: ['evaluate', 'e'],
 		description: 'Evaluate javascript code.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		if (config.devs !== message.author.id) return;

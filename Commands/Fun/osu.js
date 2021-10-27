@@ -7,7 +7,7 @@ module.exports = {
 		name: 'osu',
 		aliases: [],
 		description: 'Shows information about the OSU player',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const username = args[0];

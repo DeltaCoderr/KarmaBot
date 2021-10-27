@@ -8,7 +8,7 @@ module.exports = {
 		name: 'wiki',
 		aliases: ['wikipedia'],
 		description: 'Shows Information about query from Wikipedia',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		if (!args[0]) {

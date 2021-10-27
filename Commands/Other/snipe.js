@@ -6,7 +6,7 @@ module.exports = {
 		name: 'snipe',
 		aliases: [],
 		description: 'Shows the latest Deleted Message.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const msg = client.snipes.get(message.channel.id);

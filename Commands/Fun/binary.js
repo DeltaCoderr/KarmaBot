@@ -7,7 +7,7 @@ module.exports = {
 		name: 'binary',
 		aliases: [],
 		description: 'Shows your text in Binary Format.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const type = args[0];

@@ -5,7 +5,7 @@ module.exports = {
 		name: 'reload',
 		aliases: [],
 		description: 'Reloads the Command.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		if (config.devs !== message.author.id) return;

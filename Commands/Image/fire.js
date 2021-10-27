@@ -9,7 +9,7 @@ module.exports = {
 		name: 'fire',
 		aliases: [],
 		description: 'FIREEEEE!!!!!',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const member = client.users.cache.get(args[0])

@@ -6,7 +6,7 @@ module.exports = {
 		name: 'invite',
 		aliases: ['inv'],
 		description: 'Link for Bot\'s Invite',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const embed = new Discord.MessageEmbed()

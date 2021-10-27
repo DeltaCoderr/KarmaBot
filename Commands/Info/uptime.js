@@ -7,7 +7,7 @@ module.exports = {
 		name: 'uptime',
 		aliases: [],
 		description: 'Shows the Bot\'s uptime',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const uptime = Functions.convertTime(client.uptime);

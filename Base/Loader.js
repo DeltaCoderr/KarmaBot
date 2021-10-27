@@ -3,9 +3,9 @@ const fs = require('fs');
 module.exports = {
 	LoadCommands: async function(client) {
 		fs.readdirSync(`${__dirname}/../Commands`).forEach((dir) => {
-			const commands = fs.readdirSync(`${__dirname}/../Commands/${dir}`);
+			const commands = fs.readdirSync(`${__dirname}/../Commands\\${dir}`);
 			commands.forEach((file) => {
-				const pull = require(`${__dirname}/../Commands/${dir}/${file}`);
+				const pull = require(`${__dirname}/../Commands\\${dir}/${file}`);
 				if (pull.help.name) {
 					client.commands.set(pull.help.name, pull);
 					pull.help.aliases.forEach((alias) => {

@@ -6,7 +6,7 @@ module.exports = {
 		name: 'info',
 		aliases: ['botinfo', 'stats'],
 		description: 'Shows the stats of the Bot',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const mapping = {

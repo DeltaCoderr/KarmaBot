@@ -7,7 +7,7 @@ module.exports = {
 		name: 'help',
 		aliases: ['h', 'cmds', 'commands'],
 		description: 'Shows all the commands.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const embed = new Discord.MessageEmbed()

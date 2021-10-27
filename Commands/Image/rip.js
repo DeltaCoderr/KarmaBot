@@ -8,7 +8,7 @@ module.exports = {
 		name: 'rip',
 		aliases: [],
 		description: 'Rip.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const member = client.users.cache.get(args[0])

@@ -7,7 +7,7 @@ module.exports = {
 		name: 'smug',
 		aliases: [],
 		description: 'Yes, Smug.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const { url } = await undici.fetch(

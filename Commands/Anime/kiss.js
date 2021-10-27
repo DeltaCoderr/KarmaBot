@@ -8,7 +8,7 @@ module.exports = {
 		name: 'kiss',
 		aliases: [],
 		description: 'Kiss :flushed:',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const embed = new Discord.MessageEmbed().setColor(config.embedColor);

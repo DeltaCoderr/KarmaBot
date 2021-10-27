@@ -5,7 +5,7 @@ module.exports = {
 		name: 'clyde',
 		aliases: [],
 		description: 'Shows your text as Clyde\'s message,',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const text = args.join(' ');

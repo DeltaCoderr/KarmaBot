@@ -7,7 +7,7 @@ module.exports = {
 		name: 'repo',
 		aliases: ['repo'],
 		description: 'Link to the Github Repository',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const embed = new Discord.MessageEmbed()

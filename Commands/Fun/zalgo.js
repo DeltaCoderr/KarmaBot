@@ -5,7 +5,7 @@ module.exports = {
 		name: 'zalgo',
 		aliases: ['zalgo'],
 		description: 'Converts your text into Zalgo ',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		message.reply(Functions.zalgoConvert(args.join(' ')));

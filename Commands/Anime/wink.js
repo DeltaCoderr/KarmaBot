@@ -7,7 +7,7 @@ module.exports = {
 		name: 'wink',
 		aliases: [],
 		description: 'Winky Wink.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const { link } = await undici.fetch(

@@ -6,7 +6,7 @@ module.exports = {
 		name: 'trivia',
 		aliases: [],
 		description: 'Test your brain, with some fun questions.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		await Weky.Trivia({

@@ -6,7 +6,7 @@ module.exports = {
 		name: 'snake',
 		aliases: ['snek'],
 		description: 'Play the snake game in Discord!',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		await Weky.Snake({

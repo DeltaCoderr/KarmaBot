@@ -8,7 +8,7 @@ module.exports = {
 		name: 'addemoji',
 		aliases: [],
 		description: 'Adds an emoji to your server',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		if (!message.member.permissions.has('1073741824n')) {

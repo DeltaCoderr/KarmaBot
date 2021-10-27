@@ -6,7 +6,7 @@ module.exports = {
 		name: 'fight',
 		aliases: ['battle'],
 		description: 'Lets\' fight.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const opponent = message.mentions.users.first();

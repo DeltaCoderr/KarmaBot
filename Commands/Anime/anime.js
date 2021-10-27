@@ -8,7 +8,7 @@ module.exports = {
 		name: 'anime',
 		aliases: [],
 		description: 'Shows Information about an animeInfo.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message, args) => {
 		const anime = args.join(' ');

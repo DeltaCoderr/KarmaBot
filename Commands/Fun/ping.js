@@ -6,7 +6,7 @@ module.exports = {
 		name: 'ping',
 		aliases: ['latency'],
 		description: 'Shows Bot\'s Latency',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const embed = new Discord.MessageEmbed()

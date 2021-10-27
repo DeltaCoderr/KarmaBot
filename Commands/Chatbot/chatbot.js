@@ -8,7 +8,7 @@ module.exports = {
 		name: 'chatbot',
 		aliases: [],
 		description: 'Shows the Chatbot config.',
-		category: __dirname.split('Commands/')[1],
+		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
 		const db = await Database.findOne({ _id: message.guild.id });
