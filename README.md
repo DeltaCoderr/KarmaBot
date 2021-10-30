@@ -8,7 +8,7 @@
 <a href="https://github.com/DeltaCoderr/KarmaBot/blob/network/members"><img src="https://img.shields.io/github/forks/DeltaCoderr/KarmaBot.svg?color=ff0000&label=Forks" /></a>
 <a href="https://github.com/DeltaCoderr/KarmaBot/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-orange" /></a>
 
-> A Multipurpose Discord Bot used by 200K+ users and more than 2000 servers.
+> A Multipurpose Discord Bot used by 200K+ users and more than 2200 servers.
 
 ## Commands List 💫
 
