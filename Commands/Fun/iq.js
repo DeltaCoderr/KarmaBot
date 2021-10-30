@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require('../../Configs/config');
+
 const Functions = require('../../Base/Functions');
 
 module.exports = {

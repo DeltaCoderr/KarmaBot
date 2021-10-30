@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const emotes = require('../../Configs/emotes');
+
 const Database = require('../../Structures/Database');
 
 module.exports = {

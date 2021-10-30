@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const undici = require('undici');
-const config = require('../../Configs/config');
+
 
 module.exports = {
 	help: {

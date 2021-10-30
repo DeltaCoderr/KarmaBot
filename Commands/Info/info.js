@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require('../../Configs/config');
+
 
 module.exports = {
 	help: {

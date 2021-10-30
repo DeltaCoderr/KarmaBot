@@ -1,5 +1,5 @@
 const Weky = require('../../Utils/Package/index');
-const config = require('../../Configs/config');
+
 
 module.exports = {
 	help: {

@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const Loader = require('../Base/Loader');
 
+require('../Utils/Global')
+require('../Utils/Logger')
+
 class Karma extends Discord.Client {
 	constructor() {
 		super({

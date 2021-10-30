@@ -1,4 +1,4 @@
-const emotes = require('../../Configs/emotes');
+
 
 module.exports = {
 	help: {

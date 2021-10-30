@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const Canvacord = require('canvacord');
-const emotes = require('../../Configs/emotes');
+
 
 module.exports = {
 	help: {

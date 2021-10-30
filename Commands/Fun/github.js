@@ -1,7 +1,7 @@
 const undici = require('undici');
 const Discord = require('discord.js');
-const emotes = require('../../Configs/emotes');
-const config = require('../../Configs/config');
+
+
 
 module.exports = {
 	help: {

@@ -1,4 +1,4 @@
-const config = require('../../Configs/config');
+
 
 module.exports = {
 	help: {

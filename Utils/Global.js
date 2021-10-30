@@ -3,6 +3,5 @@ global.toID = function (text) {
 }
 
 
-global.config = require('../Configs/config');
+global.config = require('../Configs/config')
 global.emotes = require('../Configs/emotes')
-global.filters = require('../Configs/filters')
