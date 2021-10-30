@@ -18,8 +18,8 @@ module.exports = {
 			);
 		}
 
-		const db = await Database.findOne({ _id: message.guild.id });
-		const channel = db ? db.chatbot : null;
+		const db = await Database.findOne({ ID: `chatbot_${message.guild.id}` });
+		const channel = db ? db.data : null;
 
 		if (!channel) {
 			return message.reply(
@@ -27,7 +27,7 @@ module.exports = {
 			);
 		} else {
 			await Database.findOneAndDelete(
-				{ _id: message.guild.id },
+				{ ID: `chatbot_${message.guild.id}` },
 				{ useFindAndModify: false },
 			);
 			return message.reply(

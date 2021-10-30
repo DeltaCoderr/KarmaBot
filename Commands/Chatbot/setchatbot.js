@@ -31,15 +31,15 @@ module.exports = {
 				.get(channel.id)
 				.send(`**${emotes.verified} ChatBot Channel Set!**`);
 
-			const db = await Database.findOne({ _id: message.guild.id });
+			const db = await Database.findOne({ ID: `chatbot_${message.guild.id}` });
 
 			if (db) {
-				db.chatbot = channel.id;
+				db.data = channel.id;
 				await db.save();
 			} else {
 				const newDB = new Database({
-					_id: message.guild.id,
-					chatbot: channel.id,
+					ID: `chatbot_${message.guild.id}`,
+					data: channel.id,
 				});
 				await newDB.save();
 			}

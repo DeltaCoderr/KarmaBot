@@ -1,12 +1,11 @@
 const undici = require('undici');
-const config = require('../Configs/config');
 const Database = require('../Structures/Database');
 
 module.exports = async (client, message) => {
 	if (!message.guild || message.author.bot) return;
 
-	const db = await Database.findOne({ _id: message.guild.id });
-	const channel = db ? db.chatbot : null;
+	const db = await Database.findOne({ ID: `chatbot_${message.guild.id}` });
+	const channel = db ? db.data : null;
 	const sChannel = channel
 		? message.guild.channels.cache.get(channel)
 			? message.guild.channels.cache.get(channel)

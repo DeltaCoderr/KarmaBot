@@ -11,10 +11,10 @@ module.exports = {
 		category: __dirname.split('Commands\\')[1],
 	},
 	run: async (client, message) => {
-		const db = await Database.findOne({ _id: message.guild.id });
+		const db = await Database.findOne({ ID: `chatbot_${message.guild.id}` });
 		const channel = db
-			? message.guild.channels.cache.get(db.chatbot)
-				? `<#${message.guild.channels.cache.get(db.chatbot).id}>`
+			? message.guild.channels.cache.get(db.data)
+				? `<#${message.guild.channels.cache.get(db.data).id}>`
 				: 'None'
 			: 'None';
 
