@@ -9,7 +9,7 @@
   "author": "DeltaCoderr",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.5.3",
+    "@discordjs/opus": "^0.6.0",
     "amethyste-api": "^1.1.5",
     "axios": "^0.21.1",
     "canvacord": "^5.2.1",
