@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows all the filters.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
         const embednoinvoice = new Discord.MessageEmbed()
             .setTitle('Error!')
             .setDescription(`${emotes.error} - You're not in a voice channel !`)

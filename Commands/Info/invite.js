@@ -7,7 +7,7 @@ module.exports = {
         description: 'Link for Bot\'s Invite',
         category: __dirname.split("Commands\\")[1],
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         const embed = new MessageEmbed()
             .setThumbnail(client.user.avatarURL())

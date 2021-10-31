@@ -8,7 +8,7 @@ module.exports = {
         description: 'Clears the whole Queue.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         const embed = new Discord.MessageEmbed()
             .setTitle('Something went wrong!')

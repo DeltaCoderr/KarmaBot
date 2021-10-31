@@ -1,6 +1,5 @@
 const fetch = require('node-fetch');
 const { MessageEmbed } = require('discord.js');
-const { resolveMember } = require('../../Base/Functions')
 
 module.exports = {
     help: {

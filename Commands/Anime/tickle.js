@@ -10,7 +10,7 @@ module.exports = {
         description: 'TICKLE THEM RN.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
         const { url } = await tickle().catch(() => { });
 
         if (!url) return message.channel.send(`Could not connect to nekos.life`);

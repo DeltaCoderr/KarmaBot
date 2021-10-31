@@ -1,7 +1,6 @@
 const request = require('node-fetch');
 const { createCanvas, loadImage } = require('canvas');
 const { GuildMember, User } = require('discord.js')
-const { Bot } = require('../Structures/Client')
 
 async function fetchRateLimit() {
         try {

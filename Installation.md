@@ -10,8 +10,7 @@ module.exports = {
     prefix: '',     // Your Prefix
     devs: '',       // Owner's Discord ID
     embedcolor: '', // EmbedColor
-    database: '',   // Database URL for storing Channel's Data.
-    FACT_API: '',   // Get the API from Here -> https://docs-airi.netlify.app/
+    MongoURI: '',   // Database URL for storing Channel's Data.
     AME_API: ''     // AME_API for Image Commands. Key can be found -> https://docs.api.amethyste.moe
 
 }

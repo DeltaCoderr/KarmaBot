@@ -8,7 +8,7 @@ module.exports = {
         description: 'Now Playing.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         
         const embed1 = new Discord.MessageEmbed()

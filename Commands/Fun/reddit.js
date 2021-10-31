@@ -69,7 +69,7 @@ module.exports = {
                             return;
                         }
                     })
-                } else if (data.NSFW !== true || data.spoiler !== true) {
+                } else if (data.NSFW || data.spoiler) {
                     return message.channel.send(reddit)
                 }
             })

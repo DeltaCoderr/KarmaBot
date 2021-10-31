@@ -9,11 +9,10 @@ module.exports = {
         description: 'Shows the Bot\'s uptime',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         let uptime = moment.duration(client.uptime).format("D [ days] h[ hours] m[ minutes] s[ seconds]")
 
-        const duration = moment.duration(client.uptime)
         let bicon = client.user.displayAvatarURL()
         const botembed = new MessageEmbed()
             .setTitle("Karma Bot Project")

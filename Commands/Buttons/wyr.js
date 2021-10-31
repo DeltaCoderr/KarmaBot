@@ -8,7 +8,7 @@ module.exports = {
         description: 'Would you Rather? Hmm..',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         await WouldYouRather({
             message: message,

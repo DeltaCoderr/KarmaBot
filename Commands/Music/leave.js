@@ -8,7 +8,7 @@ module.exports = {
         description: 'Leaves the VC.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
 
         const embednoinvoice = new Discord.MessageEmbed()

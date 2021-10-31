@@ -7,7 +7,7 @@ module.exports = {
         description: 'Shows the List of all the Emojis in the server',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         let Emojis = "";
         let EmojisAnimated = "";
