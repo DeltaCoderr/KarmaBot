@@ -9,7 +9,7 @@ module.exports = {
     },
     run: async (client, message, args) => {
 
-        if (!args[0]) return message.channel.send(`${client.emotes.error} Boi, Provide an Word`)
+        if (!args[0]) return message.channel.send(`${emotes.error} Boi, Provide an Word`)
 
         let def;
 
