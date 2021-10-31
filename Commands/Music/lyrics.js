@@ -9,7 +9,7 @@ module.exports = {
         description: 'Get the Lyrics of any song',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
         let embed = new MessageEmbed()
             .setDescription(` ${emotes.load} **Please wait, im looking for the Lyrics, It can take \`few \` seconds**.`)

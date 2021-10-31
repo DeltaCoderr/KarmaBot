@@ -9,7 +9,7 @@ module.exports = {
         description: 'Get a reaction for baka.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         const { url } = await baka().catch(() => { });
 

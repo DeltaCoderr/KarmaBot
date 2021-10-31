@@ -8,7 +8,7 @@ module.exports = {
         description: 'Drops random Karma Pictures.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message) => {
 
         let res = await fetch('https://api.deltaa.me/karma')
         let data = await res.json()

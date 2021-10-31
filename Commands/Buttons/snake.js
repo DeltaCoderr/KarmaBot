@@ -7,7 +7,7 @@ module.exports = {
     description: 'Play the snake game in Discord!',
     category: __dirname.split("Commands\\")[1]
   },
-  run: async (client, message, args) => {
+  run: async (message) => {
 
     await Snake({
       message: message,

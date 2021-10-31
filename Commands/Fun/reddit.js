@@ -9,7 +9,7 @@ module.exports = {
         description: 'Shows random memes from the given subreddit',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
         try {
             if (!args[0]) return message.reply("**Please provide a subreddit.**")
@@ -69,7 +69,7 @@ module.exports = {
                             return;
                         }
                     })
-                } else if (data.NSFW !== true || data.spoiler !== true) {
+                } else if (data.NSFW || data.spoiler) {
                     return message.channel.send(reddit)
                 }
             })

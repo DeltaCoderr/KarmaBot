@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows Hentai Pictures',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message) => {
 
         if (!message.channel.nsfw) {
             message.react('💢');

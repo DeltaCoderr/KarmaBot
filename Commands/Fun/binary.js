@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows your text in Binary Format.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
 
         const url = `http://some-random-api.ml/binary?text=${args}`;

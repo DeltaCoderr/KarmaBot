@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 
-module.exports = (client, message, queue) => {
+module.exports = (message) => {
 	const embed = new Discord.MessageEmbed()
 	.setTitle('Queue End!')
 	.setDescription(`${emotes.error} - Music stopped as there is no more music in the queue !`)

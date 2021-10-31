@@ -15,8 +15,6 @@ async function checkPermission(of, message, permissions) {
   /**
    * @type { Bot }
    */
-  const client = message.client;
-
   switch (of.toLowerCase()) {
     case "client":
       //embed

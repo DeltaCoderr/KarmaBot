@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows Information about query from Wikipedia',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
             const body = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(args.join(" "))}`,    ).then(res => res.json().catch(() => { }));
 

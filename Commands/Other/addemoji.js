@@ -2,7 +2,6 @@ const { MessageEmbed } = require('discord.js');
 const Discord = require('discord.js')
 const { checkPermission } = require('../../Base/Permissions');
 let isUrl = require("is-url");
-const { parse } = require("twemoji-parser");
 module.exports = {
     help: {
         name: 'addemoji',
@@ -10,7 +9,7 @@ module.exports = {
         description: 'Adds an emoji to your server',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
         /****   Checking Permissions    ****/
         let clientPermission = await checkPermission('client', message, [

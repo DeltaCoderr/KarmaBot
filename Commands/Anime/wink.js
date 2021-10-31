@@ -8,7 +8,7 @@ module.exports = {
         description: 'Winky Wink.',
         category:  __dirname.split("Commands\\")[1]
     },
-    run: async(client, message, args) => {
+    run: async(message) => {
         fetch('https://some-random-api.ml/animu/wink')
         .then(res => res.json())
         .then(response => {

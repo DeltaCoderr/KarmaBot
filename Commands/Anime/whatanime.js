@@ -8,7 +8,7 @@ module.exports = {
         description: 'Provides the Anime name from the image.',
         category:  __dirname.split("Commands\\")[1]
     },
-    run: async(client, message, args) => {
+    run: async(message, args) => {
 
         let msg = message;
         try {

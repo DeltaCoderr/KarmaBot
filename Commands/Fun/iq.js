@@ -7,7 +7,7 @@ module.exports = {
         description: 'Test your iq :brain: ',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
         let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member
         try {

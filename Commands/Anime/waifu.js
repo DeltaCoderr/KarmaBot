@@ -8,7 +8,7 @@ module.exports = {
         description: 'Drops random waifu pictures.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message) => {
         await fetch("https://nekos.life/api/v2/img/waifu")
             .then(res => res.json())
             .then(body => {

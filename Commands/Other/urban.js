@@ -22,7 +22,7 @@ module.exports = {
             if (defs.constructor.name === 'Array') {
                 let total = Object.keys(defs).length
 
-                if (!defs || !total) return message.channel.send(new MessageEmbed().setColor('FF0000').setDescription(`\u200B\n\nNo match found for **${args.join(' ')}**`).setThumbnail('https://files.catbox.moe/kkkxw3.png'))
+                if (!total) return message.channel.send(new MessageEmbed().setColor('FF0000').setDescription(`\u200B\n\nNo match found for **${args.join(' ')}**`).setThumbnail('https://files.catbox.moe/kkkxw3.png'))
 
                 def = defs[1]
 

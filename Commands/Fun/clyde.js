@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows your text as Clyde\'s message,',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
         const text = args.slice().join(' ');
         if (!text) {

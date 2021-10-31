@@ -9,7 +9,7 @@ module.exports = {
         description: 'Kiss :flushed: .',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         const embed = new MessageEmbed();
 

@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows Information about the Github User',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
         const name = args.join(' ');
         if (!name) {
             return message.channel.send(

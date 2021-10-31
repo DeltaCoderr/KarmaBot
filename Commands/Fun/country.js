@@ -9,7 +9,7 @@ module.exports = {
         description: 'Yes, Country.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
         const country = args.slice().join(' ');
         if (!country) {

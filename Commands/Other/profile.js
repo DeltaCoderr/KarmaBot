@@ -9,7 +9,7 @@ module.exports = {
         description: 'Shows the Info about the user',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (message, args) => {
 
         let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member
         let durumm;

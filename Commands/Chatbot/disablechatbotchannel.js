@@ -10,7 +10,7 @@ module.exports = {
         description: 'Disables the channel for the chatbot',
         category:  __dirname.split("Commands\\")[1]
     },
-    run: async(client, message, args) => {
+    run: async(message) => {
         
             /****   Checking Permissions    ****/
             let clientPermission = await checkPermission('client', message, [
@@ -36,12 +36,11 @@ module.exports = {
                     }});
                 } else {
 
-                    let channel = message.guild.channels.cache.get(a);
                     db.delete(`chatbot_${message.guild.id}`);
 
                     message.channel.send({embed: {
                         color: config.embed,
-                        title: `${emotes.verified} Chatbot Channel has been succesfully disabled!`
+                        title: `${emotes.verified} Chatbot Channel has been successfully disabled!`
                     }});
                 } return;
                 
