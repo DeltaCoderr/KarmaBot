@@ -9,7 +9,7 @@ module.exports = {
         description: 'Adds an emoji to your server',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message, args) => {
+    run: async (client, message, args) => {
 
         /****   Checking Permissions    ****/
         let clientPermission = await checkPermission('client', message, [

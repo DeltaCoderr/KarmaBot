@@ -8,7 +8,7 @@ module.exports = {
         description: 'Patto.',
         category:  __dirname.split("Commands\\")[1]
     },
-    run: async(message, args) => {
+    run: async(client, message, args) => {
 
         let victim = message.mentions.users.first() || (args.length > 0 ? message.users.cache.filter(e => e.username.toLowerCase().includes(args.join(" ").toLowerCase())).first() : message.author) || message.author;
         await fetch("https://nekos.life/api/v2/img/pat")

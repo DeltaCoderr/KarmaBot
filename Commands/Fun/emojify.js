@@ -6,7 +6,7 @@ module.exports = {
         description: 'Emojify the text.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message, args) => {
+    run: async (client, message, args) => {
 
         if (!args[0]) {
             return message.channel.send(

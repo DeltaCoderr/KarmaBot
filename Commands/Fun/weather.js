@@ -7,7 +7,7 @@ module.exports = {
         description: 'Shows the weather :o ',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message, args) => {
+    run: async (client, message, args) => {
 
         if (args.length === 0) {
             let errorembed = new MessageEmbed()

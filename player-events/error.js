@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 
-module.exports = (error, message) => {
+module.exports = (client, error, message) => {
 	const embedNotPlaying = new Discord.MessageEmbed()
 	.setTitle('Error!')
 	.setDescription(`${emotes.error} - There is no music being played on this server !`)

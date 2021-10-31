@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 
-module.exports = (message, track) => {
+module.exports = (client, message, track) => {
 	const embed = new Discord.MessageEmbed()
 	.setTitle('Track Added!')
 	.setDescription(`${emotes.music} - ${track.title} has been added to the queue !`)

@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 
-module.exports = (message) => {
+module.exports = (client, message) => {
 	const embed = new Discord.MessageEmbed()
 	.setTitle('Search Cancelled!')
 	.setDescription(`${emotes.error} - You did not provide a valid response ... Please send the command again !`)

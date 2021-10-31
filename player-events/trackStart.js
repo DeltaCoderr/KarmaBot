@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 
-module.exports = (message, track) => {
+module.exports = (client, message, track) => {
 	const embed = new Discord.MessageEmbed()
 	.setTitle('Track Started!')
 	.setDescription(`${emotes.music} - Now playing ${track.title} into ${message.member.voice.channel.name} ...`)

@@ -1,4 +1,4 @@
-module.exports = (message, query, tracks) => {
+module.exports = (client, message, query, tracks) => {
 		message.channel.send({
        		embed: {
             author: { name: `Here are your search results for ${query}` },

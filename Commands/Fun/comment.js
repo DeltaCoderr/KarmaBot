@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows your text as a Youtube Comment.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message, args) => {
+    run: async (client, message, args) => {
 
         const comment = args.join('');
         if (!comment) return message.channel.send(`${emotes.error} Provide something to Comment!`)

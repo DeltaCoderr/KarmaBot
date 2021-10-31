@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows Information about an Anime.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message, args) => {
+    run: async (client, message, args) => {
 
         let Text = args.join(" ");
 

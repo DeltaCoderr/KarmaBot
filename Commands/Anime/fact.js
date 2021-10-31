@@ -8,7 +8,7 @@ module.exports = {
         description: 'Gets random Anime Facts.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message) => {
+    run: async (client, message) => {
 
         let url = "https://airi.kyoyo.me/api/fact";
 

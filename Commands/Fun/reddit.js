@@ -9,7 +9,7 @@ module.exports = {
         description: 'Shows random memes from the given subreddit',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message, args) => {
+    run: async (client, message, args) => {
 
         try {
             if (!args[0]) return message.reply("**Please provide a subreddit.**")

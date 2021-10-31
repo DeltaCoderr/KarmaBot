@@ -8,7 +8,7 @@ module.exports = {
         description: 'Yeet a user',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message, args) => {
+    run: async (client, message, args) => {
 
         try {
 

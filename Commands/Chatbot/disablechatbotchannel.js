@@ -10,7 +10,7 @@ module.exports = {
         description: 'Disables the channel for the chatbot',
         category:  __dirname.split("Commands\\")[1]
     },
-    run: async(message) => {
+    run: async(client, message) => {
         
             /****   Checking Permissions    ****/
             let clientPermission = await checkPermission('client', message, [

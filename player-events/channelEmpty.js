@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-module.exports = (message) => {
+module.exports = (client, message) => {
 	const embed = new Discord.MessageEmbed()
 	.setTitle('Channel Empty!')
 	.setDescription(`${emotes.error} - Music stopped as there is no more member in the voice channel !`)

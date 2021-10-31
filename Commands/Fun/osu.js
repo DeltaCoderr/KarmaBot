@@ -13,7 +13,7 @@ module.exports = {
         description: 'Shows information about the OSU player',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (message, args) => {
+    run: async (client, message, args) => {
 
         let username = args[0]
         if (!args[0]) return message.channel.send('Please, provide a valid user\'s nickname! (osu!)')
