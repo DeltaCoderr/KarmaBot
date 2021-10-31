@@ -29,7 +29,7 @@ async function LoadCommands(client) {
                 /* Aliases */
                 if (!props.help.aliases) return logger.warn(`[WARN]: ${file} doesn't have enough Aliases.`);
 
-                for (i = 0; i < props.help.aliases.length; i++) {
+                for (let i = 0; i < props.help.aliases.length; i++) {
                     client.aliases.set(props.help.aliases[i], props.help.name);
                 };
             });
@@ -46,7 +46,7 @@ async function LoadEvents(client) {
 
         if (!files) return logger.warn(`[WARN]: Event Folder Doesn't have any files.`);
 
-        for (i = 0; i < files.length; i++) {
+        for (let i = 0; i < files.length; i++) {
             const event = require(`./Events/${files[i]}`);
             let eventName = files[i].split(".")[0];
             client.on(eventName, event.bind(null, client));

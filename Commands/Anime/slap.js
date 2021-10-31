@@ -9,7 +9,7 @@ module.exports = {
         description: 'Slap someone go go!.',
         category:  __dirname.split("Commands\\")[1]
     },
-    run: async(client, message, args) => {
+    run: async(client, message) => {
         const { url } = await slap().catch(() => {});
 
         if (!url) return message.channel.send(`Could not connect to nekos.life`);

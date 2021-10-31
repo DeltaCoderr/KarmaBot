@@ -2,7 +2,6 @@ const { MessageEmbed } = require('discord.js');
 const Discord = require('discord.js')
 const { checkPermission } = require('../../Base/Permissions');
 let isUrl = require("is-url");
-const { parse } = require("twemoji-parser");
 module.exports = {
     help: {
         name: 'addemoji',

@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows Bondage Pictures',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
         if (!message.channel.nsfw) return message.channel.send({
             embed: {
                 color: config.embedcolor,

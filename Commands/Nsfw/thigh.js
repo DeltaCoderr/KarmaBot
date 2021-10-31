@@ -8,7 +8,7 @@ module.exports = {
         description: 'Shows Thigh Pictures',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
         if (!message.channel.nsfw) {
             message.react('💢');
             return message.channel.send({

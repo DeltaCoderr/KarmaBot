@@ -9,7 +9,7 @@ module.exports = {
         description: 'Yes, Smug.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         const { url } = await smug().catch(() => { });
 

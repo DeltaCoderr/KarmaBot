@@ -11,7 +11,7 @@ module.exports = {
         if (config.devs !== message.author.id) return message.channel.send('Only the Developer can use this command.');
 
         const content = message.content.split(' ').slice(1).join(' ');
-        const result = new Promise((resolve, reject) => resolve(eval(content)));
+        const result = new Promise((resolve) => resolve(eval(content)));
 
         return result.then((output) => {
             if (typeof output !== 'string') {

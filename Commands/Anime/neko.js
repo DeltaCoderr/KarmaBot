@@ -8,7 +8,7 @@ module.exports = {
         description: 'Drops random Neko Pictures.',
         category: __dirname.split("Commands\\")[1]
     },
-    run: async (client, message, args) => {
+    run: async (client, message) => {
 
         fetch('https://shiro.gg/api/images/neko')
         .then(res => res.json())

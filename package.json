@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
+    "@weky/inlinereply": "^0.0.0",
     "amethyste-api": "^1.1.5",
     "axios": "^0.21.1",
     "canvacord": "^5.2.1",
@@ -26,7 +27,6 @@
     "moment": "^2.29.1",
     "nekos.life": "^2.0.7",
     "node-fetch": "^2.6.1",
-    "node-opus": "^0.3.3",
     "node-osu": "^2.2.1",
     "opusscript": "0.0.8",
     "quickmongo": "^3.0.2",

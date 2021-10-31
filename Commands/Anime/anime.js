@@ -30,7 +30,7 @@ module.exports = {
 
             Anime = await Scraper.getInfoFromName(Replaced);
 
-            if (!Anime.genres[0] || Anime.genres[0] === null) Anime.genres[0] = "None";
+            if (!Anime.genres[0]) Anime.genres[0] = "None";
 
             Embed = new MessageEmbed()
                 .setColor(config.embedcolor)
