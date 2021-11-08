@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 
-
-
 module.exports = {
 	help: {
 		name: 'help',
@@ -48,9 +46,7 @@ module.exports = {
 					`**Karma's prefix is \`${config.prefix}\`\n\nFor help related to a particular command use: \n\`${config.prefix}help [command name] Or ${config.prefix}help [alias]\`**`,
 				);
 				embed.addField(
-					`${emotes[emote.toLowerCase().replace(/[^a-z0-9]/g, '')]} ${emote} [${
-						cmds.size
-					}] -`,
+					`${emotes[toID(emote)]} ${emote} [${cmds.size}] -`,
 					cmds.map((c) => `\`${c.help.name}\``).join(' '),
 				);
 			});
