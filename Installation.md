@@ -40,7 +40,7 @@ module.exports = {
 ```
 * **Install** all the packages by typing **``npm i ``**
 
-* **Start** the bot by typing **``node karma.js``**
+* **Start** the bot by typing **``node index.js``**
 
 ## If you still got issues, Join the Support server 
 <a href="https://discord.gg/NtyaM9d"><img src="https://media.discordapp.net/attachments/761647934067834921/894556178548400148/unknown.png"/></a>
