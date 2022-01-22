@@ -34,7 +34,7 @@ module.exports = async (client, message) => {
 		}
 		sChannel.startTyping();
 		if (!message.content) return sChannel.send("Please say something.");
-		fetch(`https://api.deltaa.me/chatbot?message=${encodeURIComponent(message.content)}&name=${client.user.username}&user=${message.author.username}&gender=Male`)
+		fetch(`https://api.deltacoderr.repl.co/chatbot?message=${encodeURIComponent(message.content)}&name=${client.user.username}&user=${message.author.username}&gender=Male`)
 			.then(res => res.json())
 			.then(data => {
 				sChannel.send(`> ${message.content} \n ${data.message}`);
