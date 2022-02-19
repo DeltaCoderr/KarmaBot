@@ -1,6 +1,6 @@
 const { SapphireClient } = require("@sapphire/framework");
 
-global.KarmaClient = module.exports = class KarmaClient extends SapphireClient {
+module.exports = class KarmaClient extends SapphireClient {
 	constructor(options) {
 		super({
 			...options,
@@ -11,10 +11,10 @@ global.KarmaClient = module.exports = class KarmaClient extends SapphireClient {
 		this.owners = ["552814506070507531", "838620835282812969"]; // Mori Delta & Lorenz
 	}
 
-	start(token) {
+	async start(token) {
 		try {
 			this.logger.info(`[API]: Logging..`);
-			await this.login(token);
+			this.login(token);
 			this.logger.info(`[API]: Logged In!`);
 		} catch (error) {
 			this.logger.fatal(`[ERROR]: An Invalid Token was provided`);
