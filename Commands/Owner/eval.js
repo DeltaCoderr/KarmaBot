@@ -74,5 +74,3 @@ module.exports = class EvalCommand extends KarmaCommand {
 		return { result, success, type };
 	}
 };
-
-module.exports = { EvalCommand };
