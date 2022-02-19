@@ -1,0 +1,42 @@
+module.exports = {
+<<<<<<< Updated upstream:Configs/emotes.js
+	fun: '',
+	info: '',
+	load: '',
+	nsfw: '',
+	anime: '',
+	other: '',
+	music: '',
+	owner: '',
+	error: '',
+	image: '',
+	queue: '',
+	music1: '',
+	success: '',
+	buttons: '',
+	chatbot: '',
+	diskspin: '',
+	verified: '',
+	flyinghearts: '',
+};
+=======
+    flyinghearts: "",
+    load: "",
+    verified: "",
+    error: "",
+    info: "",
+    music1: "",
+    queue: "",
+    success: "",
+    music: "",
+    fun: "",
+    chatbot: "",
+    image: "",
+    anime: "",
+    nsfw: "",
+    other: "",
+    diskspin: "",
+    owner: "",
+    buttons: ""
+}
+>>>>>>> Stashed changes:old/Configs/emotes.js

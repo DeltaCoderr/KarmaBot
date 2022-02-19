@@ -1,22 +1,30 @@
 {
-	"name": "karmabot",
-	"version": "3.0.2",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "npm i && node index.js",
-		"test": "nodemon index.js"
-	},
-	"author": "DeltaCoderr",
-	"license": "CC BY-NC-ND 4.0",
-	"dependencies": {
-		"canvacord": "^5.2.3",
-		"discord.js": "^13.2.0",
-		"mongoose": "^6.0.10",
-		"undici": "^4.7.1"
-	},
-	"devDependencies": {
-		"node": "^16.10.0",
-		"nodemon": "^2.0.13"
-	}
+  "name": "karmabot",
+  "version": "1.0.0",
+  "description": "Karma Bot",
+  "main": "src/index.js",
+  "dependencies": {
+    "@sapphire/framework": "^2.4.1",
+    "@sapphire/type": "^2.1.2",
+    "@sapphire/utilities": "^3.3.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeltaCoderr/KarmaBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeltaCoderr/KarmaBot/issues"
+  },
+  "homepage": "https://github.com/DeltaCoderr/KarmaBot#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
