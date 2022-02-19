@@ -2,7 +2,7 @@ require("dotenv").config();
 const KarmaClient = require("./Library/KarmaClient");
 
 const client = new KarmaClient({
-	intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS", "GUILD_PRESENCE"],
+	intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"],
 });
 
-client.start(process.env.TOKEN);
+(async () => await client.start(process.env.TOKEN))();
