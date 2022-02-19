@@ -1,8 +1,8 @@
 {
   "name": "karmabot",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "description": "Karma Bot",
-  "main": "src/index.js",
+  "main": "index.js",
   "dependencies": {
     "@sapphire/framework": "^2.4.1",
     "@sapphire/type": "^2.1.2",
@@ -11,8 +11,8 @@
     "dotenv": "^16.0.0"
   },
   "scripts": {
-    "start": "node src/index.js",
-    "watch": "nodemon src/index.js"
+    "start": "node index.js",
+    "watch": "nodemon index.js"
   },
   "repository": {
     "type": "git",

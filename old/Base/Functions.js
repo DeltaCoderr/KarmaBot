@@ -1,41 +1,36 @@
-<<<<<<< Updated upstream:Base/Functions.js
 module.exports = {
-	getUser: function(message, args, author) {
+	getUser: function (message, args, author) {
 		if (args && args.length > 0) {
 			if (author) {
 				return message.guild.members.cache
 					.filter((e) =>
-						e.user.username
-							.toLowerCase()
-							.includes(args.join(' ').toLowerCase()),
+						e.user.username.toLowerCase().includes(args.join(" ").toLowerCase())
 					)
 					.first()
 					? message.guild.members.cache
-						.filter((e) =>
-							e.user.username
-								.toLowerCase()
-								.includes(args.join(' ').toLowerCase()),
-						)
-						.first()
+							.filter((e) =>
+								e.user.username
+									.toLowerCase()
+									.includes(args.join(" ").toLowerCase())
+							)
+							.first()
 					: message.mentions.users.first();
 			} else {
 				return message.guild.members.cache
 					.filter((e) =>
-						e.user.username
-							.toLowerCase()
-							.includes(args.join(' ').toLowerCase()),
+						e.user.username.toLowerCase().includes(args.join(" ").toLowerCase())
 					)
 					.first()
 					? message.guild.members.cache
-						.filter((e) =>
-							e.user.username
-								.toLowerCase()
-								.includes(args.join(' ').toLowerCase()),
-						)
-						.first()
+							.filter((e) =>
+								e.user.username
+									.toLowerCase()
+									.includes(args.join(" ").toLowerCase())
+							)
+							.first()
 					: author
-						? message.mentions.users.first() || message.author
-						: message.mentions.users.first();
+					? message.mentions.users.first() || message.author
+					: message.mentions.users.first();
 			}
 		} else {
 			return author
@@ -43,41 +38,41 @@ module.exports = {
 				: message.mentions.users.first();
 		}
 	},
-	cleanEval: function(text, token) {
-		if (typeof text === 'string') {
+	cleanEval: function (text, token) {
+		if (typeof text === "string") {
 			return text
-				.replace(token, 'T0K3N')
-				.replace(/`/g, '`' + String.fromCharCode(8203))
-				.replace(/@/g, '@' + String.fromCharCode(8203));
+				.replace(token, "T0K3N")
+				.replace(/`/g, "`" + String.fromCharCode(8203))
+				.replace(/@/g, "@" + String.fromCharCode(8203));
 		} else {
 			return text;
 		}
 	},
-	binaryConvert: function(text, encode) {
+	binaryConvert: function (text, encode) {
 		if (encode) {
 			const output = [];
 			const length = text.length;
 			for (let i = 0; i < length; i++) {
 				const binary = text[i].charCodeAt().toString(2);
-				output.push(Array(8 - binary.length + 1).join('0') + binary);
+				output.push(Array(8 - binary.length + 1).join("0") + binary);
 			}
-			return output.join(' ');
+			return output.join(" ");
 		} else {
 			const output = [];
-			text = text.replace(/\s/g, '');
+			text = text.replace(/\s/g, "");
 			const length = text.length;
 			if (length % 8 !== 0) {
-				return 'Invalid Binary';
+				return "Invalid Binary";
 			}
 			for (let i = 0; i < length; i += 8) {
 				const binary = text.substr(i, 8);
 				output.push(String.fromCharCode(parseInt(binary, 2)));
 			}
-			return output.join('');
+			return output.join("");
 		}
 	},
 	// Adopted from https://github.com/WekyDev/weky-npm/blob/main/functions/function.js#L81-L89
-	shuffleArray: function(array) {
+	shuffleArray: function (array) {
 		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
 			const temp = array[i];
@@ -87,29 +82,29 @@ module.exports = {
 		return array;
 	},
 	// Adopted from https://github.com/WekyDev/weky-npm/blob/main/functions/function.js#L49-L80
-	convertTime: function(time) {
+	convertTime: function (time) {
 		const absoluteSeconds = Math.floor((time / 1000) % 60);
 		const absoluteMinutes = Math.floor((time / (1000 * 60)) % 60);
 		const absoluteHours = Math.floor((time / (1000 * 60 * 60)) % 24);
 		const absoluteDays = Math.floor(time / (1000 * 60 * 60 * 24));
 		const d = absoluteDays
 			? absoluteDays === 1
-				? '1 day'
+				? "1 day"
 				: `${absoluteDays} days`
 			: null;
 		const h = absoluteHours
 			? absoluteHours === 1
-				? '1 hour'
+				? "1 hour"
 				: `${absoluteHours} hours`
 			: null;
 		const m = absoluteMinutes
 			? absoluteMinutes === 1
-				? '1 minute'
+				? "1 minute"
 				: `${absoluteMinutes} minutes`
 			: null;
 		const s = absoluteSeconds
 			? absoluteSeconds === 1
-				? '1 second'
+				? "1 second"
 				: `${absoluteSeconds} seconds`
 			: null;
 		const absoluteTime = [];
@@ -117,10 +112,10 @@ module.exports = {
 		if (h) absoluteTime.push(h);
 		if (m) absoluteTime.push(m);
 		if (s) absoluteTime.push(s);
-		return absoluteTime.join(', ');
+		return absoluteTime.join(", ");
 	},
 	// Adopted from https://github.com/combatwombat/Lunicode.js/blob/master/lunicode.js#L348-L484
-	zalgoConvert: function(text) {
+	zalgoConvert: function (text) {
 		const diacriticsTop = [];
 		const diacriticsMiddle = [];
 		const diacriticsBottom = [];
@@ -186,7 +181,7 @@ module.exports = {
 		diacriticsTop.push(String.fromCharCode(864));
 		diacriticsTop.push(String.fromCharCode(865));
 
-		let newText = '',
+		let newText = "",
 			newChar;
 		for (const i in text) {
 			newChar = text[i];
@@ -238,7 +233,7 @@ module.exports = {
 		}
 		return newText;
 	},
-	isUrl: function(url) {
+	isUrl: function (url) {
 		const DomainRE = /^[^\s\\.]+\.\S{2,}$/;
 		const protocolAndDomain = /^(?:\w+:)?\/\/(\S+)$/;
 
@@ -252,93 +247,106 @@ module.exports = {
 
 		return false;
 	},
-	getRandomString: function(length) {
-		const randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-		let result = '';
+	getRandomString: function (length) {
+		const randomChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		let result = "";
 		for (let i = 0; i < length; i++) {
 			result += randomChars.charAt(
-				Math.floor(Math.random() * randomChars.length),
+				Math.floor(Math.random() * randomChars.length)
 			);
 		}
 		return result;
 	},
-	randomHexColor: function() {
-		return '#' + Math.floor(Math.random() * 16777215).toString(16);
+	randomHexColor: function () {
+		return "#" + Math.floor(Math.random() * 16777215).toString(16);
 	},
 };
-=======
-const request = require('node-fetch');
-const { createCanvas, loadImage } = require('canvas');
-const { GuildMember, User } = require('discord.js')
+const request = require("node-fetch");
+const { createCanvas, loadImage } = require("canvas");
+const { GuildMember, User } = require("discord.js");
 
 async function fetchRateLimit() {
-        try {
-            const { body } = await request.get('https://trace.moe/api/me');
-            return { status: body.user_limit > 0, refresh: body.user_limit_ttl };
-        } catch {
-            return { status: false, refresh: Infinity };
-        }
-};
-
-async function search(file) {
-    if (Buffer.byteLength(file) > 1e+7) return 'size';
-    const { body } = await request
-        .post('https://trace.moe/api/search')
-        .attach('image', base64(file));
-    const data = body.docs[0];
-    return {
-        prob: Math.round(data.similarity * 100),
-        episode: data.episode,
-        title: data.title_english,
-        preview: await fetchPreview(data),
-        nsfw: data.is_adult
-    };
-};
-
-async function fetchPreview(data) {
-    try {
-        const { body } = await request
-            .get(`https://media.trace.moe/video/${data.anilist_id}/${encodeURIComponent(data.filename)}`)
-            .query({
-                t: data.at,
-                token: data.tokenthumb,
-                mute: true,
-                size: 'm'
-            });
-        return body;
-    } catch {
-        return null;
-    }
-};
-
-async function convertGIF(image) {
-    const data = await loadImage(image);
-    const canvas = createCanvas(data.width, data.height);
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(data, 0, 0);
-    return canvas.toBuffer();
+	try {
+		const { body } = await request.get("https://trace.moe/api/me");
+		return { status: body.user_limit > 0, refresh: body.user_limit_ttl };
+	} catch {
+		return { status: false, refresh: Infinity };
+	}
 }
 
-  
-async function base64(text, mode = 'encode') {
-		if (mode === 'encode') return Buffer.from(text).toString('base64');
-		if (mode === 'decode') return Buffer.from(text, 'base64').toString('utf8') || null;
-		throw new TypeError(`${mode} is not a supported base64 mode.`);
-};
+async function search(file) {
+	if (Buffer.byteLength(file) > 1e7) return "size";
+	const { body } = await request
+		.post("https://trace.moe/api/search")
+		.attach("image", base64(file));
+	const data = body.docs[0];
+	return {
+		prob: Math.round(data.similarity * 100),
+		episode: data.episode,
+		title: data.title_english,
+		preview: await fetchPreview(data),
+		nsfw: data.is_adult,
+	};
+}
 
+async function fetchPreview(data) {
+	try {
+		const { body } = await request
+			.get(
+				`https://media.trace.moe/video/${data.anilist_id}/${encodeURIComponent(
+					data.filename
+				)}`
+			)
+			.query({
+				t: data.at,
+				token: data.tokenthumb,
+				mute: true,
+				size: "m",
+			});
+		return body;
+	} catch {
+		return null;
+	}
+}
+
+async function convertGIF(image) {
+	const data = await loadImage(image);
+	const canvas = createCanvas(data.width, data.height);
+	const ctx = canvas.getContext("2d");
+	ctx.drawImage(data, 0, 0);
+	return canvas.toBuffer();
+}
+
+async function base64(text, mode = "encode") {
+	if (mode === "encode") return Buffer.from(text).toString("base64");
+	if (mode === "decode")
+		return Buffer.from(text, "base64").toString("utf8") || null;
+	throw new TypeError(`${mode} is not a supported base64 mode.`);
+}
 
 async function resolveMember(query, guild) {
-    if(query instanceof GuildMember) return query;
-    if(query instanceof User) return guild.members.fetch(query);
-  
-    if(typeof query !== 'string') return null;
-      
-    if(/^(?:<@!?)?(\d{17,19})>?$/.test(query)) return guild.members.fetch(/^(?:<@!?)?(\d{17,19})>?$/.exec(query)[1]).catch(() => {});
-    if(/\w{1,32}#\d{4}/.test(query)){
-      const res = guild.members.find(member => member.user.tag.toLowerCase() === query.toLowerCase());
-      return res || null;
-    }
-};
+	if (query instanceof GuildMember) return query;
+	if (query instanceof User) return guild.members.fetch(query);
 
-module.exports = { fetchRateLimit, search, fetchPreview, convertGIF, base64, resolveMember }
->>>>>>> Stashed changes:old/Base/Functions.js
+	if (typeof query !== "string") return null;
+
+	if (/^(?:<@!?)?(\d{17,19})>?$/.test(query))
+		return guild.members
+			.fetch(/^(?:<@!?)?(\d{17,19})>?$/.exec(query)[1])
+			.catch(() => {});
+	if (/\w{1,32}#\d{4}/.test(query)) {
+		const res = guild.members.find(
+			(member) => member.user.tag.toLowerCase() === query.toLowerCase()
+		);
+		return res || null;
+	}
+}
+
+module.exports = {
+	fetchRateLimit,
+	search,
+	fetchPreview,
+	convertGIF,
+	base64,
+	resolveMember,
+};

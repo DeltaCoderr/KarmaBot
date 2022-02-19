@@ -1,8 +1,7 @@
-const { Command } = require("@sapphire/framework");
+const KarmaCommand = require("../../Library/KarmaCommand");
 const { Message } = require("discord.js");
-// const { KarmaCommand } = require("../../lib/KarmaCommand");
 
-class PingCommand extends Command {
+module.exports = class PingCommand extends KarmaCommand {
 	constructor(context, options) {
 		super(context, {
 			...options,
@@ -24,6 +23,4 @@ class PingCommand extends Command {
 			)
 			.catch(() => {});
 	}
-}
-
-module.exports = { PingCommand };
+};

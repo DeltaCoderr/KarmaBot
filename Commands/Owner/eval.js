@@ -1,9 +1,9 @@
-const { Command } = require("@sapphire/framework");
 const { Type } = require("@sapphire/type");
 const { codeBlock, isThenable } = require("@sapphire/utilities");
 const { inspect } = require("util");
+const KarmaCommand = require("../../Library/KarmaCommand");
 
-class EvalCommand extends Command {
+module.exports = class EvalCommand extends KarmaCommand {
 	constructor(context, options) {
 		super(context, {
 			...options,
@@ -73,6 +73,4 @@ class EvalCommand extends Command {
 
 		return { result, success, type };
 	}
-}
-
-module.exports = { EvalCommand };
+};
