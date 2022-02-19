@@ -5,6 +5,7 @@ class ReadyListener extends Listener {
 		super(context, {
 			...options,
 			once: true,
+			event: "ready",
 		});
 	}
 
