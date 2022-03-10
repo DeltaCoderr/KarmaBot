@@ -25,7 +25,6 @@ class Bot extends Discord.Client {
 		this.initEvents();
 		this.login(token);
 	}
-	d;
 
 	initCommands() {
 		let counter = 0;
