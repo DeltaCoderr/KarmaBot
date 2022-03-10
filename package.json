@@ -4,9 +4,6 @@
   "description": "Karma Bot",
   "main": "index.js",
   "dependencies": {
-    "@sapphire/framework": "^2.4.1",
-    "@sapphire/type": "^2.1.2",
-    "@sapphire/utilities": "^3.3.0",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0"
   },
