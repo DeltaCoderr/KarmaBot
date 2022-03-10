@@ -81,7 +81,7 @@ class Bot extends Discord.Client {
 			}
 		}
 		console.log(`[interactions]: ${counter}`);
-		const rest = new REST({ version: "9" }).setToken(process.env.token);
+		const rest = new REST({ version: "9" }).setToken(process.env.TOKEN);
 
 		try {
 			console.log("Started refreshing application (/) commands.");
@@ -100,7 +100,7 @@ class Bot extends Discord.Client {
 		return {
 			name: command.name,
 			description: command.description,
-			options: command.slashOptions,
+			options: command.slashOptions ?? [],
 			defaultPermissions: true,
 		};
 	}
