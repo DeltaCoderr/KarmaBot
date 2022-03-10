@@ -1,2 +1,2 @@
-global.KarmaClient = require("../Library/KarmaClient");
-global.KarmaCommand = require("../Library/KarmaCommand");
+global.Command = require("../Client/Command");
+global.Listener = require("../Client/Listener");
