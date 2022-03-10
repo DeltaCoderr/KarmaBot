@@ -1,12 +1,3 @@
-<<<<<<< Updated upstream
-test.js
-config.js
-emotes.js
-*filters.js
-node_modules/
-package-lock.json
-=======
 .env
 package-lock.json
 node_modules/
->>>>>>> Stashed changes
