@@ -29,11 +29,11 @@ class Bot extends Discord.Client {
 
 	initCommands() {
 		let counter = 0;
-		const subFolder = fs.readdirSync("./src/commands");
+		const subFolder = fs.readdirSync("Commands");
 		for (const category of subFolder) {
-			const commandsFiles = fs.readdirSync(`./src/commands/${category}`);
+			const commandsFiles = fs.readdirSync(`Commands/${category}`);
 			for (const commandFile of commandsFiles) {
-				const command = require(`../commands/${category}/${commandFile}`);
+				const command = require(`../Commands/${category}/${commandFile}`);
 
 				if (command.run && typeof command.run === "function") {
 					this.commands.set(command.name, command);
@@ -46,13 +46,13 @@ class Bot extends Discord.Client {
 
 	initEvents() {
 		let counter = 0;
-		const subFolder = fs.readdirSync("./src/events");
+		const subFolder = fs.readdirSync("Events");
 		for (const category of subFolder) {
 			const eventsFiles = fs
-				.readdirSync(`./src/events/${category}`)
+				.readdirSync(`Events/${category}`)
 				.filter((f) => f.endsWith(".js"));
 			for (const eventFile of eventsFiles) {
-				const event = require(`../events/${category}/${eventFile}`);
+				const event = require(`../Events/${category}/${eventFile}`);
 				/**
 				 * @type {Listener}
 				 */
@@ -67,9 +67,9 @@ class Bot extends Discord.Client {
 	async initInteractions(guild) {
 		let counter = 0;
 		let commands = [];
-		const subFolder = fs.readdirSync("./src/commands");
+		const subFolder = fs.readdirSync("Commands");
 		for (const category of subFolder) {
-			const commandsFiles = fs.readdirSync(`./src/commands/${category}`);
+			const commandsFiles = fs.readdirSync(`Commands/${category}`);
 			for (const commandFile of commandsFiles) {
 				const command = require(`../commands/${category}/${commandFile}`);
 
