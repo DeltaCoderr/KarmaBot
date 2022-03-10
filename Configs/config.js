@@ -1,7 +1,7 @@
 /* eslint-disable no-inline-comments */
 
 module.exports = {
-	token: process.env.TOKEN, // Bot token
+	token: "BOT-TOKEN-GOES-HERE", // Bot token
 	prefix: "!", // Prefix for commands
 	devs: [], // ID of the bot owner
 	embedColor: "#5865F2", // Color of embeds
