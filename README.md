@@ -1,4 +1,4 @@
-<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Karma" src="https://cdn.discordapp.com/avatars/636484020301201418/c42cd65954060d3fdf4e0a3bab01990c.png?size=1024">
+<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Karma" src="https://cdn.discordapp.com/avatars/636484020301201418/c42cd65954060d3fdf4e0a3bab01990c.png?size=1024"> 
 
 # KarmaBot ✨
 
@@ -9,32 +9,31 @@
 
 > A Multipurpose Discord Bot with a Music System used by 200K+ users and more than 2000 servers.
 
-Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).
+Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
 
 ## Categories 📑
-
 - [x] Music & Filter
 - [x] Fun
 - [x] Anime
 - [x] Buttons
 - [x] NSFW
 - [x] Utility
-- [x] Image
-- [x] ChatBot
+- [X] Image
+- [X] ChatBot
 
-### Commands List 💫
+### Commands List 💫 
 
 Karma has a lot of features, with **8 main categories**:
 
-- 🎵 **Music**: `play`, `skip`, `queue`, `np`,`filters` and **10** more!
-- 👩‍💼 **Information**: `info`, `help`, `invite` and **2** more!
-- 🚓 **Anime**: `anime`, `hug`, `karma`, `neko` and **11** more!
-- 🔲 **Buttons** : `snake`, and **1** more!
-- 🤖 **ChatBot**: `chatbot` and **2** more!
-- 👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **8** more!
-- 🖨️ **Image**: `fire`, `respect`, `scary`, `triggered` and **5** more!
-- ✉️ **Other**: `profile`, `addemoji`, `snipe`, `wiki` and **3** more!
-- 👑 **Owner**: `eval`, `reload`
+*   🎵 **Music**: `play`, `skip`, `queue`, `np`,`filters` and **10** more! 
+*   👩‍💼 **Information**: `info`, `help`, `invite` and **2** more! 
+*   🚓 **Anime**: `anime`, `hug`, `karma`, `neko` and **11** more! 
+*   🔲 **Buttons** : `snake`,  and **1** more!
+*   🤖 **ChatBot**: `chatbot` and **2** more! 
+*   👻 **Fun**: `binary`, `clyde`, `comment`, `eject`, `iq`, `reddit` and **8** more!
+*   🖨️ **Image**: `fire`, `respect`, `scary`, `triggered` and **5** more! 
+*   ✉️ **Other**: `profile`, `addemoji`, `snipe`, `wiki` and **3** more!
+*   👑 **Owner**: `eval`, `reload`
 
 ## Status 📥
 
@@ -49,23 +48,20 @@ Karma has a lot of features, with **8 main categories**:
     <img src="https://top.gg/api/widget/636484020301201418.svg" alt="Karma Bot" />
 </a>
 
-### Support Server :label:
 
-<a href="https://discord.gg/NtyaM9d"><img src="https://discord.com/api/guilds/738773269456486401/embed.png?style=banner3"/></a>
+### Support Server :label:
+<a href="https://discord.gg/NtyaM9d"><img src="https://media.discordapp.net/attachments/761647934067834921/894556178548400148/unknown.png"/></a>
 <br><br>
 
-- **[Bot Website](https://karma.deltaa.me)**
+* **[Bot Website](https://karma.deltaa.me)**
 
-## Installation
-
-The Installation guide can be found in the [Installation.md](https://github.com/DeltaCoderr/KarmaBot/blob/master/Installation.md) file.
+## Installation 
+The Installation guide can be found in the [Installation.md](https://github.com/DeltaCoderr/KarmaBot/blob/master/Installation.md) file. 
 
 ## License ©️
-
 Karma Bot is licensed under the GPL 3.0 license. See the file `LICENSE` for more information. If you plan to use any part of this source code in your own bot, I would be grateful if you would include some form of credit somewhere.
 
 ## ✨ Contributors :
-
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/DeltaCoderr/Covid-19-Tracker)&nbsp;
 
 Thanks goes to these wonderful people :
@@ -87,5 +83,5 @@ Thanks goes to these wonderful people :
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+ 
