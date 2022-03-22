@@ -1,29 +1,15 @@
 {
   "name": "karmabot",
-  "version": "4.0.0",
-  "description": "Karma Bot",
+  "version": "3.1.0",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "@discordjs/rest": "^0.3.0",
-    "discord-api-types": "^0.26.1",
-    "discord.js": "^13.6.0",
-    "dotenv": "^16.0.0"
-  },
   "scripts": {
-    "start": "node index.js",
-    "watch": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DeltaCoderr/KarmaBot.git"
-  },
-  "author": "",
+  "author": "DeltaCoderr",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DeltaCoderr/KarmaBot/issues"
-  },
-  "homepage": "https://github.com/DeltaCoderr/KarmaBot#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "mongoose": "^6.2.7"
   }
 }
