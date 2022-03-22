@@ -1,3 +1,4 @@
+require('dotenv').config()
 const Discord = require("discord.js"),
 	fs = require("fs"),
 	Listener = require("./Listener"),
@@ -95,7 +96,7 @@ class Bot extends Discord.Client {
 		}
 	}
 
-	async build(command) {
+	 build(command) {
 		return {
 			name: command.name,
 			description: command.description,
