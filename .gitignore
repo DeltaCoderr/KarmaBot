@@ -1,4 +1,3 @@
-node_modules/
 package-lock.json
 .env
-Configs/config.js
+node_modules/
