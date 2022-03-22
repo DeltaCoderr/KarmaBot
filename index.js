@@ -1,4 +1,6 @@
-const Client = require("./Client/Bot"),
-  client = new Client();
+require("dotenv").config();
+const KarmaBot = require("./Structures/Client");
 
-client.start(process.env.TOKEN);
+const client = new KarmaBot();
+
+client.init(process.env.TOKEN);
