@@ -4,7 +4,7 @@ module.exports = new Command({
     name: "eval",
     aliases: ["eval"],
     description: "The ping of the bot",
-    category: "Misc",
+    category: "Owner",
     run: async (client, message, args) => {
 
         if (!message.author.id === '552814506070507531') return

@@ -5,7 +5,7 @@ module.exports = new Command({
 	name: "help",
 	aliases: ["help"],
 	description: "Help Command.",
-	category: "General",
+	category: "Info",
 	run: async (client, message, args) => {
 		const directories = [
 			...new Set(client.commands.map((cmd) => cmd.category)),

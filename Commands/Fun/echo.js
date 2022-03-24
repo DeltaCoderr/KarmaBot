@@ -3,7 +3,7 @@ const Command = require("../../Client/Command");
 module.exports = new Command({
   name: "echo",
   description: "Echoes your message",
-  category: "Misc",
+  category: "Fun",
   slashOptions: [
     {
       name: "message",
