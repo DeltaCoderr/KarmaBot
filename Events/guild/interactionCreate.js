@@ -22,7 +22,7 @@ module.exports = new Listener(
 									.join(", ")}\` Permission(s)`,
 								ephemeral: true,
 							})
-							.catch(() => {});
+							.catch(() => { });
 						return;
 					}
 				}
@@ -36,6 +36,11 @@ module.exports = new Listener(
 					console.log(error);
 				}
 			}
+		}
+		if (!interaction.isSelectMenu()) return;
+
+		if (interaction.customId === 'select') {
+			await interaction.update({ content: 'Something was selected!', components: [] });
 		}
 	}
 );
