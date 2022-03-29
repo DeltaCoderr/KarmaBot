@@ -42,6 +42,7 @@ module.exports = new Command({
 						categories.map((cmd) => {
 
 							return {
+								emoji: Emotes[toID(cmd.directory)],
 								label: cmd.directory,
 								value: cmd.directory.toLowerCase(),
 								description: `Commands from ${cmd.directory} category`,
@@ -67,7 +68,7 @@ module.exports = new Command({
 			const [directory] = interaction.values;
 			const category = categories.find((x) => x.directory.toLowerCase() === directory)
 			const categoryEmbed = new MessageEmbed()
-				.setTitle(`${directory} commmands`)
+				.setTitle(`${formatString(directory)} commands`)
 				.setDescription("Here are the list of all the commands.")
 				.addFields(
 					category.commands.map((cmd) => {
