@@ -1,4 +1,5 @@
 require('dotenv').config()
+require("../Utils/Global")
 const Discord = require("discord.js"),
 	fs = require("fs"),
 	Listener = require("./Listener"),
