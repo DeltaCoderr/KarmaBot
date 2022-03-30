@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, User } = require("discord.js");
 const Command = require("../../Client/Command");
 
 module.exports = new Command({
@@ -54,7 +54,11 @@ module.exports = new Command({
 					`${roles.length !== 0 ? roles.join(", ") : "None"}`,
 					true
 				)
-				.addField(`> Badges`, `mori-delta-upto-you-:)`, true)
+				.addField(
+					`> Badges`,
+					`${(await badges(user)).map((b) => b.emoji).join(" ")}`,
+					true
+				)
 				.addField(
 					`> Created At`,
 					`<t:${parseInt(user.createdTimestamp / 1000)}:R>`,
@@ -94,7 +98,11 @@ module.exports = new Command({
 					`<t:${parseInt(user.createdTimestamp / 1000)}:R>`,
 					true
 				)
-				.addField(`> Badges`, `same as above lol`, true)
+				.addField(
+					`> Badges`,
+					`${(await badges(user)).map((b) => b.emoji).join(" ")}`,
+					true
+				)
 				.addField(`> Links`, links, true);
 
 			return interaction.reply({
@@ -114,6 +122,50 @@ module.exports = new Command({
 					},
 				],
 			});
+		}
+
+		/**
+		 * @param {User} user
+		 */
+		async function badges(user) {
+			let totalFlags;
+			const badgeList = {
+				DISCORD_EMPLOYEE: {
+					name: "Discord Staff",
+					emoji: ":staff:",
+				},
+				PARTNERED_SERVER_OWNER: {},
+				HYPESQUAD_EVENTS: {},
+				BUGHUNTER_LEVEL_1: {},
+				HOUSE_BRAVERY: {},
+				HOUSE_BRILLIANCE: {},
+				HOUSE_BALANCE: {},
+				EARLY_SUPPORTER: {},
+				TEAM_USER: {},
+				BUGHUNTER_LEVEL_2: {},
+				VERIFIED_BOT: {},
+				EARLY_VERIFIED_BOT_DEVELOPER: {},
+				DISCORD_CERTIFIED_MODERATOR: {},
+				// additional
+				DISCORD_NITRO_CLASSIC: {},
+				DISCORD_NITRO_BOOST: {},
+			};
+
+			totalFlags = user.flags
+				.toArray()
+				.filter((b) => !!badgeList[b])
+				.map((x) => badgeList[x]);
+
+			if (user.avatar && user.avatar.startsWith("a_")) {
+				totalFlags.push(badgeList["DISCORD_NITRO_CLASSIC"]);
+			}
+
+			(await user.fetch()).banner;
+			if (user.banner) {
+				totalFlags.push(badgeList["DISCORD_NITRO_BOOST"]);
+			}
+
+			return totalFlags;
 		}
 	},
 });
