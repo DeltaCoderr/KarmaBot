@@ -25,8 +25,10 @@ module.exports = new Command({
 			});
 
 		if (member) {
-			const roles = member.roles.cache.map((r) => r.name).slice(0, -1);
-			const links = `[Avatar](${
+			const roles = member.roles.cache
+				.map((r) => `<@&${r.id}>`)
+				.slice(0, -1);
+			let links = `[Avatar](${
 				user.avatarURL({ dynamic: true, format: "webp" }) ??
 				user.defaultAvatarURL
 			})`;
@@ -48,6 +50,7 @@ module.exports = new Command({
 			embed
 				.setColor(member.displayHexColor)
 				.setThumbnail(member.displayAvatarURL({ dynamic: true }))
+				.addField(user.bannerURL({ dynamic: true, size: 512 }) || null)
 				.addField(`> Nickname`, `${member.displayName}`, true)
 				.addField(
 					`> Roles`,
@@ -75,7 +78,7 @@ module.exports = new Command({
 				embeds: [embed],
 			});
 		} else {
-			const links = `[Avatar](${
+			let links = `[Avatar](${
 				user.avatarURL({ dynamic: true, format: "webp" }) ??
 				user.defaultAvatarURL
 			})`;
@@ -93,6 +96,7 @@ module.exports = new Command({
 				.setThumbnail(
 					user.avatarURL({ dynamic: true }) ?? user.defaultAvatarURL
 				)
+				.addField(user.bannerURL({ dynamic: true, size: 512 }) || null)
 				.addField(
 					`> Created At`,
 					`<t:${parseInt(user.createdTimestamp / 1000)}:R>`,
