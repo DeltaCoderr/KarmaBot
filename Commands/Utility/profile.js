@@ -14,8 +14,9 @@ module.exports = new Command({
 		},
 	],
 	exec: async (client, interaction) => {
-		const member = interaction.options.getMember("target");
-		const user = interaction.options.getUser("target");
+		const member =
+			interaction.options.getMember("target") || interaction.member;
+		const user = interaction.options.getUser("target") || interaction.user;
 
 		const embed = new MessageEmbed()
 			.setTitle(user.tag)
@@ -24,7 +25,7 @@ module.exports = new Command({
 				text: `ID: ${user.id}`,
 			});
 
-		if (member) {
+		if (member && member.id === user.id) {
 			const roles = member.roles.cache
 				.map((r) => `<@&${r.id}>`)
 				.slice(0, -1);
@@ -50,16 +51,16 @@ module.exports = new Command({
 			embed
 				.setColor(member.displayHexColor)
 				.setThumbnail(member.displayAvatarURL({ dynamic: true }))
-				.addField(user.bannerURL({ dynamic: true, size: 512 }) || null)
+				.setImage(user.bannerURL({ dynamic: true, size: 512 }) || null)
 				.addField(`> Nickname`, `${member.displayName}`, true)
 				.addField(
 					`> Roles`,
-					`${roles.length !== 0 ? roles.join(", ") : "None"}`,
+					`${roles.length !== 0 ? roles.join(", ") : "None"}_ _`,
 					true
 				)
 				.addField(
 					`> Badges`,
-					`${(await badges(user)).map((b) => b.emoji).join(" ")}`,
+					`${(await badges(user)).map((b) => b.emoji).join(" ")}_ _`,
 					true
 				)
 				.addField(
@@ -69,7 +70,7 @@ module.exports = new Command({
 				)
 				.addField(
 					`> Joined At`,
-					`<t:${parseInt(member.joinedTimestamp / 10000)}:R>`,
+					`<t:${parseInt(member.joinedTimestamp / 1000)}:R>`,
 					true
 				)
 				.addField(`> Links`, links, true);
@@ -96,7 +97,7 @@ module.exports = new Command({
 				.setThumbnail(
 					user.avatarURL({ dynamic: true }) ?? user.defaultAvatarURL
 				)
-				.addField(user.bannerURL({ dynamic: true, size: 512 }) || null)
+				.setImage(user.bannerURL({ dynamic: true, size: 512 }) || null)
 				.addField(
 					`> Created At`,
 					`<t:${parseInt(user.createdTimestamp / 1000)}:R>`,
@@ -104,7 +105,7 @@ module.exports = new Command({
 				)
 				.addField(
 					`> Badges`,
-					`${(await badges(user)).map((b) => b.emoji).join(" ")}`,
+					`${(await badges(user)).map((b) => b.emoji).join(" ")}_ _`,
 					true
 				)
 				.addField(`> Links`, links, true);

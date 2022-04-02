@@ -7,7 +7,8 @@
     "@discordjs/rest": "^0.3.0",
     "discord-api-types": "^0.26.1",
     "discord.js": "^13.6.0",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.2.9"
   },
   "scripts": {
     "start": "node index.js",
