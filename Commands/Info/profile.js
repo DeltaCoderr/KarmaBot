@@ -4,7 +4,7 @@ const Command = require("../../Client/Command");
 module.exports = new Command({
 	name: "profile",
 	description: "User Profile Information",
-	category: "Utility",
+	category: "Info",
 	slashOptions: [
 		{
 			name: "target",
@@ -52,28 +52,28 @@ module.exports = new Command({
 				.setColor(member.displayHexColor)
 				.setThumbnail(member.displayAvatarURL({ dynamic: true }))
 				.setImage(user.bannerURL({ dynamic: true, size: 512 }) || null)
-				.addField(`> Nickname`, `${member.displayName}`, true)
+				.addField(`・ Nickname`, `${member.displayName}`, true)
 				.addField(
-					`> Roles`,
+					`・ Roles`,
 					`${roles.length !== 0 ? roles.join(", ") : "None"}_ _`,
 					true
 				)
 				.addField(
-					`> Badges`,
+					`・ Badges`,
 					`${(await badges(user)).map((b) => b.emoji).join(" ")}_ _`,
 					true
 				)
 				.addField(
-					`> Created At`,
+					`・ Created At`,
 					`<t:${parseInt(user.createdTimestamp / 1000)}:R>`,
 					true
 				)
 				.addField(
-					`> Joined At`,
+					`・ Joined At`,
 					`<t:${parseInt(member.joinedTimestamp / 1000)}:R>`,
 					true
 				)
-				.addField(`> Links`, links, true);
+				.addField(`・ Links`, links, true);
 
 			return interaction.reply({
 				embeds: [embed],
@@ -99,16 +99,16 @@ module.exports = new Command({
 				)
 				.setImage(user.bannerURL({ dynamic: true, size: 512 }) || null)
 				.addField(
-					`> Created At`,
+					`・ Created At`,
 					`<t:${parseInt(user.createdTimestamp / 1000)}:R>`,
 					true
 				)
 				.addField(
-					`> Badges`,
+					`・ Badges`,
 					`${(await badges(user)).map((b) => b.emoji).join(" ")}_ _`,
 					true
 				)
-				.addField(`> Links`, links, true);
+				.addField(`・ Links`, links, true);
 
 			return interaction.reply({
 				embeds: [embed],
