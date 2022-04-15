@@ -8,7 +8,8 @@
     "discord-api-types": "^0.26.1",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
-    "mongoose": "^6.2.9"
+    "mongoose": "^6.2.9",
+    "undici": "^5.0.0"
   },
   "scripts": {
     "start": "node index.js",
