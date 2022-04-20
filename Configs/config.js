@@ -6,5 +6,5 @@ module.exports = {
 	embedColor: "#5865F2", // Color of embeds
 	OSU_API_KEY: "", // Osu! API key
 	AME_API: "", // API key for the AME API (https://api.amethyste.moe)
-	guild: "920039825128685718", // test guild for registering interactions
+	guild: "", // test guild for registering interactions
 };
