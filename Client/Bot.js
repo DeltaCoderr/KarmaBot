@@ -21,7 +21,7 @@ class Bot extends Discord.Client {
 		this.utils = require("../Utils/Functions");
 	}
 	start(token) {
-		if (!token) return console.error(`[ERROR]: Invalid/No Token Provided`);
+		if (!token) return logger_error('Invalid/No Token Provided')
 		this.initCommands();
 		// this.initInteractions(); // Moved to `ready.js`
 		this.initEvents();
@@ -42,7 +42,7 @@ class Bot extends Discord.Client {
 				counter++;
 			}
 		}
-		console.log(`[commands]: ${counter}`);
+		logger_success(`[Commands Loaded]: ${counter}`)
 	}
 
 	initEvents() {
@@ -62,7 +62,7 @@ class Bot extends Discord.Client {
 				counter++;
 			}
 		}
-		console.log(`[events]: ${counter}`);
+		logger_success(`[Events Loaded]: ${counter}`)
 	}
 
 	async initInteractions(guild) {
@@ -81,19 +81,19 @@ class Bot extends Discord.Client {
 				counter++;
 			}
 		}
-		console.log(`[interactions]: ${counter}`);
+		logger_success(`[Interactions Loaded]: ${counter}`)
 		const rest = new REST({ version: "9" }).setToken(process.env.TOKEN);
 
 		try {
-			console.log("Started refreshing application (/) commands.");
+			logger_log(`Started refreshing application (/) commands.`)
 
 			await rest.put(Routes.applicationGuildCommands(this.user.id, guild.id), {
 				body: commands,
 			});
 
-			console.log("Successfully reloaded application (/) commands.");
+			logger_log(`Successfully reloaded application (/) commands.`)
 		} catch (error) {
-			console.error(error);
+			logger_error(error);
 		}
 	}
 
