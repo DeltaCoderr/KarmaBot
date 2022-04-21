@@ -1,4 +1,3 @@
-const { Logger } = require("simple-node-logger");
 const Listener = require("../../Client/Listener");
 
 module.exports = new Listener(
