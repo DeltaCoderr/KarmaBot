@@ -35,6 +35,6 @@ module.exports = new Listener("messageCreate", async (client, message) => {
 		await command.run(client, message, args);
 	} catch (error) {
 		message.channel.send(`An error occurred: \`${error}\``);
-		console.log(error);
+		logger_error("messageCreate", error);
 	}
 });

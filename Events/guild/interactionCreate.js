@@ -1,3 +1,4 @@
+const { Logger } = require("simple-node-logger");
 const Listener = require("../../Client/Listener");
 
 module.exports = new Listener(
@@ -33,7 +34,7 @@ module.exports = new Listener(
 					interaction.reply({
 						content: `An error occurred: \`${error}\``,
 					});
-					console.log(error);
+					logger_error("interactionCreate", error);
 				}
 			}
 		}
