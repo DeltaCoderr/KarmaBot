@@ -7,7 +7,7 @@ mongoose
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
-	.then(console.log("Connected to database!"));
+	.then(logger_log('Connected to database!'));
 
 const ChannelSchema = new Schema(
 	{

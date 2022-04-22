@@ -33,7 +33,7 @@ module.exports = new Listener(
 					interaction.reply({
 						content: `An error occurred: \`${error}\``,
 					});
-					console.log(error);
+					logger_error("interactionCreate", error);
 				}
 			}
 		}
