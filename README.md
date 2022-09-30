@@ -9,7 +9,7 @@
 
 > A Multipurpose Discord Bot with a Music System used by 200K+ users and more than 2000 servers.
 
-Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
+Karma Bot is an open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
 
 ## Categories 📑
 - [x] Music & Filter
