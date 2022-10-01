@@ -1,15 +1,16 @@
-<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Karma" src="https://cdn.discordapp.com/avatars/636484020301201418/c42cd65954060d3fdf4e0a3bab01990c.png?size=1024"> 
+<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Karma" src="https://cdn.discordapp.com/attachments/978736153467432970/1025650943204802690/unknown.png"> 
 
 # KarmaBot ✨
 
 [![Run on Repl.it](https://repl.it/badge/github/DeltaCoderr/KarmaBot)](https://repl.it/github/DeltaCoderr/KarmaBot)
-[![](https://img.shields.io/badge/discord.js-v12.5.3-blue.svg?logo=npm)](https://github.com/discordjs)
+[![](https://img.shields.io/badge/discord.js-v14.5.0-blue.svg?logo=npm)](https://github.com/discordjs)
 [![Stars](https://img.shields.io/github/stars/DeltaCoderr/KarmaBot.svg)](https://github.com/DeltaCoderr/KarmaBot)
 [![License](https://img.shields.io/github/license/DeltaCoderr/KarmaBot.svg)](https://github.com/DeltaCoderr/KarmaBot/blob/master/LICENSE)
 
-> A Multipurpose Discord Bot with a Music System used by 200K+ users and more than 2000 servers.
 
-Karma Bot is a open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
+> A Multipurpose Discord Bot with a Music System used by 400K+ users and more than 2400 servers.
+
+Karma Bot is an open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [DeltaCoderr](https://github.com/DeltaCoderr).  
 
 ## Categories 📑
 - [x] Music & Filter
