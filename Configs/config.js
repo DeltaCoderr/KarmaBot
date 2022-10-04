@@ -1,3 +1,6 @@
 module.exports = {
-    token : ''
+    token : '',
+    clientId:'',
+    guildId:'',
+    embedcolor: '',
 }
