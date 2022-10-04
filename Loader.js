@@ -10,18 +10,19 @@ const globPromise = promisify(glob);
  */
 
 async function LoadCommands(client) {
-  const commandFiles = await globPromise(`${__dirname}/Commands/**/*.js`);
-  commandFiles.map((value) => {
-    const file = require(value);
-    const splitted = value.split("/");
-    const directory = splitted[splitted.length - 2];
 
-    if (file.name) {
-      const properties = { directory, ...file };
-      client.commands.set(file.name, properties);
+
+  const commandFolders = fs.readdirSync('./commands');
+
+  for(const folder of commandFolders) {
+    const commandFiles = fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith('.js'));
+    for (const file of commandFiles) {
+      const command = require(`./commands/${folder}/${file}`);
+      client.commands.set(command.data.name, command);
+      client.slashCommands.push(command.data.toJSON());
+      console.log(`[LOADED]: Command - ${file}`);
     }
-  });
-  console.log(`[LOADED] : `);
+  }
 }
 
 async function LoadEvents(client) {

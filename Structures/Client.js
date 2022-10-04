@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits: gib, Collection } = require("discord.js");
+const { Client, GatewayIntentBits: gib, Collection, REST, Routes } = require("discord.js");
 const { LoadCommands, LoadEvents } = require("../Loader");
 
 class Bot extends Client {
@@ -33,10 +33,43 @@ class Bot extends Client {
 
         this.commands = new Collection();
         
-        this.slashCommands = new Collection();
+        this.slashCommands = [];
         
         LoadCommands(this);
         LoadEvents(this);
+
+        const rest = new REST({ version: '10' }).setToken(this.config.token);
+
+        (async () => {
+          try {
+            console.log(`Started refreshing ${this.slashCommands.length} application (/) commands.`);
+
+            const data = await rest.put(
+              Routes.applicationGuildCommands(this.config.clientId, this.config.guildId),
+              { body: this.slashCommands },
+            );
+
+            console.log(`Successfully reloaded ${data.length} application (/) commands.`);
+          } catch (error) {
+            console.error(error);
+          }
+        })();
+
+        this.on('interactionCreate', async interaction => {
+          if (!interaction.isCommand()) return;
+          
+          const command = this.commands.get(interaction.commandName);
+          
+          if (!command) return;
+        
+          try {
+            await command.execute(interaction);
+          }
+          catch (error) {
+            console.error(error);
+            await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+          }
+        });
 
         this.login(this.config.token).catch(() => {
           console.error(`[ERROR] : Invalid Token provided.`)
