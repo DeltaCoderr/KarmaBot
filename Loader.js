@@ -38,7 +38,8 @@ async function LoadEvents(client) {
     for (let i = 0; i < files.length; i++) {
       const event = require(`./Events/${files[i]}`);
       let eventName = files[i].split(".")[0];
-      client.on(eventName, event.bind(null, client));
+      if(event.once) client.once(eventName, (...args)=> event.execute(...args, client));
+      else client.on(eventName, (...args)=> event.execute(...args, client));
       console.log(`[LOADED]: Event - ${files[i]}`);
     }
   });
