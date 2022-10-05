@@ -55,22 +55,6 @@ class Bot extends Client {
           }
         })();
 
-        this.on('interactionCreate', async interaction => {
-          if (!interaction.isCommand()) return;
-          
-          const command = this.commands.get(interaction.commandName);
-          
-          if (!command) return;
-        
-          try {
-            await command.execute(interaction);
-          }
-          catch (error) {
-            console.error(error);
-            await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-          }
-        });
-
         this.login(this.config.token).catch(() => {
           console.error(`[ERROR] : Invalid Token provided.`)
         });
