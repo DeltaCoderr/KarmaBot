@@ -10,18 +10,19 @@ const globPromise = promisify(glob);
  */
 
 async function LoadCommands(client) {
-  const commandFiles = await globPromise(`${__dirname}/Commands/**/*.js`);
-  commandFiles.map((value) => {
-    const file = require(value);
-    const splitted = value.split("/");
-    const directory = splitted[splitted.length - 2];
 
-    if (file.name) {
-      const properties = { directory, ...file };
-      client.commands.set(file.name, properties);
+
+  const commandFolders = fs.readdirSync('./commands');
+
+  for(const folder of commandFolders) {
+    const commandFiles = fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith('.js'));
+    for (const file of commandFiles) {
+      const command = require(`./commands/${folder}/${file}`);
+      client.commands.set(command.data.name, command);
+      client.slashCommands.push(command.data.toJSON());
+      console.log(`[LOADED]: Command - ${file}`);
     }
-  });
-  console.log(`[LOADED] : `);
+  }
 }
 
 async function LoadEvents(client) {
@@ -37,7 +38,8 @@ async function LoadEvents(client) {
     for (let i = 0; i < files.length; i++) {
       const event = require(`./Events/${files[i]}`);
       let eventName = files[i].split(".")[0];
-      client.on(eventName, event.bind(null, client));
+      if(event.once) client.once(eventName, (...args)=> event.execute(...args, client));
+      else client.on(eventName, (...args)=> event.execute(...args, client));
       console.log(`[LOADED]: Event - ${files[i]}`);
     }
   });
