@@ -5,6 +5,12 @@ const config  = require('../../Configs/config');
 const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
+	help: {
+        name: 'thigh',
+        aliases: ['thigh'],
+        description: 'Shows Thigh Pictures',
+        category: 'Nsfw',
+    },
 	data: new SlashCommandBuilder()
 		.setName('thigh')
 		.setDescription('Shows Thigh Pictures'),

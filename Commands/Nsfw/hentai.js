@@ -5,6 +5,12 @@ const config  = require('../../Configs/config');
 const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
+	help: {
+        name: 'hentai',
+        aliases: ['hentai'],
+        description: 'Shows Hentai Pictures',
+        category: 'Nsfw',
+    },
 	data: new SlashCommandBuilder()
 		.setName('hentai')
 		.setDescription('Shows Hentai Pictures'),
