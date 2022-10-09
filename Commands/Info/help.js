@@ -38,7 +38,7 @@ module.exports = {
                             if (!interaction.channel.nsfw && c.help.category === 'Nsfw') {
                                 if (!markedNSFW) {
                                     markedNSFW = true;
-                                    embed.addField(`${emotes.nsfw} NSFW [3] -`, 'This section can only be used in an NSFW channel.');
+                                    embed.addFields({name:`${emotes.nsfw} NSFW [3] -`,value:'This section can only be used in an NSFW channel.'});
                                 }
                             }
                             else commandCategories.push(c.help.category);
