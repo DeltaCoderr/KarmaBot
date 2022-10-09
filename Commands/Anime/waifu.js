@@ -24,7 +24,6 @@ module.exports = {
             name: `${r.names.en}${r.names.jp ? ` • ${r.names.jp}` : ""}`,
             iconURL: r.images[0],
           })
-
           .setDescription(`Anime: ${r.from.name}`)
           .setImage(r.images[0])
           .setFooter({
