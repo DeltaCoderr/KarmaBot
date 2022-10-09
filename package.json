@@ -3,6 +3,8 @@
     "discord.js": "^14.5.0",
     "fs": "^0.0.1-security",
     "glob": "^8.0.3",
+    "moment": "^2.29.4",
+    "moment-duration-format": "^2.3.2",
     "node-fetch": "^2.6.7",
     "util": "^0.12.4"
   },
