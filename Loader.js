@@ -45,4 +45,13 @@ async function LoadEvents(client) {
   });
 }
 
-module.exports = { LoadCommands, LoadEvents };
+async function LoadSelectMenus(client) {
+  const SelectMenuFiles = fs.readdirSync(`./SelectMenus`).filter(file => file.endsWith('.js'));
+  for (const file of SelectMenuFiles) {
+    const selectMenu = require(`./SelectMenus/${file}`);
+    client.selectMenus.set(selectMenu.data.name, selectMenu);
+    console.log(`[LOADED]: SelectMenu - ${file}`);
+  }
+}
+
+module.exports = { LoadCommands, LoadEvents, LoadSelectMenus };
