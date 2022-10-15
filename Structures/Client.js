@@ -1,5 +1,5 @@
 const { Client, GatewayIntentBits: gib, Collection, REST, Routes } = require("discord.js");
-const { LoadCommands, LoadEvents } = require("../Loader");
+const { LoadCommands, LoadEvents, LoadSelectMenus } = require("../Loader");
 
 class Bot extends Client {
   /**
@@ -34,9 +34,12 @@ class Bot extends Client {
         this.commands = new Collection();
         
         this.slashCommands = [];
+
+        this.selectMenus = new Collection();
         
         LoadCommands(this);
         LoadEvents(this);
+        LoadSelectMenus(this);
 
         const rest = new REST({ version: '10' }).setToken(this.config.token);
 

@@ -1,7 +1,9 @@
 module.exports = {
-  token: "",
-  clientId: "",
-  guildId: "",
-  embedcolor: "",
-  ANIMU_API: "",
-};
+    prefix:'',
+    token : '',
+    clientId:'',
+    guildId:'',
+    embedcolor: '',
+    devs:'',
+    ANIMU_API: "",
+}

@@ -5,6 +5,12 @@ const config  = require('../../Configs/config');
 const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
+	help: {
+        name: 'bondage',
+        aliases: ['bondage'],
+        description: 'Shows Bondage Pictures',
+        category: 'Nsfw'
+    },
 	data: new SlashCommandBuilder()
 		.setName('bondage')
 		.setDescription('Shows Bondage Pictures'),
