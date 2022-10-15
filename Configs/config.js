@@ -4,5 +4,6 @@ module.exports = {
     clientId:'',
     guildId:'',
     embedcolor: '',
-    devs:''
+    devs:'',
+    ANIMU_API: "",
 }
