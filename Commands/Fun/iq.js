@@ -3,6 +3,12 @@ const { EmbedBuilder } = require("discord.js");
 const config = require("../../Configs/config");
 
 module.exports = {
+ help: {
+        name: 'iq',
+        aliases: ['iq'],
+        description: 'Guesses how smart you are',
+        category: "Fun"
+    },
   data: new SlashCommandBuilder()
     .setName("iq")
     .setDescription("Guesses how smart you are")
