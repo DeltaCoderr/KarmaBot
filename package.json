@@ -7,6 +7,7 @@
     "moment-duration-format": "^2.3.2",
     "mal-scraper": "^2.11.4",
     "node-fetch": "^2.6.7",
+    "to-zalgo": "^1.0.1",
     "util": "^0.12.4"
   },
   "devDependencies": {
