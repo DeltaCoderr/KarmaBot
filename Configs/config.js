@@ -6,4 +6,5 @@ module.exports = {
     embedcolor: '',
     devs:'',
     ANIMU_API: "",
+    SAUCENAO_API: ""
 }
