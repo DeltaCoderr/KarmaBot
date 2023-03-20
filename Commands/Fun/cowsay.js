@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-var cowsay = require("cowsay");
+const cowsay = require("cowsay");
 
 module.exports = {
     help: {
