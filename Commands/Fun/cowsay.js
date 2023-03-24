@@ -19,7 +19,7 @@ module.exports = {
                 "https://png.pngtree.com/png-clipart/20200225/original/pngtree-binary-code-and-magnifying-glass-isometric-icon-png-image_5252004.jpg"
             )
 
-            .setDescription("```\n" + result + "\n``")
+            .setDescription("```\n" + result + "\n```")
             .setTimestamp()
             .setFooter(
                 "© Karma",
