@@ -29,7 +29,7 @@
     "node-fetch": "^2.6.1",
     "node-osu": "^2.2.1",
     "opusscript": "0.0.8",
-    "quickmongo": "^3.0.2",
+    "quickmongo": "^5.2.0",
     "reddit.images": "^1.0.2",
     "relevant-urban": "^2.0.0",
     "to-zalgo": "^1.0.1",
